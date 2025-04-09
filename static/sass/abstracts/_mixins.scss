@@ -1,0 +1,109 @@
+/*---
+
+These are the styles for the typography. Typography styles can be applied
+to any element. Typically you'll want to use either
+a `<p>`, `<span>`, or heading element:
+
+​```html
+<h1 class="heading-1">This is a title text</h1>
+<span class="text-scale-lg">This is a text</span>
+<p class="small">Some Text</p>
+​```
+
+Index
+- Responsive Mixins
+- Sizes
+- Layouts
+- Inputs
+
+*/
+
+/*-------------------------------------------*\
+Responsive mixins
+\*-------------------------------------------*/
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin monitor-up {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+/*-------------------------------------------*\
+Sizes
+\*-------------------------------------------*/
+
+@mixin square($size, $radius: 0) {
+  width: $size;
+  height: $size;
+
+  @if $radius !=0 {
+    border-radius: $radius;
+  }
+}
+
+@mixin font-size($mobile, $desktop: null) {
+  font-size: $mobile;
+
+  @include desktop-up() {
+    font-size: $desktop;
+
+    @if $desktop == null {
+      font-size: $mobile;
+    }
+  }
+}
+
+@mixin line-height($mobile, $desktop: null) {
+  line-height: $mobile;
+
+  @include desktop-up() {
+    line-height: $desktop;
+
+    @if $desktop == null {
+      line-height: $mobile;
+    }
+  }
+}
+/*-------------------------------------------*\
+Layouts
+\*-------------------------------------------*/
+
+@mixin layout-base($display, $align-items, $column-gap) {
+  display: $display;
+  align-items: $align-items;
+
+  @if $column-gap != null {
+    column-gap: $column-gap;
+  }
+}
+
+/*-------------------------------------------*\
+Inputs
+\*-------------------------------------------*/
+
+@mixin hide-input {
+  position: absolute;
+  z-index: -1;
+
+  @include square(0.1px, $radius: 0);
+  opacity: 0;
+  overflow: hidden;
+}

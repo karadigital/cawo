@@ -1,0 +1,45 @@
+/*---
+
+These are the styles for the variables. Variables can be applied
+to any element, components, or pages. Refers to figma.
+
+Index
+- Base
+- Primary
+- Secondary
+*/
+
+/*-------------------------------------------*\
+Base
+\*-------------------------------------------*/
+$base-lightest: #fafafa;
+$base-light: #cfcfcf;
+$base: #2a2a2a;
+$base-dark: #575757;
+
+/*-------------------------------------------*\
+Primary
+\*-------------------------------------------*/
+$primary-light: #ffd6c4;
+$primary: #ff6d2c;
+
+/*-------------------------------------------*\
+Secondary
+\*-------------------------------------------*/
+
+$secondary: #0b2353;
+
+/*-------------------------------------------*\
+Disabled
+\*-------------------------------------------*/
+$disabled-lighter: #c9c9c9;
+$disabled-light: #919191;
+$disabled: #757575;
+$disabled-dark: #454545;
+$disabled-darker: #1b1b1b;
+
+/*-------------------------------------------*\
+Others
+\*-------------------------------------------*/
+$white: #fff;
+$button-stroke: #fff;

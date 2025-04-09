@@ -1,0 +1,254 @@
+/*---
+
+These are the styles for the typography. Typography styles can be applied
+to any element. Typically you'll want to use either
+a `<p>`, `<span>`, or heading element:
+
+​```html
+<h1 class="heading-1">This is a title text</h1>
+<span class="text-scale-lg">This is a text</span>
+<p class="small">Some Text</p>
+​```
+
+Index
+- Font size
+- Font weight
+- Text color
+- Text align
+- Text decoration
+- Text transform
+- Text overflow
+- List style
+- White space
+
+*/
+
+/*-------------------------------------------*\
+Font size
+\*-------------------------------------------*/
+
+:root {
+  font-size: 100%; //16px
+}
+
+*,
+h1,
+h2,
+h3,
+p,
+div,
+a,
+span,
+label,
+li,
+footer {
+  font-family: "Figtree", sans-serif;
+  font-size: 1rem;
+  line-height: 150%;
+}
+
+a {
+  color: inherit;
+}
+.small,
+.label,
+.text-scale-2xs {
+  font-family: "Source Sans 3", sans-serif;
+  line-height: 120%;
+}
+
+.text-scale-2xl {
+  @include font-size(2.625rem, 4rem); //42px, 64px
+  @include line-height(52px, 64px);
+}
+
+.text-scale-xl {
+  @include font-size(2rem, 4rem); //32px, 64px
+  @include line-height(42px, 64px);
+}
+
+.text-scale-lg {
+  @include font-size(1.5rem, 2rem); //24px, 32px
+  @include line-height(20px);
+}
+
+.text-scale-sm {
+  @include font-size(1rem, 1.5rem); //16px, 24px
+}
+
+.text-scale-xs {
+  @include font-size(0.9375rem, 0.9375rem); //15px, 15px
+}
+
+.text-scale-2xs {
+  @include font-size(0.875rem, 0.875rem); //14px, 14px
+}
+
+.text-scale-3xs {
+  @include font-size(0.8125rem, 0.8125rem); //13px, 13px
+}
+
+.text-size-32 {
+  @include font-size(2rem); //32px
+  line-height: normal;
+}
+
+.text-size-24 {
+  @include font-size(1.5rem); //24px
+  line-height: normal;
+}
+
+.small {
+  @include font-size(0.75rem, 0.75rem); //12px
+  line-height: normal;
+}
+
+.label {
+  @include font-size(0.625rem, 1rem); //10px, 16px
+  line-height: normal;
+}
+
+.extra-small {
+  @include font-size(0.625rem, 0.625rem !important); //10px
+  line-height: normal;
+}
+/*-------------------------------------------*\
+Font Weight
+\*-------------------------------------------*/
+
+.light {
+  font-weight: 300;
+}
+.regular {
+  font-weight: 400;
+}
+.medium {
+  font-weight: 500;
+}
+.semi-bold {
+  font-weight: 600;
+}
+.bold {
+  font-weight: 700;
+}
+.extra-bold {
+  font-weight: 800;
+}
+
+/*-------------------------------------------*\
+Text Align
+\*-------------------------------------------*/
+
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-justify {
+  text-align: justify;
+}
+
+/*-------------------------------------------*\
+Text color
+\*-------------------------------------------*/
+.text-white {
+  color: $white;
+}
+
+.text-primary {
+  color: $primary !important;
+}
+
+.text-base {
+  color: $base;
+}
+/*-------------------------------------------*\
+Text Decoration
+\*-------------------------------------------*/
+
+.underline {
+  text-decoration: underline;
+}
+.overline {
+  text-decoration: overline;
+}
+.line-through {
+  text-decoration: line-through;
+}
+.none {
+  text-decoration: none;
+}
+
+/*-------------------------------------------*\
+Text Transform
+\*-------------------------------------------*/
+
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.normal-case {
+  text-transform: none;
+}
+/*-------------------------------------------*\
+Text overflow
+\*-------------------------------------------*/
+
+.text-truncate {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/*-------------------------------------------*\
+List Style
+\*-------------------------------------------*/
+
+.list-disc {
+  list-style-type: disc;
+}
+.list-decimal {
+  list-style-type: decimal;
+}
+.list-none {
+  list-style-type: none;
+}
+
+.list-outside {
+  list-style-position: outside;
+}
+.list-inside {
+  list-style-position: inside;
+}
+
+/*-------------------------------------------*\
+White-space
+\*-------------------------------------------*/
+
+.white-space-nowrap {
+  white-space: nowrap;
+}
+.white-space-break-spaces {
+  white-space: break-spaces;
+}
+
+/*-------------------------------------------*\
+Others
+\*-------------------------------------------*/
+.italic {
+  font-style: italic;
+}

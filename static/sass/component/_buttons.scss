@@ -1,0 +1,211 @@
+/*
+Your standard form button. Typically you'll want to use either
+a `<div>`, `<button>` or `<a>`, element:
+
+​```html
+<button type="button" class="usa-button">Button</button>
+```
+
+:hover    - Highlights when hovering.
+:disabled - Dims the button when disabled.
+--primary  - Indicates button is the primary action.
+--outline  - Indicates button is the secondary action.
+--icon-only - The button has only 1 icon
+--big  - A bigger button
+
+Index
+- Button
+
+*/
+
+/*-------------------------------------------*\
+Button
+\*-------------------------------------------*/
+button {
+  border: none;
+  background-color: transparent;
+}
+
+$button-stroke: inset 0 0 0 2px;
+
+// Buttons
+
+.button {
+  background-color: $primary;
+  border: 0;
+  border-radius: 0.25rem;
+  min-width: 7.375rem;
+  padding: 0.75rem 1.25rem;
+
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: $white;
+
+  // BIG
+  &--big {
+    border-radius: 0.25rem;
+    font-size: 1.46rem;
+    padding: 1rem 1.5rem;
+  }
+
+  // Default
+  // &:hover {
+  //   background-color: $primary-dark;
+  //   border-bottom: 0;
+  //   text-decoration: none;
+  //   color: $white;
+  // }
+
+  // &:active {
+  //   background-color: $primary-darker;
+  // }
+
+  // &:not([disabled]):focus {
+  //   outline: 0.25rem solid $blue-vivid-40v;
+  //   outline-offset: 0.25rem;
+  // }
+
+  // &:disabled,
+  // &[aria-disabled="true"] {
+  //   color: $disabled-dark;
+
+  //   background-color: $disabled-lighter;
+  //   cursor: not-allowed;
+  //   opacity: 1;
+  // }
+}
+
+.usa-icon {
+  position: relative;
+
+  display: inline-block;
+  flex-shrink: 0; // Avoid shrinking on small screens.
+
+  @include square(1em, $radius: 0);
+  fill: currentColor;
+}
+
+.button--outline {
+  background-color: transparent;
+  box-shadow: $button-stroke $primary;
+  padding-inline: 1.25rem;
+  font-weight: 500;
+  color: $primary;
+
+  &:visited {
+    color: $primary;
+  }
+
+  // &:hover,
+  // &.button--hover {
+  //   background-color: transparent;
+  //   box-shadow: $button-stroke $primary-dark;
+  //   color: $primary-dark;
+  // }
+
+  // &:active,
+  // &.button--active {
+  //   background-color: transparent;
+  //   box-shadow: $button-stroke $primary-darker;
+  //   color: $primary-darker;
+  // }
+}
+
+.button--secondary {
+  background-color: $secondary;
+  // &:hover,
+  // &.button--hover {
+  //   background-color: $secondary-dark;
+  // }
+
+  // &:active,
+  // &.button--active {
+  //   background-color: $secondary-darker;
+  // }
+}
+
+// Cannot use disabled mixin due to transparent causing build errors with color grade check.
+// .button--outline:disabled,
+// .button--outline[aria-disabled="true"],
+// .button--outline-inverse:disabled,
+// .button--outline-inverse[aria-disabled="true"] {
+//   &,
+//   &:hover,
+//   &:active,
+//   &:focus {
+//     background-color: transparent;
+//     color: $disabled;
+//   }
+// }
+
+// .button--outline:disabled,
+// .button--outline[aria-disabled="true"] {
+//   box-shadow: $button-stroke $disabled-lighter;
+
+//   &.button--inverse {
+//     box-shadow: $button-stroke $disabled-light;
+//     color: $disabled-light;
+//   }
+// }
+
+.button--white {
+  background-color: $white;
+  color: $primary;
+  &:hover img {
+    filter: brightness(0) invert(1);
+  }
+}
+// Unstyled
+.button--unstyled {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+
+  color: $primary;
+  text-decoration: underline;
+  font-weight: 400;
+  justify-content: normal;
+
+  &:hover,
+  &.button--hover,
+  &:disabled:hover,
+  &[aria-disabled="true"]:hover,
+  &:disabled.button--hover,
+  &[aria-disabled="true"].button--hover,
+  &:active,
+  &.button--active,
+  &:disabled:active,
+  &[aria-disabled="true"]:active,
+  &:disabled.button--active,
+  &[aria-disabled="true"].button--active,
+  &:disabled:focus,
+  &[aria-disabled="true"]:focus,
+  &:disabled.focus,
+  &[aria-disabled="true"].focus,
+  &:disabled,
+  &[aria-disabled="true"],
+  &.button--disabled {
+    background-color: transparent;
+    box-shadow: none;
+    text-decoration: underline;
+  }
+
+  // &.button--hover {
+  //   color: $primary-dark;
+  // }
+
+  // &.button--active {
+  //   color: $primary-darker;
+  // }
+
+  // &:disabled,
+  // &[aria-disabled="true"],
+  // &:disabled:hover,
+  // &[aria-disabled="true"]:hover,
+  // &[aria-disabled="true"]:focus {
+  //   color: $disabled;
+  // }
+}

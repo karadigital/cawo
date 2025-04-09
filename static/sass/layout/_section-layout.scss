@@ -1,0 +1,31 @@
+.page-header {
+  display: flex;
+}
+.main-container {
+  background-color: #fff;
+}
+
+.list-filter-section .form {
+  display: flex;
+  justify-content: inherit;
+}
+.left-filter-section {
+  display: flex;
+  gap: 8px;
+  align-content: last baseline;
+  align-items: center;
+}
+
+.statistic-row {
+  .card {
+    border: 1px solid #E5EFFF;
+    display: grid;
+    justify-content: flex-start;
+    grid-template-columns: 1fr 8fr;
+    .left-card-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
