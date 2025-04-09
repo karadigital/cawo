@@ -196,9 +196,10 @@ body {
   min-height: 100vh;
   width: 100%;
   box-sizing: border-box;
+  background-color: #fafafa;
 }
 
-footer {
+f footer {
   margin-top: auto;
 }
 
@@ -239,8 +240,16 @@ a.web-link:hover {
   background-color: #ff6d2c;
 }
 
-.bg-primary {
+.bg-secondary {
   background-color: #0b2353;
+}
+
+.linear-blue {
+  background: linear-gradient(270deg, rgba(11, 35, 83, 0) 33.62%, #0b2353 137.84%);
+}
+
+.linear-black {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
 }
 
 /*---
@@ -288,6 +297,7 @@ footer {
   font-family: "Figtree", sans-serif;
   font-size: 1rem;
   line-height: 150%;
+  color: #2a2a2a;
 }
 
 a {
@@ -332,16 +342,31 @@ a {
 }
 
 .text-scale-lg {
-  font-size: 1.5rem;
-  line-height: 20px;
+  font-size: 2rem;
+  line-height: 42px;
 }
 @media (min-width: 1024px) {
   .text-scale-lg {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }
 @media (min-width: 1024px) {
   .text-scale-lg {
+    line-height: 64px;
+  }
+}
+
+.text-scale-md {
+  font-size: 1.5rem;
+  line-height: 20px;
+}
+@media (min-width: 1024px) {
+  .text-scale-md {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .text-scale-md {
     line-height: 20px;
   }
 }
@@ -356,11 +381,11 @@ a {
 }
 
 .text-scale-xs {
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
 }
 @media (min-width: 1024px) {
   .text-scale-xs {
-    font-size: 0.9375rem;
+    font-size: 1rem;
   }
 }
 
@@ -466,6 +491,12 @@ Text Align
   text-align: left;
 }
 
+@media (min-width: 1024px) {
+  .text-md-left {
+    text-align: left;
+  }
+}
+
 .text-center {
   text-align: center;
 }
@@ -491,6 +522,14 @@ Text color
 
 .text-base {
   color: #2a2a2a;
+}
+
+.text-base-darker {
+  color: #292929;
+}
+
+.text-base-darkest {
+  color: #222222;
 }
 
 /*-------------------------------------------*\
@@ -740,6 +779,12 @@ input.form-control {
   height: 200px;
 }
 
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @media (min-width: 1024px) {
   .w-60 {
     width: 75%;
@@ -777,7 +822,13 @@ input.form-control {
 }
 
 @media (min-width: 1024px) {
-  .d-lg-block {
+  .d-md-flex {
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .d-md-block {
     display: block;
   }
 }
@@ -908,7 +959,7 @@ input.form-control {
 }
 
 .section__padding {
-  padding: 1.5rem 5%;
+  padding: 2.625rem 5%;
 }
 @media (min-width: 1024px) {
   .section__padding {
@@ -1309,6 +1360,25 @@ hr {
   padding-right: 3rem;
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-link__wrapper {
+  display: none;
+}
+
+footer * {
+  color: white;
+}
+
+.footnote {
+  border-top: 1px solid #fff;
+  padding: 2rem 5%;
+}
+
 /*
 Your standard form button. Typically you'll want to use either
 a `<div>`, `<button>` or `<a>`, element:
@@ -1339,13 +1409,17 @@ button {
 .button {
   background-color: #ff6d2c;
   border: 0;
-  border-radius: 0.25rem;
+  border-radius: 8px;
   min-width: 7.375rem;
-  padding: 0.75rem 1.25rem;
+  padding: 1rem 2rem;
+  width: max-content;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   color: #fff;
+  line-height: 20px;
+  box-sizing: border-box;
+  text-align: center;
 }
 .button--big {
   border-radius: 0.25rem;
@@ -1380,6 +1454,7 @@ button {
 .button--white {
   background-color: #fff;
   color: #ff6d2c;
+  border: 1px solid #ff6d2c;
 }
 .button--white:hover img {
   filter: brightness(0) invert(1);
@@ -1400,6 +1475,18 @@ button {
   background-color: transparent;
   box-shadow: none;
   text-decoration: underline;
+}
+
+.accordion__body {
+  display: grid;
+  row-gap: 12px;
+  padding-left: 1.5rem;
+}
+.accordion__img {
+  border-radius: 16px;
+  overflow: hidden;
+  height: 200px;
+  margin-top: 1rem;
 }
 
 .rows-3 {
@@ -1464,6 +1551,22 @@ button {
   row-gap: 2rem;
 }
 
+.rg-42px {
+  row-gap: 2.625rem;
+}
+
+@media (min-width: 1024px) {
+  .rg-md-24px {
+    row-gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .rg-md-32px {
+    row-gap: 2rem;
+  }
+}
+
 .rg-48px {
   row-gap: 3rem;
 }
@@ -1474,6 +1577,10 @@ button {
 
 .cg-8px {
   column-gap: 0.5rem;
+}
+
+.cg-12px {
+  column-gap: 0.75rem;
 }
 
 .cg-16px {
@@ -1527,6 +1634,146 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.hero__section {
+  height: 70vh;
+  overflow: hidden;
+}
+.hero__section .section__wrapper {
+  position: relative;
+}
+.hero__section .hero__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.our-services__section {
+  display: grid;
+  row-gap: 1.5rem;
+}
+@media (min-width: 1024px) {
+  .our-services__section {
+    row-gap: 4rem;
+  }
+}
+.our-services__section .card-services {
+  position: relative;
+  height: 250px;
+  padding: 2rem 1.75rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .our-services__section .card-services:nth-of-type(10), .our-services__section .card-services:nth-of-type(11), .our-services__section .card-services:nth-of-type(12) {
+    display: none;
+  }
+}
+.our-services__section .card-services__body {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  row-gap: 8px;
+  align-content: end;
+  height: 100%;
+}
+.our-services__section .card-services img {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+.cta-home__section {
+  position: relative;
+  height: 475px;
+  overflow: hidden;
+}
+.cta-home__section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cta-home__body {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  row-gap: 2rem;
+  align-content: end;
+  height: 100%;
+}
+
+.why-choose-us__img {
+  position: relative;
+}
+
+.special-offers__section {
+  position: relative;
+  height: 385px;
+}
+@media (max-width: 768px) {
+  .special-offers__body {
+    justify-items: center;
+    align-content: end;
+    height: 100%;
+  }
+}
+.special-offers__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonials__list {
+  padding-left: 1rem;
+}
+.testimonials__item {
+  display: grid;
+  row-gap: 1rem;
+  padding: 1rem;
+  border-radius: 16px;
+  background-color: #f8f8f6;
+}
+
+.check__list {
+  display: grid;
+  row-gap: 1.5rem;
+}
+.check__list li {
+  position: relative;
+  padding-left: 2.25rem;
+}
+.check__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  background-image: url("../images/check-orange-line.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: middle;
+}
+
+.coverage__body {
+  display: grid;
+  row-gap: 1.5rem;
+}
+.coverage__text {
+  padding: 0 5% 5rem;
 }
 
 /*# sourceMappingURL=main.css.map */

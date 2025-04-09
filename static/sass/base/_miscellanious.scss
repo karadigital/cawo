@@ -31,6 +31,12 @@
   height: 200px;
 }
 
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .w-60 {
   @include desktop-up {
     width: 75%;
@@ -64,7 +70,13 @@
   display: grid;
 }
 
-.d-lg-block {
+.d-md-flex {
+  @include desktop-up {
+    display: flex;
+  }
+}
+
+.d-md-block {
   @include desktop-up {
     display: block;
   }
@@ -177,7 +189,7 @@
 }
 
 .section__padding {
-  padding: 1.5rem 5%;
+  padding: 2.625rem 5%;
 
   @include desktop-up {
     padding: 2.5rem 5%;

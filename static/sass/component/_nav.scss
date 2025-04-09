@@ -68,3 +68,13 @@
 //   background-color: #CBE4FF;
 //   border-radius: 4px;
 // }
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-link__wrapper {
+  display: none;
+}

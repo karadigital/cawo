@@ -45,6 +45,7 @@ footer {
   font-family: "Figtree", sans-serif;
   font-size: 1rem;
   line-height: 150%;
+  color: $base;
 }
 
 a {
@@ -68,6 +69,11 @@ a {
 }
 
 .text-scale-lg {
+  @include font-size(2rem, 3rem); //32px, 48px
+  @include line-height(42px, 64px);
+}
+
+.text-scale-md {
   @include font-size(1.5rem, 2rem); //24px, 32px
   @include line-height(20px);
 }
@@ -77,7 +83,7 @@ a {
 }
 
 .text-scale-xs {
-  @include font-size(0.9375rem, 0.9375rem); //15px, 15px
+  @include font-size(0.875rem, 1rem); //14rem, 16rem
 }
 
 .text-scale-2xs {
@@ -142,6 +148,12 @@ Text Align
 .text-left {
   text-align: left;
 }
+
+.text-md-left {
+  @include desktop-up {
+    text-align: left;
+  }
+}
 .text-center {
   text-align: center;
 }
@@ -165,6 +177,12 @@ Text color
 
 .text-base {
   color: $base;
+}
+.text-base-darker {
+  color: $base-darker;
+}
+.text-base-darkest {
+  color: $base-darkest;
 }
 /*-------------------------------------------*\
 Text Decoration

@@ -1,128 +1,15 @@
-// .accordion {
-//   &__wrapper {
-//     border: 1px solid $stroke;
-//     border-radius: 10px;
-//     overflow: hidden;
-//     box-sizing: border-box;
-//     cursor: pointer;
-//     transition: all 0.3s ease; // Transisi halus untuk semua properti
-//   }
+.accordion {
+  &__body {
+    display: grid;
+    row-gap: 12px;
 
-//   &__wrapper.active {
-//     height: max-content;
-//     .accordion__content {
-//       height: max-content;
-//       opacity: 1;
-//       padding: 1.5rem 1.25rem;
-//     }
-//     .accordion__title::after {
-//       transform: rotate(180deg);
-//     }
-//   }
+    padding-left: 1.5rem;
+  }
+  &__img {
+    border-radius: 16px;
+    overflow: hidden;
+    height: 200px;
 
-//   &__title {
-//     display: grid;
-//     grid-template-columns: 1fr auto;
-//     align-items: baseline;
-
-//     background-color: $grey-50;
-//     padding: 0.625rem 1.25rem;
-
-//     &::after {
-//       content: '';
-//       width: 24px;
-//       height: 24px;
-//       background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDE1TDEyIDlMNiAxNSIgc3Ryb2tlPSIjMUYyMDIxIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K") !important;
-//       background-repeat: no-repeat;
-//       background-size: contain;
-//       transition: transform 0.3s ease;
-//     }
-//   }
-
-//   &__content {
-//     height: 0;
-//     color: $grey-600;
-//     opacity: 0;
-//     overflow: hidden;
-//     transition: height 0.3s ease, opacity 0.3s ease;
-//   }
-// }
-// // For marketting website
-// .accordion-website {
-//   &__wrapper {
-//     // border: 1px solid $stroke;
-//     // border-radius: 10px;
-//     overflow: hidden;
-//     box-sizing: border-box;
-//     cursor: pointer;
-//     transition: all 0.3s ease; // Transisi halus untuk semua properti
-//     border-bottom: 1px solid $gray-cool-10;
-
-//   }
-
-//   &__wrapper.active {
-//     height: max-content;
-//     .accordion-website__content {
-//       height: max-content;
-//       opacity: 1;
-//       padding: 0 0 1.5rem;
-//     }
-
-//     .accordion-website__title::after {
-//       // transform: rotate(180deg);
-//       background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjYiIHZpZXdCb3g9IjAgMCAyNCAyNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTggMTRIMTZNMjIgMTRDMjIgMTkuNTIyOCAxNy41MjI4IDI0IDEyIDI0QzYuNDc3MTUgMjQgMiAxOS41MjI4IDIgMTRDMiA4LjQ3NzE1IDYuNDc3MTUgNCAxMiA0QzE3LjUyMjggNCAyMiA4LjQ3NzE1IDIyIDE0WiIgc3Ryb2tlPSIjMDA1RUEyIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K");
-//     }
-//   }
-
-//   &__title {
-//     display: grid;
-//     grid-template-columns: 1fr auto;
-//     align-items: baseline;
-
-//     // background-color: $grey-50;
-//     padding: 1.5rem 0;
-
-//     &::after {
-//       content: '';
-//       width: 24px;
-//       height: 24px;
-//       background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjYiIHZpZXdCb3g9IjAgMCAyNCAyNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDEwVjE4TTggMTRIMTZNMjIgMTRDMjIgMTkuNTIyOCAxNy41MjI4IDI0IDEyIDI0QzYuNDc3MTUgMjQgMiAxOS41MjI4IDIgMTRDMiA4LjQ3NzE1IDYuNDc3MTUgNCAxMiA0QzE3LjUyMjggNCAyMiA4LjQ3NzE1IDIyIDE0WiIgc3Ryb2tlPSIjMDA1RUEyIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K");
-//       background-repeat: no-repeat;
-//       background-size: contain;
-//       transition: transform 0.3s ease;
-//     }
-//   }
-
-//   &__content {
-//     height: 0;
-//     @include font-size(1rem, 1rem);
-//     color: $grey-600;
-//     opacity: 0;
-//     overflow: hidden;
-//     transition: height 0.3s ease, opacity 0.3s ease;
-//   }
-// }
-
-// .dropdown {
-//   &-menu {
-//     padding: 0;
-//     border: none;
-//     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
-//     &.show {
-//       transform: translate3d(0px, 52.5px, 0px) !important;
-//     }
-//   }
-
-//   &-item {
-//     padding: 0.75rem;
-//     &:hover {
-//       background-color: $blue-10;
-//       color: $base-darkest;
-//     }
-//   }
-// }
-
-// // Google dropdown icon
-// .dropdown-toggle::after {
-//   content: none;
-// }
+    margin-top: 1rem;
+  }
+}

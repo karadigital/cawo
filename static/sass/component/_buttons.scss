@@ -33,14 +33,17 @@ $button-stroke: inset 0 0 0 2px;
 .button {
   background-color: $primary;
   border: 0;
-  border-radius: 0.25rem;
+  border-radius: 8px;
   min-width: 7.375rem;
-  padding: 0.75rem 1.25rem;
-
+  padding: 1rem 2rem;
+  width: max-content;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   color: $white;
+  line-height: 20px;
+  box-sizing: border-box;
+  text-align: center;
 
   // BIG
   &--big {
@@ -152,6 +155,7 @@ $button-stroke: inset 0 0 0 2px;
 .button--white {
   background-color: $white;
   color: $primary;
+  border: 1px solid $primary;
   &:hover img {
     filter: brightness(0) invert(1);
   }
