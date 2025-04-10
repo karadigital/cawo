@@ -17,42 +17,23 @@ f footer {
 
 .mobile-only {
   @include desktop-up {
-    display: none !important;
+    display: none;
   }
 }
 
 .desktop-only {
-  display: none !important;
+  display: none;
 
   @include desktop-up {
-    display: block !important;
+    display: block;
   }
 }
 
 a {
   text-decoration: none;
-  // &:hover {
-  // 	color: $primary-dark;
-  // }
-  &.web-link:hover {
-    color: unset;
-  }
 }
 
 .content-container {
   display: grid;
   grid-template-columns: 230px 1fr;
-}
-
-.usa-link {
-  color: $primary;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  // &:hover {
-  //   color: $primary-dark;
-  // }
-  // &:focus {
-  //   outline: 0.25rem solid $blue-vivid-40v;
-  //   outline-offset: 0;
-  // }
 }

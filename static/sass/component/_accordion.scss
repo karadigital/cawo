@@ -1,15 +1,97 @@
 .accordion {
   &__body {
+    position: relative;
     display: grid;
     row-gap: 12px;
-
     padding-left: 1.5rem;
   }
+
+  &__title {
+    color: $white;
+  }
+
   &__img {
     border-radius: 16px;
     overflow: hidden;
     height: 200px;
-
     margin-top: 1rem;
+  }
+
+  &__item {
+    cursor: pointer;
+    .accordion__img {
+      display: none;
+    }
+
+    &.active {
+      .accordion__body::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: $primary;
+        height: 100%;
+        width: 6px;
+      }
+
+      .accordion__title {
+        color: $primary;
+      }
+
+      .accordion__img {
+        display: block;
+      }
+    }
+  }
+
+  @include desktop-up {
+    &__item .accordion__img {
+      display: none !important;
+    }
+
+    // .how-it-works__img-desktop {
+    //   .accordion__img {
+    //     display: none;
+    //     position: absolute;
+    //     inset: 0;
+    //     object-fit: cover;
+    //     border-radius: 16px;
+    //     height: 100%;
+    //     width: 100%;
+
+    //     &.active {
+    //       display: block;
+    //     }
+    //   }
+    // }
+  }
+}
+
+.how-it-works {
+  &__section {
+    display: grid;
+    row-gap: 2.625rem;
+
+    @include desktop-up {
+      row-gap: 5rem;
+    }
+  }
+
+  &__img-desktop {
+    position: relative;
+
+    .accordion__img {
+      display: none;
+      position: absolute;
+      inset: 0;
+      object-fit: cover;
+      border-radius: 16px;
+      height: 100%;
+      width: 100%;
+
+      &.active {
+        display: block;
+      }
+    }
   }
 }

@@ -1,80 +1,23 @@
-// /*-------------------------------------------*\
-// Top Nav
-// \*-------------------------------------------*/
-// .usa-header {
-//   display: flex;
-//   align-items: center;
-
-//   height: 80px;
-//   padding-inline: 2.5rem;
-//   background: $primary-darker;
-// }
-
-// .usa-navbar {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-// }
-
-// .usa-identifier__logo-name {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-
-//   @include square(36px, $radius: 50%);
-//   border: 1px solid $white;
-//   background-color: $rest;
-
-//   color: $white;
-// }
-
-// .notification {
-//   &__wrapper { position: relative; }
-//   &__counter {
-//     position: absolute;
-//     top: -8px;
-//     left: -8px;
-//     background-color: $red-cool-50;
-//     @include square(18px, $radius: 0);
-//     border-radius: 4px;
-
-//     color: $white;
-//     text-align: center;
-//   }
-// }
-
-// /*-------------------------------------------*\
-// Side Nav
-// \*-------------------------------------------*/
-// .sidenav__wrapper {
-//   display: grid;
-//   row-gap: 1.5rem;
-//   align-content: baseline;
-
-//   background: $gray-4;
-//   min-height: calc(100vh - 80px - 38.49px); //height of navbar & footer
-//   height: 100%;
-
-//   box-sizing: border-box;
-//   padding: 1.5rem;
-// }
-
-// .link-item {
-//   padding: 12px 8px;
-// }
-
-// .link-active {
-//   font-weight: 600;
-//   background-color: #CBE4FF;
-//   border-radius: 4px;
-// }
-
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
 
-.nav-link__wrapper {
+  padding: 1rem 5%;
+  @include desktop-up {
+    padding: 3.25rem 5% 0;
+  }
+}
+.menu__mobile {
+  @include desktop-up {
+    display: none;
+  }
+}
+.nav-link__desktop {
   display: none;
+
+  @include desktop-up {
+    display: flex;
+    column-gap: 1.5rem;
+  }
 }

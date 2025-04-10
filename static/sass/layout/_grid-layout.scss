@@ -1,25 +1,9 @@
-.rows-3 {
-  grid-template-rows: repeat(3, minmax(0, 1fr));
-}
-
-.cols-md-3 {
-  @include desktop-up {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
 .cols-2fr-1fr {
   grid-template-columns: 2fr 1fr;
 }
 
 .cols-detail {
   grid-template-columns: 2fr 0.75fr;
-}
-
-.cols-md-4 {
-  @include desktop-up {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
 }
 
 .cols-3 {
@@ -33,6 +17,18 @@
 .cols-md-2 {
   @include desktop-up {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.cols-md-3 {
+  @include desktop-up {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.cols-md-4 {
+  @include desktop-up {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
@@ -50,6 +46,12 @@
 
 .rg-16px {
   row-gap: 1rem;
+}
+
+.rg-md-16 {
+  @include desktop-up {
+    row-gap: 1rem;
+  }
 }
 
 .rg-24px {
@@ -71,6 +73,12 @@
 
 .rg-md-32px {
   @include desktop-up {
+    row-gap: 2rem;
+  }
+}
+
+.rg-lg-32px {
+  @include monitor-up {
     row-gap: 2rem;
   }
 }
@@ -102,6 +110,24 @@
 .cg-32px {
   column-gap: 2rem;
 }
-.cg-40px {
-  column-gap: 2.5rem;
+
+.cg-48px {
+  column-gap: 3rem;
+}
+
+.cg-md-16px {
+  @include desktop-up {
+    column-gap: 1rem;
+  }
+}
+.cg-md-32px {
+  @include desktop-up {
+    column-gap: 2rem;
+  }
+}
+
+.cg-lg-32px {
+  @include monitor-up {
+    column-gap: 2rem;
+  }
 }

@@ -1,0 +1,25 @@
+// Go to component
+
+.check__list {
+  display: grid;
+  row-gap: 1.5rem;
+  li {
+    position: relative;
+    padding-left: 2.25rem;
+  }
+  li::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-image: url("../images/check-orange-line.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+  }
+}

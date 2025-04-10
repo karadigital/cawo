@@ -38,18 +38,19 @@ $button-stroke: inset 0 0 0 2px;
   padding: 1rem 2rem;
   width: max-content;
   font-size: 1rem;
+  line-height: 20px;
   font-weight: 600;
   text-decoration: none;
   color: $white;
-  line-height: 20px;
   box-sizing: border-box;
   text-align: center;
 
   // BIG
   &--big {
-    border-radius: 0.25rem;
-    font-size: 1.46rem;
-    padding: 1rem 1.5rem;
+    @include desktop-up {
+      padding: 1.5rem 2rem;
+      font-size: 1.5rem;
+    }
   }
 
   // Default
@@ -79,23 +80,13 @@ $button-stroke: inset 0 0 0 2px;
   // }
 }
 
-.usa-icon {
-  position: relative;
-
-  display: inline-block;
-  flex-shrink: 0; // Avoid shrinking on small screens.
-
-  @include square(1em, $radius: 0);
-  fill: currentColor;
-}
-
 .button--outline {
   background-color: transparent;
-  box-shadow: $button-stroke $primary;
   padding-inline: 1.25rem;
   font-weight: 500;
   color: $primary;
-
+  border: 1px solid $primary;
+  text-align: center;
   &:visited {
     color: $primary;
   }
@@ -153,63 +144,7 @@ $button-stroke: inset 0 0 0 2px;
 // }
 
 .button--white {
-  background-color: $white;
-  color: $primary;
-  border: 1px solid $primary;
-  &:hover img {
-    filter: brightness(0) invert(1);
-  }
-}
-// Unstyled
-.button--unstyled {
   background-color: transparent;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  padding: 0;
-
-  color: $primary;
-  text-decoration: underline;
-  font-weight: 400;
-  justify-content: normal;
-
-  &:hover,
-  &.button--hover,
-  &:disabled:hover,
-  &[aria-disabled="true"]:hover,
-  &:disabled.button--hover,
-  &[aria-disabled="true"].button--hover,
-  &:active,
-  &.button--active,
-  &:disabled:active,
-  &[aria-disabled="true"]:active,
-  &:disabled.button--active,
-  &[aria-disabled="true"].button--active,
-  &:disabled:focus,
-  &[aria-disabled="true"]:focus,
-  &:disabled.focus,
-  &[aria-disabled="true"].focus,
-  &:disabled,
-  &[aria-disabled="true"],
-  &.button--disabled {
-    background-color: transparent;
-    box-shadow: none;
-    text-decoration: underline;
-  }
-
-  // &.button--hover {
-  //   color: $primary-dark;
-  // }
-
-  // &.button--active {
-  //   color: $primary-darker;
-  // }
-
-  // &:disabled,
-  // &[aria-disabled="true"],
-  // &:disabled:hover,
-  // &[aria-disabled="true"]:hover,
-  // &[aria-disabled="true"]:focus {
-  //   color: $disabled;
-  // }
+  color: $white;
+  border: 1px solid $white;
 }

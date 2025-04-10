@@ -75,11 +75,17 @@ a {
 
 .text-scale-md {
   @include font-size(1.5rem, 2rem); //24px, 32px
+  @include line-height(40px);
+}
+
+.text-scale-2md {
+  @include font-size(1.25rem, 1.5rem); //20px, 24px
   @include line-height(20px);
 }
 
 .text-scale-sm {
   @include font-size(1rem, 1.5rem); //16px, 24px
+  @include line-height(24px, 32px);
 }
 
 .text-scale-xs {
@@ -118,6 +124,10 @@ a {
   @include font-size(0.625rem, 0.625rem !important); //10px
   line-height: normal;
 }
+.text-list {
+  @include font-size(1rem, 1.5rem); //16px, 24px
+  @include line-height(20px);
+}
 /*-------------------------------------------*\
 Font Weight
 \*-------------------------------------------*/
@@ -148,15 +158,16 @@ Text Align
 .text-left {
   text-align: left;
 }
+.text-center {
+  text-align: center;
+}
 
 .text-md-left {
   @include desktop-up {
     text-align: left;
   }
 }
-.text-center {
-  text-align: center;
-}
+
 .text-right {
   text-align: right;
 }

@@ -15,9 +15,7 @@
 .w-100 {
   width: 100% !important;
 }
-.w-98 {
-  width: 98%;
-}
+
 .h-100 {
   height: 100%;
 }
@@ -192,20 +190,10 @@
   padding: 2.625rem 5%;
 
   @include desktop-up {
-    padding: 2.5rem 5%;
+    padding: 5rem 5%;
   }
 }
-.web__padding {
-  padding: 3.5rem 5%;
 
-  @include desktop-up {
-    padding: 3.5rem 5%;
-  }
-
-  @include monitor-up {
-    padding: 4rem 12.5rem;
-  }
-}
 .cursor-pointer {
   cursor: pointer;
 }
@@ -223,21 +211,16 @@ hr {
   opacity: 1;
 }
 
-.img-100-contain {
-  @include square(100px, $radius: 0);
-  object-fit: contain;
-}
-
-.img-48-contain {
-  @include square(48px, $radius: 0);
-  object-fit: contain;
-  border-radius: 2.5px;
-}
-
 .vertical-align-middle {
   vertical-align: middle;
 }
 
 .z-index-1 {
   z-index: 1;
+}
+
+.border-radius-md-16px {
+  @include desktop-up {
+    border-radius: 16px;
+  }
 }
