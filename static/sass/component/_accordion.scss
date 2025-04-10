@@ -34,8 +34,14 @@
         width: 6px;
       }
 
+      .accordion__body p {
+        opacity: 1;
+        color: $white;
+      }
+
       .accordion__title {
         color: $primary;
+        opacity: 1;
       }
 
       .accordion__img {
