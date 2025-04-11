@@ -815,7 +815,11 @@
             id="message"
             placeholder="Briefly describe the issue or any specific requests"
             rows="4"
+            maxlength="1000"
           ></textarea>
+          <p id="char-count" class="text-scale-xs opacity-70 ml-auto">
+            0 / 1000
+          </p>
         </div>
 
         <div class="input__layout car-registration-number">
@@ -1003,6 +1007,14 @@
           },
         }).mount();
       });
+
+      // Counter
+      $("#message").on("input", function () {
+        const currentLength = $(this).val().length;
+        $("#char-count").text(`${currentLength} / 1000`);
+      });
+
+      $("#char-count").text(`${$("#message").val().length} / 1000`);
     </script>
   </body>
 </html>
