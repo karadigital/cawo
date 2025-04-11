@@ -73,7 +73,9 @@
 .d-grid {
   display: grid;
 }
-
+.d-block {
+  display: block;
+}
 .d-md-flex {
   @include desktop-up {
     display: flex;

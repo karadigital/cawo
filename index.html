@@ -26,22 +26,25 @@
     <section class="hero__section img-behind-text__wrapper">
       <nav class="nav section__wrapper">
         <div class="nav-link__desktop">
-          <a href="" class="text-white">Home</a>
+          <!-- Hide first. Enabled after there is new pages -->
+
+          <!-- <a href="" class="text-white">Home</a>
           <a href="" class="text-white">Services</a>
           <a href="" class="text-white">Locations</a>
           <a href="" class="text-white">Get a Quote</a>
           <a href="" class="text-white">About Us</a>
-          <a href="" class="text-white">Contact Us</a>
+          <a href="" class="text-white">Contact Us</a> -->
         </div>
         <img
           src="./static/images/instant-fix-logo.png"
           alt="company logo"
           class=""
         />
-        <div class="menu__mobile d-flex align-items-center cg-16px">
+        <!-- Hide first. Enabled after there is new pages -->
+        <!-- <div class="menu__mobile d-flex align-items-center cg-16px">
           <p>Menu</p>
           <img src="./static/images/hamburger.svg" alt="hamburger icon" />
-        </div>
+        </div> -->
       </nav>
       <!-- Hero -->
       <div class="">
@@ -59,8 +62,10 @@
               Sydney's Trusted Network of Mobile Repairers
             </p>
             <div class="hero__buttons">
-              <a href="" class="button">Get a Free Quote Now</a>
-              <a href="" class="button button--white">Our Services</a>
+              <a href="#contact-form" class="button">Get a Free Quote Now</a>
+              <a href="#our-services" class="button button--white"
+                >Our Services</a
+              >
             </div>
           </div>
         </div>
@@ -192,7 +197,10 @@
       </ul>
     </section>
     <!-- Services -->
-    <section class="section__wrapper section__padding our-services__section">
+    <section
+      id="our-services"
+      class="section__wrapper section__padding our-services__section"
+    >
       <div
         class="our-services__header d-grid rg-24px cols-md-2 align-items-center cg-48px"
       >
@@ -219,7 +227,10 @@
         </div>
       </div>
       <div class="d-grid cols-md-3 rg-16px rg-lg-32px cg-md-16px cg-lg-32px">
-        <div class="card-services img-behind-text__wrapper linear-black">
+        <div
+          id="bumper-repair"
+          class="card-services img-behind-text__wrapper linear-black"
+        >
           <img
             src="./static/images/bumper-repair.png"
             alt="Bumper repair"
@@ -233,7 +244,10 @@
             </p>
           </div>
         </div>
-        <div class="card-services img-behind-text__wrapper linear-black">
+        <div
+          id="alloy-wheel-repair"
+          class="card-services img-behind-text__wrapper linear-black"
+        >
           <img
             src="./static/images/aloy-wheel-repair.png"
             alt="Aloy wheel repair"
@@ -247,7 +261,10 @@
             </p>
           </div>
         </div>
-        <div class="card-services img-behind-text__wrapper linear-black">
+        <div
+          id="wheel-arc-scratch-repair"
+          class="card-services img-behind-text__wrapper linear-black"
+        >
           <img
             src="./static/images/wheel-arc-scratch repair.png"
             alt="Wheel Arc Scratch repair"
@@ -261,7 +278,10 @@
             </p>
           </div>
         </div>
-        <div class="card-services img-behind-text__wrapper linear-black">
+        <div
+          id="paint-correction"
+          class="card-services img-behind-text__wrapper linear-black"
+        >
           <img
             src="./static/images/paint-correction.png"
             alt="Paint correction"
@@ -275,7 +295,10 @@
             </p>
           </div>
         </div>
-        <div class="card-services img-behind-text__wrapper linear-black">
+        <div
+          id="card-door-scratch-repair"
+          class="card-services img-behind-text__wrapper linear-black"
+        >
           <img
             src="./static/images/car-door-scratch repair.png"
             alt="Car door scratch repair"
@@ -289,7 +312,10 @@
             </p>
           </div>
         </div>
-        <div class="card-services img-behind-text__wrapper linear-black">
+        <div
+          id="small-car-dent-repair"
+          class="card-services img-behind-text__wrapper linear-black"
+        >
           <img
             src="./static/images/small-car-dent-repair.png"
             alt="Small car dent repair"
@@ -303,7 +329,10 @@
             </p>
           </div>
         </div>
-        <div class="card-services img-behind-text__wrapper linear-black">
+        <div
+          id="minor-car-scratch-repair"
+          class="card-services img-behind-text__wrapper linear-black"
+        >
           <img
             src="./static/images/minor-car-scratch-repair.png"
             alt="Minor car scratch repair repair"
@@ -317,7 +346,10 @@
             </p>
           </div>
         </div>
-        <div class="card-services img-behind-text__wrapper linear-black">
+        <div
+          id="presale-exterior-car-cleanup"
+          class="card-services img-behind-text__wrapper linear-black"
+        >
           <img
             src="./static/images/presale-exterior-car-cleanup.png"
             alt="Presale exterior car cleanup"
@@ -333,7 +365,10 @@
             </p>
           </div>
         </div>
-        <div class="card-services img-behind-text__wrapper linear-black">
+        <div
+          id="ceramic-coating"
+          class="card-services img-behind-text__wrapper linear-black"
+        >
           <img
             src="./static/images/ceramic-coating.png"
             alt="Ceramic coating"
@@ -347,7 +382,8 @@
             </p>
           </div>
         </div>
-        <a href="" class="button button--outline w-100 mobile-only"
+        <!-- Hide first and enabled later when services page is added -->
+        <a href="" class="button button--outline w-100 d-none"
           >See More Services</a
         >
       </div>
@@ -371,7 +407,9 @@
           Ready to Fix Your Car?
         </h2>
         <div class="d-grid rg-24px justify-content-center">
-          <a href="" class="button button--big">Get an Instant Quote</a>
+          <a href="#contact-form" class="button button--big"
+            >Get an Instant Quote</a
+          >
           <p class="text-scale-2md semi-bold text-white text-center">
             in Under 2 Minutes!
           </p>
@@ -403,7 +441,9 @@
           <li class="text-list">Competitive Pricing</li>
           <li class="text-list">Same-Day Service</li>
         </ul>
-        <a href="" class="button">Learn More</a>
+        <!-- Hide first. Enabled after there is new pages -->
+
+        <!-- <a href="javascript:void(0)" class="button">Learn More</a> -->
       </div>
       <div class="why-choose-us__img desktop-only">
         <img
@@ -556,7 +596,7 @@
           Save big on premium services with our exclusive promotions and
           discounts.
         </p>
-        <div class="d-grid d-md-flex align-items-center cg-24px">
+        <div class="d-grid d-md-flex align-items-center cg-24px rg-24px">
           <a href="" class="button button--big button--secondary"
             >Get an Instant Quote</a
           >
@@ -571,7 +611,7 @@
     <!-- Testimonials -->
     <section class="testimonials__section overflow-hidden">
       <div
-        class="section__padding text-with-curved__wrapper section__wrapper position-relative"
+        class="section__padding text-with-curved__wrapper section__wrapper position-relative d-grid rg-8px"
       >
         <img
           src="./static/images/decorative-bg-curved-orange.svg"
@@ -674,7 +714,7 @@
       </div>
     </section>
     <!-- Coverage Area -->
-    <section class="section__wrapper coverage__section">
+    <section id="coverage-area" class="section__wrapper coverage__section">
       <div class="coverage__header d-grid rg-16px">
         <h2 class="text-scale-sm bold">Coverage Area</h2>
         <div class="d-grid rg-8px rg-md-24px">
@@ -685,7 +725,7 @@
             <br />
             Quality, Convenience, and Expertise
           </p>
-          <p>
+          <p class="opacity-70">
             Whether you’re near or far, our expert services are just around the
             corner.
           </p>
@@ -708,15 +748,91 @@
             </p>
           </div>
           <ul class="check__list d-grid rg-24px">
-            <li class="text-list">Eastern Suburbs</li>
-            <li class="text-list">Inner West</li>
-            <li class="text-list">North Shore</li>
-            <li class="text-list">Western Sydney</li>
-            <li class="text-list">Southern Sydney</li>
-            <li class="text-list">Northern Beaches</li>
+            <li id="eastern-suburbs" class="text-list">Eastern Suburbs</li>
+            <li id="inner-west" class="text-list">Inner West</li>
+            <li id="north-shore" class="text-list">North Shore</li>
+            <li id="eastern-sydney" class="text-list">Western Sydney</li>
+            <li id="southern-sydney" class="text-list">Southern Sydney</li>
+            <li id="northern-beaches" class="text-list">Northern Beaches</li>
           </ul>
         </div>
       </div>
+    </section>
+    <!-- Form -->
+    <section
+      id="contact-form"
+      class="section__wrapper section__padding d-grid rg-24px cols-md-2 cg-32px align-items-start"
+    >
+      <div class="d-grid rg-16px rg-md-24px">
+        <h2 class="text-scale-sm bold">Get a Quote</h2>
+        <span class="text-scale-xl medium text-primary">Instant Quote</span>
+        <p class="text-scale-xl medium">in Under 2 minutes!</p>
+      </div>
+      <form name="contact" netlify class="d-grid rg-24px rg-md-32px">
+        <div class="input__layout name">
+          <label class="medium" for="name"
+            >Name <sup class="text-error">*</sup></label
+          >
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Your Full Name"
+            required
+          />
+        </div>
+
+        <div class="input__layout mobile-number">
+          <label class="medium" for="mobile-number"
+            >Mobile number <sup class="text-error">*</sup></label
+          >
+          <input
+            type="tel"
+            name="mobile-number"
+            id="mobile-number"
+            placeholder="Your Mobile Number"
+            required
+          />
+        </div>
+
+        <div class="input__layout email">
+          <label class="medium" for="email"
+            >Email <sup class="text-error">*</sup></label
+          >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="For Invoicing"
+            required
+          />
+        </div>
+
+        <div class="input__layout message">
+          <label class="medium" for="message">Comment or message</label>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Write your message..."
+          ></textarea>
+        </div>
+
+        <div class="input__layout car-registration-number">
+          <label class="medium" for="car-registration-number"
+            >Car registration number</label
+          >
+          <input
+            type="text"
+            name="car-registration-number"
+            id="car-registration-number"
+            placeholder="e.g., B 1234 CD"
+          />
+        </div>
+
+        <button type="submit" class="submit button button--tertiary">
+          Submit
+        </button>
+      </form>
     </section>
     <!-- Footer -->
     <footer class="bg-secondary">
@@ -725,40 +841,73 @@
           <img src="./static/images/instant-fix-logo.png" alt="Company logo" />
           <div class="d-grid rg-42px cols-md-4">
             <div class="">
-              <p class="text-size-24 mb-3">Service Area</p>
+              <a href="#coverage-area" class="d-block text-size-24 mb-3"
+                >Service Area</a
+              >
               <div class="d-grid rg-8px">
-                <a href="" class="opacity-50">Sydney CBD</a>
-                <a href="" class="opacity-50">Eastern Suburbs</a>
-                <a href="" class="opacity-50">North Shore</a>
-                <a href="" class="opacity-50">Inner West</a>
+                <a href="#eastern-suburbs" class="opacity-50"
+                  >Eastern Suburbs</a
+                >
+                <a href="#inner-west" class="opacity-50">Inner West</a>
+                <a href="#north-shore" class="opacity-50">North Shore</a>
+                <a href="#eastern-sydney" class="opacity-50">Western Sydney</a>
+                <a href="#southern-sydney" class="opacity-50"
+                  >Southern Sydney</a
+                >
+                <a href="#northern-beaches" class="opacity-50"
+                  >Northern Beaches</a
+                >
               </div>
             </div>
             <div class="">
               <p class="text-size-24 mb-3">Services</p>
               <div class="d-grid rg-8px">
-                <a href="" class="opacity-50">Bumper Repair</a>
-                <a href="" class="opacity-50">Alloy Wheel Repair</a>
-                <a href="" class="opacity-50">Wheel Arc Scratch Repair</a>
-                <a href="" class="opacity-50">Paint Correction</a>
-                <a href="" class="opacity-50">Car Door Scratch Repair</a>
-                <a href="" class="opacity-50">Small Car Dent Repair</a>
-                <a href="" class="opacity-50">Minor Car Scratch Repair</a>
-                <a href="" class="opacity-50">Presale Exterior Car Cleanup</a>
-                <a href="" class="opacity-50">Ceramic Coating</a>
+                <a href="#bumper-repair" class="opacity-50">Bumper Repair</a>
+                <a href="#alloy-wheel-repair" class="opacity-50"
+                  >Alloy Wheel Repair</a
+                >
+                <a href="#wheel-arc-scratch-repair" class="opacity-50"
+                  >Wheel Arc Scratch Repair</a
+                >
+                <a href="#paint-correction" class="opacity-50"
+                  >Paint Correction</a
+                >
+                <a href="#card-door-scratch-repair" class="opacity-50"
+                  >Car Door Scratch Repair</a
+                >
+                <a href="#small-car-dent-repair" class="opacity-50"
+                  >Small Car Dent Repair</a
+                >
+                <a href="#minor-car-scratch-repair" class="opacity-50"
+                  >Minor Car Scratch Repair</a
+                >
+                <a href="#presale-exterior-car-cleanup" class="opacity-50"
+                  >Presale Exterior Car Cleanup</a
+                >
+                <a href="#ceramic-coating" class="opacity-50"
+                  >Ceramic Coating</a
+                >
               </div>
             </div>
             <div class="d-grid rg-32px">
               <div class="">
                 <p class="text-size-24 mb-3">Contact Us</p>
                 <div class="d-grid rg-8px">
-                  <div class="d-flex align-items-center cg-12px">
+                  <a
+                    href="tel:+61292726888"
+                    class="d-flex align-items-center cg-12px"
+                  >
                     <img src="./static/images/phone.svg" alt="Phone number" />
                     <p class="opacity-50">+61 292726888</p>
-                  </div>
-                  <div class="d-flex align-items-center cg-12px">
+                  </a>
+                  <a
+                    href="mailto:hello@instantfix.com"
+                    target="_blank"
+                    class="d-flex align-items-center cg-12px"
+                  >
                     <img src="./static/images/email.svg" alt="email" />
                     <p class="opacity-50">hello@instantfix.com</p>
-                  </div>
+                  </a>
                   <div class="d-flex align-items-center cg-12px">
                     <img src="./static/images/website.svg" alt="website" />
                     <p class="opacity-50">www.instantfix.com.au</p>
@@ -772,7 +921,7 @@
                   </div>
                 </div>
               </div>
-              <p class="text-size-24 mb-3">About Us</p>
+              <p class="text-size-24 mb-3 d-none">About Us</p>
               <p class="text-size-24 mb-3">Get a Quote</p>
             </div>
             <div class="">

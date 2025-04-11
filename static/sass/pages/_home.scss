@@ -105,6 +105,10 @@
         row-gap: 8px;
         align-content: end;
 
+        @include mobile {
+          height: 100%;
+        }
+
         @include desktop-up {
           position: absolute;
           top: 45%;

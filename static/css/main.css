@@ -220,6 +220,7 @@ f footer {
 
 a {
   text-decoration: none;
+  line-height: 48px;
 }
 
 .content-container {
@@ -407,24 +408,6 @@ a {
   }
 }
 
-.text-scale-2xs {
-  font-size: 0.875rem;
-}
-@media (min-width: 1024px) {
-  .text-scale-2xs {
-    font-size: 0.875rem;
-  }
-}
-
-.text-scale-3xs {
-  font-size: 0.8125rem;
-}
-@media (min-width: 1024px) {
-  .text-scale-3xs {
-    font-size: 0.8125rem;
-  }
-}
-
 .text-size-32 {
   font-size: 2rem;
   line-height: normal;
@@ -447,6 +430,21 @@ a {
 @media (min-width: 1024px) {
   .text-size-24 {
     line-height: 48px;
+  }
+}
+
+.text-size-14 {
+  font-size: 0.8125rem;
+  line-height: 22px;
+}
+@media (min-width: 1024px) {
+  .text-size-14 {
+    font-size: 0.8125rem;
+  }
+}
+@media (min-width: 1024px) {
+  .text-size-14 {
+    line-height: 22px;
   }
 }
 
@@ -570,6 +568,10 @@ Text color
   color: #222222;
 }
 
+.text-error {
+  color: #f71111;
+}
+
 /*-------------------------------------------*\
 Text Decoration
 \*-------------------------------------------*/
@@ -677,25 +679,51 @@ input[type=search],
 input[type=datetime-local],
 select {
   display: block;
-  border-radius: 0;
+  border: 1px solid #c0bdcd;
+  border-radius: 8px;
+  color: #222222;
   height: 2.5rem !important;
-  margin-top: 0.5rem;
   padding: 0.5rem !important;
   width: 100%;
   box-sizing: border-box;
   overflow: visible;
 }
-
-.contact__form .web-input {
-  height: 2.75rem !important;
+input[type=text]::placeholder,
+input[type=password]::placeholder,
+input[type=date]::placeholder,
+input[type=email]::placeholder,
+input[type=number]::placeholder,
+input[type=tel]::placeholder,
+input[type=search]::placeholder,
+input[type=datetime-local]::placeholder,
+select::placeholder {
+  color: #c0bdcd;
 }
-.contact__form .web-input,
-.contact__form .web-textarea {
-  border-radius: 8px;
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=date]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+input[type=tel]:focus,
+input[type=search]:focus,
+input[type=datetime-local]:focus,
+select:focus {
+  outline: none;
+  border-color: #c0bdcd;
 }
 
 textarea {
+  border: 1px solid #c0bdcd;
+  border-radius: 8px;
+  color: #222222;
   padding: 0.5rem !important;
+}
+textarea::placeholder {
+  color: #c0bdcd;
+}
+textarea:focus {
+  outline: none;
+  border-color: #c0bdcd;
 }
 
 select {
@@ -824,6 +852,10 @@ input.form-control {
 
 .d-grid {
   display: grid;
+}
+
+.d-block {
+  display: block;
 }
 
 @media (min-width: 1024px) {
@@ -1457,6 +1489,13 @@ button {
   background-color: #0b2353;
 }
 
+.button--tertiary {
+  background-color: #4318ff;
+  min-width: 13rem;
+  border-radius: 30px;
+  padding: 0.875rem;
+}
+
 .button--white {
   background-color: transparent;
   color: #fff;
@@ -1555,6 +1594,39 @@ button {
   width: 1.5rem;
   height: 1.5rem;
   vertical-align: middle;
+}
+
+form {
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.1019607843);
+  display: grid;
+  grid-template-areas: "name" "mobile-number" "email" "crn" "message" "submit";
+  column-gap: 2rem;
+}
+@media (min-width: 1024px) {
+  form {
+    grid-template-areas: "name crn" "mobile-number email" "message message" "submit .";
+  }
+}
+form .name {
+  grid-area: name;
+}
+form .car-registration-number {
+  grid-area: crn;
+}
+form .mobile-number {
+  grid-area: mobile-number;
+}
+form .email {
+  grid-area: email;
+}
+form .message {
+  grid-area: message;
+}
+form .submit {
+  grid-area: submit;
 }
 
 .cols-2fr-1fr {
@@ -1695,7 +1767,7 @@ button {
 
 .input__layout {
   display: grid;
-  row-gap: 8px;
+  row-gap: 12px;
 }
 
 .img-behind-text__wrapper {
@@ -1790,6 +1862,11 @@ button {
   display: grid;
   row-gap: 8px;
   align-content: end;
+}
+@media (max-width: 768px) {
+  .our-services__section .card-services__body {
+    height: 100%;
+  }
 }
 @media (min-width: 1024px) {
   .our-services__section .card-services__body {
