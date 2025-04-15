@@ -13,32 +13,39 @@ input[type="datetime-local"],
 select {
   display: block;
 
-  // border: 1px solid $base-dark !important;
-  border-radius: 0;
-  // color: $base-darkest;
+  border: 1px solid #c0bdcd;
+  border-radius: 8px;
+  color: $base-darkest;
   height: 2.5rem !important;
-  margin-top: 0.5rem;
+  // margin-top: 0.5rem;
   padding: 0.5rem !important;
   width: 100%;
   box-sizing: border-box;
 
   overflow: visible;
 
-  // &::placeholder {
-  //   color: $gray-50;
-  // }
-}
-.contact__form {
-  .web-input {
-    height: 2.75rem !important;
+  &::placeholder {
+    color: #c0bdcd;
   }
-  .web-input,
-  .web-textarea {
-    border-radius: 8px;
+  &:focus {
+    outline: none;
+    border-color: #c0bdcd;
   }
 }
+
 textarea {
+  border: 1px solid #c0bdcd;
+  border-radius: 8px;
+  color: $base-darkest;
+
   padding: 0.5rem !important;
+  &::placeholder {
+    color: #c0bdcd;
+  }
+  &:focus {
+    outline: none;
+    border-color: #c0bdcd;
+  }
 }
 
 select {

@@ -119,6 +119,13 @@ $button-stroke: inset 0 0 0 2px;
   // }
 }
 
+.button--tertiary {
+  background-color: #4318ff;
+  min-width: 13rem;
+  border-radius: 30px;
+  padding: 0.875rem;
+}
+
 // Cannot use disabled mixin due to transparent causing build errors with color grade check.
 // .button--outline:disabled,
 // .button--outline[aria-disabled="true"],
