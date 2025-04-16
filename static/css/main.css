@@ -2089,15 +2089,29 @@ form .submit {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.modal-caption {
+  width: 600px;
+}
 .modal-content {
   background-color: #fefefe;
-  margin: 10% auto;
-  padding: 20px;
+  margin: 5% auto;
+  padding: 30px;
   border: 1px solid #888;
   width: 90%;
-  max-width: 500px;
+  max-width: 700px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   animation: modalopen 0.3s;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 /*# sourceMappingURL=main.css.map */

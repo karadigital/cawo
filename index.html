@@ -489,7 +489,23 @@
     <!-- The Modal -->
     <section id="registration-modal" class="modal">
       <div class="modal-content">
+        <div class="d-grid rg-16px rg-md-24px">
+          <div class="hero__buttons">
+            <h2 class="text-scale-sm bold">Get a Quote</h2>
+            <button type="button" class="cursor-pointer" id="btn-close-modal">Close</button>
+          </div>
+          <div class="modal-caption">
+            <span class="text-scale-xl medium text-primary">Instant Quote </span>
+            <span class="text-scale-xl medium">in Under 2 minutes!</span>
+            <p>Autofill your car information by entering your rego</p>
+          </div>
+        </div>
         <form name="contact" netlify class="d-grid rg-24px rg-md-32px">
+          <div class="input__layout car-registration-number">
+            <label class="medium" for="car-registration-number">Car registration number</label>
+            <input type="text" name="car-registration-number" id="car-registration-number" placeholder="e.g., B 1234 CD" />
+          </div>
+
           <div class="input__layout name">
             <label class="medium" for="name">Name <sup class="text-error">*</sup></label>
             <input type="text" name="name" id="name" placeholder="Your Full Name" required />
@@ -515,11 +531,6 @@
               maxlength="1000"
             ></textarea>
             <p id="char-count" class="text-scale-xs opacity-70 ml-auto">0 / 1000</p>
-          </div>
-
-          <div class="input__layout car-registration-number">
-            <label class="medium" for="car-registration-number">Car registration number</label>
-            <input type="text" name="car-registration-number" id="car-registration-number" placeholder="e.g., B 1234 CD" />
           </div>
 
           <button type="submit" class="submit button button--tertiary cursor-pointer">Submit</button>
