@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "scss:build": "sass src/scss:dist/css --style compressed --no-source-map",
+    "scss:watch": "sass --watch src/scss:dist/css --style expanded",
+    "copy:html": "cp src/index.html dist/",
+    "build": "yarn scss:build && yarn copy:html",
+    "dev": "concurrently \"yarn scss:watch\" \"live-server src\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "live-server": "^1.2.2",
+    "sass": "^1.72.0"
+  }
+}

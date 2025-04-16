@@ -669,14 +669,14 @@ textarea {
   resize: none;
 }
 
-input[type=text],
-input[type=password],
-input[type=date],
-input[type=email],
-input[type=number],
-input[type=tel],
-input[type=search],
-input[type=datetime-local],
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="search"],
+input[type="datetime-local"],
 select {
   display: block;
   border: 1px solid #c0bdcd;
@@ -688,25 +688,25 @@ select {
   box-sizing: border-box;
   overflow: visible;
 }
-input[type=text]::placeholder,
-input[type=password]::placeholder,
-input[type=date]::placeholder,
-input[type=email]::placeholder,
-input[type=number]::placeholder,
-input[type=tel]::placeholder,
-input[type=search]::placeholder,
-input[type=datetime-local]::placeholder,
+input[type="text"]::placeholder,
+input[type="password"]::placeholder,
+input[type="date"]::placeholder,
+input[type="email"]::placeholder,
+input[type="number"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="search"]::placeholder,
+input[type="datetime-local"]::placeholder,
 select::placeholder {
   color: #c0bdcd;
 }
-input[type=text]:focus,
-input[type=password]:focus,
-input[type=date]:focus,
-input[type=email]:focus,
-input[type=number]:focus,
-input[type=tel]:focus,
-input[type=search]:focus,
-input[type=datetime-local]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="search"]:focus,
+input[type="datetime-local"]:focus,
 select:focus {
   outline: none;
   border-color: #c0bdcd;
@@ -746,8 +746,8 @@ select {
 }
 
 /* Chrome, Safari, Edge, Opera */
-input[type=number]::-webkit-outer-spin-button,
-input[type=number]::-webkit-inner-spin-button {
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -1844,7 +1844,9 @@ form .submit {
   border-radius: 1rem;
 }
 @media (max-width: 768px) {
-  .our-services__section .card-services:nth-of-type(10), .our-services__section .card-services:nth-of-type(11), .our-services__section .card-services:nth-of-type(12) {
+  .our-services__section .card-services:nth-of-type(10),
+  .our-services__section .card-services:nth-of-type(11),
+  .our-services__section .card-services:nth-of-type(12) {
     display: none;
   }
 }
@@ -2076,4 +2078,26 @@ form .submit {
   }
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: modalopen 0.3s;
+}
 /*# sourceMappingURL=main.css.map */
