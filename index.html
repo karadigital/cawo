@@ -15,6 +15,40 @@
 
     <!-- Third party -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+    <style>
+      .file-list {
+        list-style: none;
+        margin-top: 10px;
+        padding: 0;
+      }
+
+      .file-list li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #f4f4f4;
+        padding: 5px 10px;
+        margin-bottom: 5px;
+        border-radius: 4px;
+      }
+
+      .file-list li span {
+        font-size: 14px;
+      }
+
+      .file-list li button {
+        background: none;
+        border: none;
+        color: red;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .file-list li button:hover {
+        text-decoration: underline;
+      }
+    </style>
+
   </head>
   <body>
     <section class="hero__section img-behind-text__wrapper">
@@ -497,38 +531,38 @@
             <p>Autofill your car information by entering your rego</p>
           </div>
         </div>
-        <form name="contact" netlify class="d-grid rg-24px rg-md-32px" enctype="multipart/form-data">
+        <form name="contactQuote" netlify class="d-grid rg-24px rg-md-32px" enctype="multipart/form-data">
           <div class="input__layout-modal name">
-            <label class="medium" for="name">Name <sup class="text-error">*</sup></label>
-            <input type="text" name="name" id="name" placeholder="Your Full Name" required />
+            <label class="medium" for="pop-name">Name <sup class="text-error">*</sup></label>
+            <input type="text" name="name" id="pop-name" placeholder="Your Full Name" required />
           </div>
           <div class="input__layout_modal car-registration-number">
-            <label class="medium" for="car-registration-number">Car registration number</label>
-            <input type="text" name="car-registration-number" id="car-registration-number" placeholder="e.g., B 1234 CD" />
+            <label class="medium" for="pop-car-registration-number">Car registration number</label>
+            <input type="text" name="car-registration-number" id="pop-car-registration-number" placeholder="e.g., B 1234 CD" />
           </div>
 
           <div class="input__layout_modalmobile-number">
-            <label class="medium" for="mobile-number">Mobile number <sup class="text-error">*</sup></label>
-            <input type="tel" name="mobile-number" id="mobile-number" placeholder="Your Mobile Number" required />
+            <label class="medium" for="pop-mobile-number">Mobile number <sup class="text-error">*</sup></label>
+            <input type="tel" name="mobile-number" id="pop-mobile-number" placeholder="Your Mobile Number" required />
           </div>
 
           <div class="input__layout_modal email">
-            <label class="medium" for="email">Email <sup class="text-error">*</sup></label>
-            <input type="email" name="email" id="email" placeholder="For Invoicing" required />
+            <label class="medium" for="pop-email">Email <sup class="text-error">*</sup></label>
+            <input type="email" name="email" id="pop-email" placeholder="For Invoicing" required />
           </div>
 
           <div class="input__layout_modal car-year">
-            <label class="medium" for="car-year">Manufacture and Year of Car</label>
-            <input type="text" name="car-year" id="car-year" placeholder="e.g., Honda Accord 2020" />
+            <label class="medium" for="pop-car-year">Manufacture and Year of Car</label>
+            <input type="text" name="car-year" id="pop-car-year" placeholder="e.g., Honda Accord 2020" />
           </div>
           <div class="input__layout_modal car-color">
-            <label class="medium" for="car-color">Car Color</label>
-            <input type="text" name="car-color" id="car-color" placeholder="e.g., Blue" />
+            <label class="medium" for="pop-car-color">Car Color</label>
+            <input type="text" name="car-color" id="pop-car-color" placeholder="e.g., Blue" />
           </div>
 
           <div class="input__layout_modal damage-type">
-            <label class="medium" for="damage-type">Type of Damage</label>
-            <select name="damage-type" id="damage-type">
+            <label class="medium" for="pop-damage-type">Type of Damage</label>
+            <select name="damage-type" id="pop-damage-type">
               <option value="">Select...</option>
               <option value="bumper-repair">Bumper Repair</option>
               <option value="alloy-wheel-repair">Alloy Wheel Repair</option>
@@ -542,54 +576,49 @@
             </select>
           </div>
           <div class="input__layout_modal service-type">
-            <label class="medium" for="service-type">Service Type</label>
-            <input type="text" name="service-type" id="service-type" placeholder="e.g., Blue" />
+            <label class="medium" for="pop-service-type">Service Type</label>
+            <input type="text" name="service-type" id="pop-service-type" placeholder="e.g., Blue" />
           </div>
 
           <div class="input__layout_modal book-date">
-            <label class="medium" for="book-date">Booking Date</label>
-            <input type="date" name="book-date" id="book-date" placeholder="" />
+            <label class="medium" for="pop-book-date">Booking Date</label>
+            <input type="date" name="book-date" id="pop-book-date" placeholder="" />
           </div>
           <div class="input__layout_modal book-time">
-            <label class="medium" for="book-time">Booking Time</label>
-            <input type="time" name="book-time" id="book-time" placeholder="" />
+            <label class="medium" for="pop-book-time">Booking Time</label>
+            <input type="time" name="book-time" id="pop-book-time" placeholder="" />
           </div>
 
           <div class="input__layout_modal message">
-            <label class="medium" for="message">Comment or message</label>
+            <label class="medium" for="pop-message">Comment or message</label>
             <textarea
               name="message"
-              id="message"
+              id="pop-message"
               placeholder="Briefly describe the issue or any specific requests"
               rows="4"
               maxlength="1000"
             ></textarea>
-            <p id="char-count" class="text-scale-xs opacity-70 ml-auto">0 / 1000</p>
+            <p id="pop-char-count" class="text-scale-xs opacity-70 ml-auto">0 / 1000</p>
           </div>
 
-          <label>
-            <span>Add file:</span>
-            <input name="file" type="file" />
-          </label>
 
-
-          <!-- Single file input managed dynamically -->
+          <!-- Add File Button -->
           <div class="input__layout-modal file-upload">
-            <label for="upload-file">Add Files (Max: 5):</label>
-            <input
-                    type="file"
-                    id="upload-file"
-                    accept=".jpg,.jpeg,.png,.pdf"
-                    onchange="handleFileUpload(this)"
-            />
-            <p class="help-text">Accepted formats: JPG, PNG, PDF. Max size: 5MB per file.</p>
+            <button type="button" id="add-file-button">Add File</button>
+            <p class="help-text">You can upload up to 5 files. Accepted formats: JPG, PNG, PDF.</p>
           </div>
 
-          <!-- Uploaded files list -->
-          <ul id="file-list" class="file-list"></ul>
+          <!-- Hidden file inputs -->
+          <div id="hidden-file-block" style="display: none;">
+            <input type="file" name="upload-image-1" id="upload-image-1" onchange="handleFileChange(1)" />
+            <input type="file" name="upload-image-2" id="upload-image-2" onchange="handleFileChange(2)" />
+            <input type="file" name="upload-image-3" id="upload-image-3" onchange="handleFileChange(3)" />
+            <input type="file" name="upload-image-4" id="upload-image-4" onchange="handleFileChange(4)" />
+            <input type="file" name="upload-image-5" id="upload-image-5" onchange="handleFileChange(5)" />
+          </div>
 
-          <!-- Hidden inputs that will send files to Netlify -->
-          <div id="hidden-file-inputs"></div>
+          <!-- File List -->
+          <ul id="file-list" class="file-list"></ul>
 
 
           <button type="submit" class="submit button button--tertiary cursor-pointer">Submit</button>
@@ -890,81 +919,117 @@
       $("#char-count").text(`${$("#message").val().length} / 1000`);
     </script>
     <script>
-      const maxFiles = 5; // Maximum number of files
-      const maxFileSize = 5 * 1024 * 1024; // 5MB in bytes
-      const fileList = []; // Array to track uploaded files
-      const fileListElement = document.getElementById("file-list");
-      const hiddenInputsContainer = document.getElementById("hidden-file-inputs");
+      const maxFiles = 5; // The maximum number of files that can be uploaded
+      const fileInputs = []; // Track which inputs are filled
+      const fileList = []; // Track file objects for display
+      const fileListElement = document.getElementById("file-list"); // The file list display
+      const hiddenFileBlock = document.getElementById("hidden-file-block"); // Hidden block for file inputs
 
-      function handleFileUpload(input) {
-        const files = Array.from(input.files); // Get selected files
-        const errors = [];
+      // Trigger the hidden file input to simulate clicking
+      function triggerFileInput(event) {
+        console.log("Triggering file input");
+        if (fileList.length >= maxFiles) {
+          alert("You can only upload up to 5 files.");
+          return;
+        }
 
-        files.forEach((file) => {
-          // Ensure maximum file limit is not exceeded
-          if (fileList.length >= maxFiles) {
-            errors.push("Maximum 5 files can be uploaded.");
-            return;
-          }
+        // Find the next available file input
+        const availableInput = getNextAvailableFileInput();
+        if (availableInput) {
+          console.log("Triggering file input", availableInput);
+          availableInput.click(); // Programmatically trigger the input
+        }
+      }
 
-          // Validate file size
-          if (file.size > maxFileSize) {
-            errors.push(`${file.name} exceeds the 5MB size limit.`);
-            return;
-          }
+      // Handle file input changes
+      function handleFileChange(index) {
+        const input = document.getElementById(`upload-image-${index}`);
+        if (!input || !input.files || input.files.length === 0) return;
 
-          // Add file to file list
-          if (!fileList.includes(file)) {
-            fileList.push(file);
-            addFileToList(file);
-            addHiddenInput(file);
-          }
+        const file = input.files[0]; // Get the selected file
+        if (validateFile(file)) {
+          addFile(file, index); // Add the file to the list
+        } else {
+          input.value = ""; // Clear the invalid file
+        }
+      }
+
+      // Validate a file before adding
+      function validateFile(file) {
+        const maxFileSize = 5 * 1024 * 1024; // Maximum size in bytes (5MB)
+        const allowedTypes = ["image/jpeg", "image/png", "application/pdf"]; // Allowed file types
+
+        if (!allowedTypes.includes(file.type)) {
+          alert(`${file.name} is not a valid file type. Only JPG, PNG, and PDF are allowed.`);
+          return false;
+        }
+
+        if (file.size > maxFileSize) {
+          alert(`${file.name} exceeds the maximum file size of 5MB.`);
+          return false;
+        }
+
+        return true;
+      }
+
+      // Add a file to the list and update UI
+      function addFile(file, index) {
+        // Check if the file already exists in the list
+        if (fileList.find((f) => f.name === file.name)) {
+          alert(`${file.name} has already been added.`);
+          return;
+        }
+
+        // Add file to the list
+        fileList.push(file);
+        fileInputs.push(index);
+
+        // Update the file list display
+        updateFileList();
+      }
+
+      // Remove a file from the list
+      function removeFile(index) {
+        const fileName = fileList[index].name; // Get the file name to remove
+        fileList.splice(index, 1); // Remove the file from the list
+
+        // Clear the corresponding hidden input
+        const inputIndex = fileInputs[index];
+        const input = document.getElementById(`upload-image-${inputIndex}`);
+        if (input) input.value = "";
+
+        // Update the input tracking and the UI
+        fileInputs.splice(index, 1);
+        updateFileList();
+        console.log(`${fileName} has been removed.`);
+      }
+
+      // Display the file list in the UI
+      function updateFileList() {
+        fileListElement.innerHTML = ""; // Clear the existing list
+
+        // Add each file to the list
+        fileList.forEach((file, index) => {
+          const li = document.createElement("li");
+          li.innerHTML = `
+        <span>${file.name}</span>
+        <button type="button" onclick="removeFile(${index})">Remove</button>
+      `;
+          fileListElement.appendChild(li);
         });
+      }
 
-        // Clear the file input
-        input.value = "";
-
-        // Show errors if any
-        if (errors.length > 0) {
-          alert(errors.join("\n"));
+      // Find the next available hidden file input
+      function getNextAvailableFileInput() {
+        for (let i = 1; i <= maxFiles; i++) {
+          const input = document.getElementById(`upload-image-${i}`);
+          if (input && !fileInputs.includes(i)) {
+            return input;
+          }
         }
+        return null; // No available inputs
       }
-
-      function addFileToList(file) {
-        // Create a list item for the uploaded file
-        const li = document.createElement("li");
-        li.innerHTML = `
-      <span>${file.name}</span>
-      <button type="button" onclick="removeFile('${file.name}')">Remove</button>
-    `;
-        fileListElement.appendChild(li);
-      }
-
-      function addHiddenInput(file) {
-        // Create a hidden file input for the form submission
-        const inputName = `file${fileList.length}`; // File field name (e.g., file1, file2, etc.)
-        const hiddenInput = document.createElement("input");
-        hiddenInput.type = "hidden";
-        hiddenInput.name = inputName;
-        hiddenInput.value = file.name; // Just using file name for now (replace with backend upload logic if needed)
-        hiddenInputsContainer.appendChild(hiddenInput);
-      }
-
-      function removeFile(fileName) {
-        // Remove the file from the file list
-        const fileIndex = fileList.findIndex((file) => file.name === fileName);
-        if (fileIndex !== -1) {
-          fileList.splice(fileIndex, 1);
-
-          // Remove file from visible list
-          const fileItems = Array.from(fileListElement.children);
-          fileItems[fileIndex].remove();
-
-          // Remove the corresponding hidden input
-          const hiddenInputs = Array.from(hiddenInputsContainer.children);
-          hiddenInputs[fileIndex].remove();
-        }
-      }
+      document.getElementById("add-file-button").addEventListener("click", triggerFileInput);
     </script>
   </body>
 </html>
