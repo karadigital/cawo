@@ -11,13 +11,22 @@ form {
     "email"
     "crn"
     "message"
-    "submit";
+    "submit"
+    "caryear"
+    "carcolor"
+    "damage"
+    "service"
+    "bookdate"
+    "booktime";
 
   column-gap: 2rem;
   @include desktop-up {
     grid-template-areas:
       "name crn"
       "mobile-number email"
+      "caryear carcolor"
+      "damage service"
+      "bookdate booktime"
       "message message"
       "submit .";
   }
@@ -33,9 +42,29 @@ form {
   .email {
     grid-area: email;
   }
+  .car-year {
+    grid-area: caryear;
+  }
+  .car-color {
+    grid-area: carcolor;
+  }
+  .damage-type {
+    grid-area: damage;
+  }
+  .service-type {
+    grid-area: service;
+  }
+  .book-date {
+    grid-area: bookdate;
+  }
+  .book-time {
+    grid-area: booktime;
+  }
+
   .message {
     grid-area: message;
   }
+
   .submit {
     grid-area: submit;
   }

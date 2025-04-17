@@ -669,14 +669,14 @@ textarea {
   resize: none;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="date"],
-input[type="email"],
-input[type="number"],
-input[type="tel"],
-input[type="search"],
-input[type="datetime-local"],
+input[type=text],
+input[type=password],
+input[type=date],
+input[type=email],
+input[type=number],
+input[type=tel],
+input[type=search],
+input[type=datetime-local],
 select {
   display: block;
   border: 1px solid #c0bdcd;
@@ -688,25 +688,25 @@ select {
   box-sizing: border-box;
   overflow: visible;
 }
-input[type="text"]::placeholder,
-input[type="password"]::placeholder,
-input[type="date"]::placeholder,
-input[type="email"]::placeholder,
-input[type="number"]::placeholder,
-input[type="tel"]::placeholder,
-input[type="search"]::placeholder,
-input[type="datetime-local"]::placeholder,
+input[type=text]::placeholder,
+input[type=password]::placeholder,
+input[type=date]::placeholder,
+input[type=email]::placeholder,
+input[type=number]::placeholder,
+input[type=tel]::placeholder,
+input[type=search]::placeholder,
+input[type=datetime-local]::placeholder,
 select::placeholder {
   color: #c0bdcd;
 }
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="date"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="tel"]:focus,
-input[type="search"]:focus,
-input[type="datetime-local"]:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=date]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+input[type=tel]:focus,
+input[type=search]:focus,
+input[type=datetime-local]:focus,
 select:focus {
   outline: none;
   border-color: #c0bdcd;
@@ -746,8 +746,8 @@ select {
 }
 
 /* Chrome, Safari, Edge, Opera */
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -1416,6 +1416,52 @@ hr {
   }
 }
 
+/* Popup Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 710px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: modalopen 0.3s;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: black;
+}
+
 footer * {
   color: white;
 }
@@ -1500,6 +1546,39 @@ button {
   background-color: transparent;
   color: #fff;
   border: 1px solid #fff;
+}
+
+.styled-select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  color: #333;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: all 0.3s ease;
+}
+
+.styled-select:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.dropdown-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #666;
+  pointer-events: none;
 }
 
 .accordion__body {
@@ -1602,12 +1681,12 @@ form {
   border-radius: 16px;
   box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.1019607843);
   display: grid;
-  grid-template-areas: "name" "mobile-number" "email" "crn" "message" "submit";
+  grid-template-areas: "name" "mobile-number" "email" "crn" "message" "submit" "caryear" "carcolor" "damage" "service" "bookdate" "booktime";
   column-gap: 2rem;
 }
 @media (min-width: 1024px) {
   form {
-    grid-template-areas: "name crn" "mobile-number email" "message message" "submit .";
+    grid-template-areas: "name crn" "mobile-number email" "caryear carcolor" "damage service" "bookdate booktime" "message message" "submit .";
   }
 }
 form .name {
@@ -1621,6 +1700,24 @@ form .mobile-number {
 }
 form .email {
   grid-area: email;
+}
+form .car-year {
+  grid-area: caryear;
+}
+form .car-color {
+  grid-area: carcolor;
+}
+form .damage-type {
+  grid-area: damage;
+}
+form .service-type {
+  grid-area: service;
+}
+form .book-date {
+  grid-area: bookdate;
+}
+form .book-time {
+  grid-area: booktime;
 }
 form .message {
   grid-area: message;
@@ -1770,6 +1867,11 @@ form .submit {
   row-gap: 12px;
 }
 
+.input__layout_modal {
+  display: grid;
+  row-gap: 2px;
+}
+
 .img-behind-text__wrapper {
   position: relative;
   overflow: hidden;
@@ -1844,9 +1946,7 @@ form .submit {
   border-radius: 1rem;
 }
 @media (max-width: 768px) {
-  .our-services__section .card-services:nth-of-type(10),
-  .our-services__section .card-services:nth-of-type(11),
-  .our-services__section .card-services:nth-of-type(12) {
+  .our-services__section .card-services:nth-of-type(10), .our-services__section .card-services:nth-of-type(11), .our-services__section .card-services:nth-of-type(12) {
     display: none;
   }
 }
@@ -2078,40 +2178,4 @@ form .submit {
   }
 }
 
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-caption {
-  width: 600px;
-}
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto;
-  padding: 30px;
-  border: 1px solid #888;
-  width: 90%;
-  max-width: 700px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  animation: modalopen 0.3s;
-}
-
-@keyframes modalopen {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 /*# sourceMappingURL=main.css.map */

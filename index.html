@@ -44,8 +44,7 @@
             <h1 class="text-scale-2xl bold text-white">Expert Car Dent & Scratch Repairs Save Up to 40%</h1>
             <p class="text-size-24 medium text-white mb-2">Sydney's Trusted Network of Mobile Repairers</p>
             <div class="hero__buttons">
-              <button class="open-btn button" id="openModalBtn">Register Vehicle</button>
-              <a href="#contact-form" class="button">Get a Free Quote Now</a>
+              <button class="open-btn button" id="openModalBtn">Get a Free Quote Now</button>
               <a href="#our-services" class="button button--white">Our Services</a>
             </div>
           </div>
@@ -492,36 +491,62 @@
         <div class="d-grid rg-16px rg-md-24px">
           <div class="hero__buttons">
             <h2 class="text-scale-sm bold">Get a Quote</h2>
-            <button type="button" class="cursor-pointer" id="btn-close-modal">Close</button>
+
+            <button type="button" class="cursor-pointer close" id="btn-close-modal">X Close</button>
           </div>
           <div class="modal-caption">
-            <span class="text-scale-xl medium text-primary">Instant Quote </span>
-            <span class="text-scale-xl medium">in Under 2 minutes!</span>
             <p>Autofill your car information by entering your rego</p>
           </div>
         </div>
         <form name="contact" netlify class="d-grid rg-24px rg-md-32px">
-          <div class="input__layout car-registration-number">
+          <div class="input__layout-modal name">
+            <label class="medium" for="name">Name <sup class="text-error">*</sup></label>
+            <input type="text" name="name" id="name" placeholder="Your Full Name" required />
+          </div>
+          <div class="input__layout_modal car-registration-number">
             <label class="medium" for="car-registration-number">Car registration number</label>
             <input type="text" name="car-registration-number" id="car-registration-number" placeholder="e.g., B 1234 CD" />
           </div>
 
-          <div class="input__layout name">
-            <label class="medium" for="name">Name <sup class="text-error">*</sup></label>
-            <input type="text" name="name" id="name" placeholder="Your Full Name" required />
-          </div>
-
-          <div class="input__layout mobile-number">
+          <div class="input__layout_modalmobile-number">
             <label class="medium" for="mobile-number">Mobile number <sup class="text-error">*</sup></label>
             <input type="tel" name="mobile-number" id="mobile-number" placeholder="Your Mobile Number" required />
           </div>
 
-          <div class="input__layout email">
+          <div class="input__layout_modal email">
             <label class="medium" for="email">Email <sup class="text-error">*</sup></label>
             <input type="email" name="email" id="email" placeholder="For Invoicing" required />
           </div>
 
-          <div class="input__layout message">
+          <div class="input__layout_modal car-year">
+            <label class="medium" for="car-year">Manufacture and Year of Car</label>
+            <input type="text" name="car-year" id="car-year" placeholder="e.g., 2020" />
+          </div>
+          <div class="input__layout_modal car-color">
+            <label class="medium" for="car-color">Car Color</label>
+            <input type="text" name="car-color" id="car-color" placeholder="e.g., Blue" />
+          </div>
+
+          <div class="input__layout_modal damage-type">
+            <label class="medium" for="damage-type">Type of Damage</label>
+            <select name="damage-type" id="damage-type">
+              <option value="bumper-repair">Bumper Repair</option>
+              <option value="alloy-wheel-repair">Alloy Wheel Repair</option>
+              <option value="wheel-arc-scratch-repair">Wheel Arc Scratch Repair</option>
+              <option value="paint-correction">Paint Correction</option>
+              <option value="car-door-scratch-repair">Car Door Scratch Repair</option>
+              <option value="small-car-dent-repair">Small Car Dent Repair</option>
+              <option value="minor-car-scratch-repair">Minor Car Scratch Repair</option>
+              <option value="presale-exterior-car-cleanup">Presale Exterior Car Cleanup</option>
+              <option value="ceramic-coating">Ceramic Coating</option>
+            </select>
+          </div>
+          <div class="input__layout_modal service-type">
+            <label class="medium" for="service-type">Service Type</label>
+            <input type="text" name="service-type" id="service-type" placeholder="e.g., Blue" />
+          </div>
+
+          <div class="input__layout_modal message">
             <label class="medium" for="message">Comment or message</label>
             <textarea
               name="message"
@@ -619,9 +644,14 @@
       $(document).ready(function () {
         const $modal = $("#registration-modal");
         const $btn = $("#openModalBtn");
+        const $span = $(".close");
 
         $btn.on("click", function () {
           $modal.css("display", "block");
+        });
+
+        $span.on("click", function () {
+          $modal.css("display", "none");
         });
 
         $(".accordion__item").on("click", function () {

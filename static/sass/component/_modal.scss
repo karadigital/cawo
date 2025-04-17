@@ -16,7 +16,7 @@
   padding: 20px;
   border: 1px solid #888;
   width: 90%;
-  max-width: 500px;
+  max-width: 710px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   animation: modalopen 0.3s;
@@ -31,4 +31,15 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: black;
 }
