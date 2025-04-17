@@ -572,6 +572,26 @@
             <input name="file" type="file" />
           </label>
 
+
+          <!-- Single file input managed dynamically -->
+          <div class="input__layout-modal file-upload">
+            <label for="upload-file">Add Files (Max: 5):</label>
+            <input
+                    type="file"
+                    id="upload-file"
+                    accept=".jpg,.jpeg,.png,.pdf"
+                    onchange="handleFileUpload(this)"
+            />
+            <p class="help-text">Accepted formats: JPG, PNG, PDF. Max size: 5MB per file.</p>
+          </div>
+
+          <!-- Uploaded files list -->
+          <ul id="file-list" class="file-list"></ul>
+
+          <!-- Hidden inputs that will send files to Netlify -->
+          <div id="hidden-file-inputs"></div>
+
+
           <button type="submit" class="submit button button--tertiary cursor-pointer">Submit</button>
         </form>
       </div>
@@ -868,6 +888,83 @@
       });
 
       $("#char-count").text(`${$("#message").val().length} / 1000`);
+    </script>
+    <script>
+      const maxFiles = 5; // Maximum number of files
+      const maxFileSize = 5 * 1024 * 1024; // 5MB in bytes
+      const fileList = []; // Array to track uploaded files
+      const fileListElement = document.getElementById("file-list");
+      const hiddenInputsContainer = document.getElementById("hidden-file-inputs");
+
+      function handleFileUpload(input) {
+        const files = Array.from(input.files); // Get selected files
+        const errors = [];
+
+        files.forEach((file) => {
+          // Ensure maximum file limit is not exceeded
+          if (fileList.length >= maxFiles) {
+            errors.push("Maximum 5 files can be uploaded.");
+            return;
+          }
+
+          // Validate file size
+          if (file.size > maxFileSize) {
+            errors.push(`${file.name} exceeds the 5MB size limit.`);
+            return;
+          }
+
+          // Add file to file list
+          if (!fileList.includes(file)) {
+            fileList.push(file);
+            addFileToList(file);
+            addHiddenInput(file);
+          }
+        });
+
+        // Clear the file input
+        input.value = "";
+
+        // Show errors if any
+        if (errors.length > 0) {
+          alert(errors.join("\n"));
+        }
+      }
+
+      function addFileToList(file) {
+        // Create a list item for the uploaded file
+        const li = document.createElement("li");
+        li.innerHTML = `
+      <span>${file.name}</span>
+      <button type="button" onclick="removeFile('${file.name}')">Remove</button>
+    `;
+        fileListElement.appendChild(li);
+      }
+
+      function addHiddenInput(file) {
+        // Create a hidden file input for the form submission
+        const inputName = `file${fileList.length}`; // File field name (e.g., file1, file2, etc.)
+        const hiddenInput = document.createElement("input");
+        hiddenInput.type = "hidden";
+        hiddenInput.name = inputName;
+        hiddenInput.value = file.name; // Just using file name for now (replace with backend upload logic if needed)
+        hiddenInputsContainer.appendChild(hiddenInput);
+      }
+
+      function removeFile(fileName) {
+        // Remove the file from the file list
+        const fileIndex = fileList.findIndex((file) => file.name === fileName);
+        if (fileIndex !== -1) {
+          fileList.splice(fileIndex, 1);
+
+          // Remove file from visible list
+          const fileItems = Array.from(fileListElement.children);
+          fileItems[fileIndex].remove();
+
+          // Remove the corresponding hidden input
+          const hiddenInputs = Array.from(hiddenInputsContainer.children);
+          hiddenInputs[fileIndex].remove();
+        }
+      }
     </script>
   </body>
 </html>
