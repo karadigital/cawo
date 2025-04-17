@@ -497,7 +497,7 @@
             <p>Autofill your car information by entering your rego</p>
           </div>
         </div>
-        <form name="contact" netlify class="d-grid rg-24px rg-md-32px">
+        <form name="contact" netlify class="d-grid rg-24px rg-md-32px" enctype="multipart/form-data">
           <div class="input__layout-modal name">
             <label class="medium" for="name">Name <sup class="text-error">*</sup></label>
             <input type="text" name="name" id="name" placeholder="Your Full Name" required />
@@ -529,6 +529,7 @@
           <div class="input__layout_modal damage-type">
             <label class="medium" for="damage-type">Type of Damage</label>
             <select name="damage-type" id="damage-type">
+              <option value="">Select...</option>
               <option value="bumper-repair">Bumper Repair</option>
               <option value="alloy-wheel-repair">Alloy Wheel Repair</option>
               <option value="wheel-arc-scratch-repair">Wheel Arc Scratch Repair</option>
@@ -566,21 +567,10 @@
             <p id="char-count" class="text-scale-xs opacity-70 ml-auto">0 / 1000</p>
           </div>
 
-          <div class="input__layout_modal picture">
-            <div class="upload-container" id="drop-area">
-              <input type="file" id="file-input" multiple accept="image/*,.pdf,.doc,.docx" />
-              <label for="file-input"><span class="text-primary m-2">Choose Files</span><span class="text-secondary">or drop here</span></label>
-              <p class="error" id="file-error"></p>
-            </div>
-
-            <div class="file-list" id="file-list">
-              <!-- Files will be listed here -->
-            </div>
-
-            <div class="preview-container" id="preview-container">
-              <!-- Image previews will appear here -->
-            </div>
-          </div>
+          <label>
+            <span>Add file:</span>
+            <input name="file" type="file" />
+          </label>
 
           <button type="submit" class="submit button button--tertiary cursor-pointer">Submit</button>
         </form>
@@ -841,6 +831,7 @@
           // Update previews for image files
           updatePreviews();
         }
+
         // Inisialisasi awal (default active image desktop sesuai item aktif)
         // const initialImgClass = $(".accordion__item.active .accordion__img")
         //   .attr("class")
