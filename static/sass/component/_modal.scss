@@ -17,9 +17,11 @@
   border: 1px solid #888;
   width: 90%;
   max-width: 710px;
+  max-height: 90vh;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   animation: modalopen 0.3s;
+  overflow-y: auto;
 }
 
 @keyframes modalopen {

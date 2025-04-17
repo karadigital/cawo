@@ -672,6 +672,7 @@ textarea {
 input[type=text],
 input[type=password],
 input[type=date],
+input[type=time],
 input[type=email],
 input[type=number],
 input[type=tel],
@@ -691,6 +692,7 @@ select {
 input[type=text]::placeholder,
 input[type=password]::placeholder,
 input[type=date]::placeholder,
+input[type=time]::placeholder,
 input[type=email]::placeholder,
 input[type=number]::placeholder,
 input[type=tel]::placeholder,
@@ -702,6 +704,7 @@ select::placeholder {
 input[type=text]:focus,
 input[type=password]:focus,
 input[type=date]:focus,
+input[type=time]:focus,
 input[type=email]:focus,
 input[type=number]:focus,
 input[type=tel]:focus,
@@ -1435,9 +1438,11 @@ hr {
   border: 1px solid #888;
   width: 90%;
   max-width: 710px;
+  max-height: 90vh;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   animation: modalopen 0.3s;
+  overflow-y: auto;
 }
 
 @keyframes modalopen {
@@ -1546,39 +1551,6 @@ button {
   background-color: transparent;
   color: #fff;
   border: 1px solid #fff;
-}
-
-.styled-select {
-  width: 100%;
-  padding: 12px 15px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  background-color: #f9f9f9;
-  font-size: 16px;
-  color: #333;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  transition: all 0.3s ease;
-}
-
-.styled-select:focus {
-  outline: none;
-  border-color: #4a90e2;
-  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
-}
-
-.dropdown-icon {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 8px solid #666;
-  pointer-events: none;
 }
 
 .accordion__body {
