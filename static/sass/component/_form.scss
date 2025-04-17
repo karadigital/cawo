@@ -17,7 +17,8 @@ form {
     "damage"
     "service"
     "bookdate"
-    "booktime";
+    "booktime"
+    "picture";
 
   column-gap: 2rem;
   @include desktop-up {
@@ -28,6 +29,7 @@ form {
       "damage service"
       "bookdate booktime"
       "message message"
+      "picture picture"
       "submit .";
   }
   .name {
@@ -63,6 +65,9 @@ form {
 
   .message {
     grid-area: message;
+  }
+  .picture {
+    grid-area: picture;
   }
 
   .submit {

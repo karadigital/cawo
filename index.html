@@ -489,10 +489,9 @@
     <section id="registration-modal" class="modal">
       <div class="modal-content">
         <div class="d-grid rg-16px rg-md-24px">
-          <div class="hero__buttons">
+          <div class="d-flex justify-between">
             <h2 class="text-scale-sm bold">Get a Quote</h2>
-
-            <button type="button" class="cursor-pointer close" id="btn-close-modal">X Close</button>
+            <button class="close-btn" id="btn-close-modal">Close</button>
           </div>
           <div class="modal-caption">
             <p>Autofill your car information by entering your rego</p>
@@ -565,6 +564,22 @@
               maxlength="1000"
             ></textarea>
             <p id="char-count" class="text-scale-xs opacity-70 ml-auto">0 / 1000</p>
+          </div>
+
+          <div class="input__layout_modal picture">
+            <div class="upload-container" id="drop-area">
+              <input type="file" id="file-input" multiple accept="image/*,.pdf,.doc,.docx" />
+              <label for="file-input"><span class="text-primary m-2">Choose Files</span><span class="text-secondary">or drop here</span></label>
+              <p class="error" id="file-error"></p>
+            </div>
+
+            <div class="file-list" id="file-list">
+              <!-- Files will be listed here -->
+            </div>
+
+            <div class="preview-container" id="preview-container">
+              <!-- Image previews will appear here -->
+            </div>
           </div>
 
           <button type="submit" class="submit button button--tertiary cursor-pointer">Submit</button>
@@ -646,14 +661,26 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-
+    <script src="script.js"></script>
     <script>
       //-- Modal-->
 
       $(document).ready(function () {
         const $modal = $("#registration-modal");
         const $btn = $("#openModalBtn");
-        const $span = $(".close");
+        const $span = $(".close-btn");
+        const $fileInput = $("#file-input");
+        const $fileList = $("#file-list");
+        const $previewContainer = $("#preview-container");
+        const $dropArea = $("#drop-area");
+        const $fileError = $("#file-error");
+        const $submitBtn = $("#submit-btn");
+        const $form = $("#upload-form");
+        let files = [];
+
+        $fileInput.on("change", function (e) {
+          handleFiles(e.target.files);
+        });
 
         $btn.on("click", function () {
           $modal.css("display", "block");
@@ -682,7 +709,138 @@
             $(".how-it-works__img-desktop ." + imgClass).addClass("active");
           }
         });
+        // Array to hold selected files
+        let selectedFiles = [];
 
+        // When files are selected
+        $("#file-input").change(function (e) {
+          // Clear previous selection
+          selectedFiles = [];
+          $("#file-list").empty();
+
+          // Add new files to array and display them
+          $.each(e.target.files, function (index, file) {
+            selectedFiles.push(file);
+            $("#file-list").append(
+              `<div class="file-item" id="file-${index}">
+                    ${file.name} (${formatFileSize(file.size)})
+                    <div class="progress">
+                        <div class="progress-bar" id="progress-${index}" style="width: 0%">0%</div>
+                    </div>
+                    <div id="status-${index}"></div>
+                </div>`
+            );
+          });
+        });
+
+        // Upload button click handler
+        $("#uploadBtn").click(function () {
+          if (selectedFiles.length === 0) {
+            $("#status").html('<span class="error">Please select at least one file</span>');
+            return;
+          }
+
+          $("#status").html("Uploading files...");
+
+          // Upload each file
+          $.each(selectedFiles, function (index, file) {
+            uploadFile(index, file);
+          });
+        });
+
+        function handleFiles(selectedFiles) {
+          $fileError.text("");
+
+          // Check if files were selected
+          if (selectedFiles.length === 0) return;
+
+          // Check total files count (limit to 10 for example)
+          if (files.length + selectedFiles.length > 10) {
+            $fileError.text("Maximum 10 files allowed");
+            return;
+          }
+
+          // Check each file
+          for (let i = 0; i < selectedFiles.length; i++) {
+            const file = selectedFiles[i];
+
+            // Check file size (limit to 5MB)
+            if (file.size > 5 * 1024 * 1024) {
+              $fileError.text(`File ${file.name} is too large (max 5MB)`);
+              continue;
+            }
+
+            // Check file type
+            const validTypes = [
+              "image/jpeg",
+              "image/png",
+              "image/gif",
+              "application/pdf",
+              "application/msword",
+              "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            ];
+            if (!validTypes.includes(file.type)) {
+              $fileError.text(`File ${file.name} has invalid type`);
+              continue;
+            }
+
+            // Add to files array if valid
+            files.push(file);
+          }
+
+          updateFileList();
+          updateSubmitButton();
+        }
+        // Remove a file
+        function removeFile(index) {
+          files.splice(index, 1);
+          updateFileList();
+          updateSubmitButton();
+        }
+
+        // Get appropriate icon for file type
+        function getFileIcon(type) {
+          if (type.startsWith("image/")) return "📷";
+          if (type.includes("pdf")) return "📄";
+          if (type.includes("word")) return "📝";
+          return "📁";
+        }
+
+        // Format file size
+        function formatFileSize(bytes) {
+          if (bytes === 0) return "0 Bytes";
+          const k = 1024;
+          const sizes = ["Bytes", "KB", "MB", "GB"];
+          const i = Math.floor(Math.log(bytes) / Math.log(k));
+          return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + " " + sizes[i];
+        }
+        function updateFileList() {
+          $fileList.empty();
+
+          if (files.length === 0) {
+            $fileList.html("<p>No files selected</p>");
+            return;
+          }
+
+          files.forEach(function (file, index) {
+            const fileItem = $('<div class="file-item"></div>');
+            const fileInfo = $('<div class="file-info"></div>');
+            const fileIcon = $(`<span class="file-icon">${getFileIcon(file.type)}</span>`);
+            const fileName = $(`<span>${file.name} (${formatFileSize(file.size)})</span>`);
+            const removeBtn = $('<button class="remove-btn">&times;</button>');
+
+            removeBtn.on("click", function () {
+              removeFile(index);
+            });
+
+            fileInfo.append(fileIcon, fileName);
+            fileItem.append(fileInfo, removeBtn);
+            $fileList.append(fileItem);
+          });
+
+          // Update previews for image files
+          updatePreviews();
+        }
         // Inisialisasi awal (default active image desktop sesuai item aktif)
         // const initialImgClass = $(".accordion__item.active .accordion__img")
         //   .attr("class")
