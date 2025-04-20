@@ -17,6 +17,102 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
   </head>
   <body>
+        <!-- The Modal -->
+        <section id="registration-modal" class="modal">
+          <div class="modal-content">
+            <div class="d-grid rg-16px rg-md-24px">
+    
+              <div class="d-grid rg-16px rg-md-24px">
+                <div class="d-flex justify-between">
+                  <h2 class="text-scale-sm bold">Get a Quote</h2>
+                  <button class="close-btn" id="btn-close-modal">Close</button>
+                </div>
+                <span class="text-scale-xl medium text-primary">Instant Quote</span>
+                <p class="text-scale-xl medium">in Under 2 minutes!</p>
+              </div>
+              <div class="modal-caption">
+                <p>Autofill your car information by entering your rego</p>
+              </div>
+            </div>
+            <form name="contact" netlify class="cols-2" enctype="multipart/form-data">
+              <div class="input__layout-modal name" >
+                <label class="medium" for="name">Name <sup class="text-error">*</sup></label>
+                <input type="text" name="name" id="name" placeholder="Your Full Name" required />
+              </div>
+              <div class="input__layout_modal car-registration-number">
+                <label class="medium" for="car-registration-number">Car registration number</label>
+                <input type="text" name="car-registration-number" id="car-registration-number" placeholder="e.g., B 1234 CD" />
+              </div>
+    
+              <div class="input__layout_modalmobile-number">
+                <label class="medium" for="mobile-number">Mobile number <sup class="text-error">*</sup></label>
+                <input type="tel" name="mobile-number" id="mobile-number" placeholder="Your Mobile Number" required />
+              </div>
+    
+              <div class="input__layout_modal email">
+                <label class="medium" for="email">Email <sup class="text-error">*</sup></label>
+                <input type="email" name="email" id="email" placeholder="For Invoicing" required />
+              </div>
+    
+              <div class="input__layout_modal car-year">
+                <label class="medium" for="car-year">Manufacture and Year of Car</label>
+                <input type="text" name="car-year" id="car-year" placeholder="e.g., Honda Accord 2020" />
+              </div>
+              <div class="input__layout_modal car-color">
+                <label class="medium" for="car-color">Car Color</label>
+                <input type="text" name="car-color" id="car-color" placeholder="e.g., Blue" />
+              </div>
+    
+              <div class="input__layout_modal damage-type">
+                <label class="medium" for="damage-type">Type of Damage</label>
+                <select name="damage-type" id="damage-type">
+                  <option value="">Select...</option>
+                  <option value="bumper-repair">Bumper Repair</option>
+                  <option value="alloy-wheel-repair">Alloy Wheel Repair</option>
+                  <option value="wheel-arc-scratch-repair">Wheel Arc Scratch Repair</option>
+                  <option value="paint-correction">Paint Correction</option>
+                  <option value="car-door-scratch-repair">Car Door Scratch Repair</option>
+                  <option value="small-car-dent-repair">Small Car Dent Repair</option>
+                  <option value="minor-car-scratch-repair">Minor Car Scratch Repair</option>
+                  <option value="presale-exterior-car-cleanup">Presale Exterior Car Cleanup</option>
+                  <option value="ceramic-coating">Ceramic Coating</option>
+                </select>
+              </div>
+              <div class="input__layout_modal service-type">
+                <label class="medium" for="service-type">Service Type</label>
+                <input type="text" name="service-type" id="service-type" placeholder="e.g., Blue" />
+              </div>
+    
+              <div class="input__layout_modal book-date">
+                <label class="medium" for="book-date">Booking Date</label>
+                <input type="date" name="book-date" id="book-date" placeholder="" />
+              </div>
+              <div class="input__layout_modal book-time">
+                <label class="medium" for="book-time">Booking Time</label>
+                <input type="time" name="book-time" id="book-time" placeholder="" />
+              </div>
+    
+              <div class="input__layout_modal message">
+                <label class="medium" for="message">Comment or message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Briefly describe the issue or any specific requests"
+                  rows="4"
+                  maxlength="1000"
+                ></textarea>
+                <p id="char-count" class="text-scale-xs opacity-70 ml-auto">0 / 1000</p>
+              </div>
+    
+              <label>
+                <span>Add file:</span>
+                <input name="file" type="file" />
+              </label>
+    
+              <button type="submit" class="submit button button--tertiary cursor-pointer">Submit</button>
+            </form>
+          </div>
+        </section>
     <section class="hero__section img-behind-text__wrapper">
       <nav class="nav section__wrapper">
         <div class="nav-link__desktop">
@@ -485,97 +581,7 @@
         <button type="submit" class="submit button button--tertiary cursor-pointer">Submit</button>
       </form>
     </section>
-    <!-- The Modal -->
-    <section id="registration-modal" class="modal">
-      <div class="modal-content">
-        <div class="d-grid rg-16px rg-md-24px">
-          <div class="d-flex justify-between">
-            <h2 class="text-scale-sm bold">Get a Quote</h2>
-            <button class="close-btn" id="btn-close-modal">Close</button>
-          </div>
-          <div class="modal-caption">
-            <p>Autofill your car information by entering your rego</p>
-          </div>
-        </div>
-        <form name="contact" netlify class="d-grid rg-24px rg-md-32px" enctype="multipart/form-data">
-          <div class="input__layout-modal name">
-            <label class="medium" for="name">Name <sup class="text-error">*</sup></label>
-            <input type="text" name="name" id="name" placeholder="Your Full Name" required />
-          </div>
-          <div class="input__layout_modal car-registration-number">
-            <label class="medium" for="car-registration-number">Car registration number</label>
-            <input type="text" name="car-registration-number" id="car-registration-number" placeholder="e.g., B 1234 CD" />
-          </div>
 
-          <div class="input__layout_modalmobile-number">
-            <label class="medium" for="mobile-number">Mobile number <sup class="text-error">*</sup></label>
-            <input type="tel" name="mobile-number" id="mobile-number" placeholder="Your Mobile Number" required />
-          </div>
-
-          <div class="input__layout_modal email">
-            <label class="medium" for="email">Email <sup class="text-error">*</sup></label>
-            <input type="email" name="email" id="email" placeholder="For Invoicing" required />
-          </div>
-
-          <div class="input__layout_modal car-year">
-            <label class="medium" for="car-year">Manufacture and Year of Car</label>
-            <input type="text" name="car-year" id="car-year" placeholder="e.g., Honda Accord 2020" />
-          </div>
-          <div class="input__layout_modal car-color">
-            <label class="medium" for="car-color">Car Color</label>
-            <input type="text" name="car-color" id="car-color" placeholder="e.g., Blue" />
-          </div>
-
-          <div class="input__layout_modal damage-type">
-            <label class="medium" for="damage-type">Type of Damage</label>
-            <select name="damage-type" id="damage-type">
-              <option value="">Select...</option>
-              <option value="bumper-repair">Bumper Repair</option>
-              <option value="alloy-wheel-repair">Alloy Wheel Repair</option>
-              <option value="wheel-arc-scratch-repair">Wheel Arc Scratch Repair</option>
-              <option value="paint-correction">Paint Correction</option>
-              <option value="car-door-scratch-repair">Car Door Scratch Repair</option>
-              <option value="small-car-dent-repair">Small Car Dent Repair</option>
-              <option value="minor-car-scratch-repair">Minor Car Scratch Repair</option>
-              <option value="presale-exterior-car-cleanup">Presale Exterior Car Cleanup</option>
-              <option value="ceramic-coating">Ceramic Coating</option>
-            </select>
-          </div>
-          <div class="input__layout_modal service-type">
-            <label class="medium" for="service-type">Service Type</label>
-            <input type="text" name="service-type" id="service-type" placeholder="e.g., Blue" />
-          </div>
-
-          <div class="input__layout_modal book-date">
-            <label class="medium" for="book-date">Booking Date</label>
-            <input type="date" name="book-date" id="book-date" placeholder="" />
-          </div>
-          <div class="input__layout_modal book-time">
-            <label class="medium" for="book-time">Booking Time</label>
-            <input type="time" name="book-time" id="book-time" placeholder="" />
-          </div>
-
-          <div class="input__layout_modal message">
-            <label class="medium" for="message">Comment or message</label>
-            <textarea
-              name="message"
-              id="message"
-              placeholder="Briefly describe the issue or any specific requests"
-              rows="4"
-              maxlength="1000"
-            ></textarea>
-            <p id="char-count" class="text-scale-xs opacity-70 ml-auto">0 / 1000</p>
-          </div>
-
-          <label>
-            <span>Add file:</span>
-            <input name="file" type="file" />
-          </label>
-
-          <button type="submit" class="submit button button--tertiary cursor-pointer">Submit</button>
-        </form>
-      </div>
-    </section>
 
     <!-- Footer -->
     <footer class="bg-secondary">
