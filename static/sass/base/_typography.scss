@@ -68,7 +68,7 @@ a {
 }
 
 .text-scale-xl {
-  @include font-size(2rem, 4rem); //32px, 64px
+  @include font-size(32px, 64px); //32px, 64px
   @include line-height(42px, 64px);
 }
 

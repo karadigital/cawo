@@ -11,14 +11,14 @@ form {
     "email"
     "crn"
     "message"
-    "submit"
     "caryear"
     "carcolor"
     "damage"
     "service"
     "bookdate"
     "booktime"
-    "picture";
+    "picture"
+    "submit";
 
   column-gap: 2rem;
   @include desktop-up {
