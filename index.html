@@ -155,7 +155,7 @@
             <h1 class="text-scale-2xl bold text-white">Expert Car Dent & Scratch Repairs Save Up to 40%</h1>
             <p class="text-size-24 medium text-white mb-2">Sydney's Trusted Network of Mobile Repairers</p>
             <div class="hero__buttons">
-              <button class="open-btn button" id="openModalBtn">Get a Free Quote Now</button>
+              <button class="open-btn button openModalBtn" id="openModalBtn1">Get a Free Quote Now</button>
               <a href="#our-services" class="button button--white">Our Services</a>
             </div>
           </div>
@@ -333,7 +333,7 @@
       <div class="cta-home__body">
         <h2 class="text-scale-xl bold text-white text-center text-md-left">Ready to Fix Your Car?</h2>
         <div class="d-grid rg-24px justify-content-center">
-          <a href="#contact-form" class="button button--big">Get an Instant Quote</a>
+          <button class="open-btn button openModalBtn" id="openModalBtn2">Get an Instant Quote</button>
           <p class="text-scale-2md semi-bold text-white text-center">in Under 2 Minutes!</p>
         </div>
       </div>
@@ -677,7 +677,7 @@
 
       $(document).ready(function () {
         const $modal = $("#registration-modal");
-        const $btn = $("#openModalBtn");
+        const $btn = $(".openModalBtn");
         const $span = $(".close-btn");
         const $fileInput = $("#file-input");
         const $fileList = $("#file-list");
