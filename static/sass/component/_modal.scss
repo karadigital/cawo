@@ -12,12 +12,12 @@
 
 .modal-content {
   background-color: #fefefe;
-  margin: 10% auto;
+  margin: 5% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 90%;
   max-width: 710px;
-  max-height: 80vh;
+  max-height: 90vh;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   animation: modalopen 0.3s;
@@ -35,13 +35,15 @@
   }
 }
 .close-btn {
-  color: black;
-  float: right;
-  font-size: 14px;
-  border: 2 px black solid;
-  border-radius: 0.3;
-  padding: 2px;
   cursor: pointer;
+  background-color: transparent;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  font-weight: 500;
+  color: black;
+  border: 1px solid gray;
+  text-align: center;
+  border-radius: 30px;
 }
 
 .close:hover {
