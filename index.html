@@ -39,10 +39,6 @@
               <label class="medium" for="pop-name">Name <sup class="text-error">*</sup></label>
               <input type="text" name="name" id="pop-name" placeholder="Your Full Name" required />
             </div>
-            <div class="input__layout car-registration-number">
-              <label class="medium" for="car-registration-number">Car registration number</label>
-              <input type="text" name="car-registration-number" id="car-registration-number" placeholder="e.g., B 1234 CD" />
-            </div>
 
             <div class="input__layout_modal mobile-number">
               <label class="medium" for="pop-mobile-number">Mobile number <sup class="text-error">*</sup></label>
@@ -56,16 +52,16 @@
 
             <div class="input__layout_modal car-year">
               <label class="medium" for="pop-car-year">Manufacture and Year of Car</label>
-              <input type="text" name="car-year" id="pop-car-year" placeholder="e.g., Honda Accord 2020" />
+              <input type="text" name="car-year" id="pop-car-year" placeholder="e.g. Honda Accord 2020" />
             </div>
             <div class="input__layout_modal car-color">
               <label class="medium" for="pop-car-color">Car Color</label>
-              <input type="text" name="car-color" id="pop-car-color" placeholder="e.g., Blue" />
+              <input type="text" name="car-color" id="pop-car-color" placeholder="e.g. Blue" />
             </div>
 
             <div class="input__layout_modal damage-type">
               <label class="medium" for="pop-damage-type">Type of Damage</label>
-              <input type="text" name="damage-type" id="pop-service-type" placeholder="e.g. Bump repair" />
+              <input type="text" name="damage-type" id="pop-service-type" placeholder="e.g. Dent" />
             </div>
             <div class="input__layout_modal service-type">
               <label class="medium" for="pop-service-type">Service Type</label>
@@ -95,8 +91,8 @@
             <div class="input__layout_modal message">
               <label class="medium" for="pop-message">Comment or message</label>
               <textarea
-                name="message"
-                id="pop-message"
+                name="pop-message"
+                id="message"
                 placeholder="Briefly describe the issue or any specific requests"
                 rows="4"
                 maxlength="1000"
@@ -594,11 +590,6 @@
           <p id="char-count" class="text-scale-xs opacity-70 ml-auto">0 / 1000</p>
         </div>
 
-        <div class="input__layout car-registration-number">
-          <label class="medium" for="car-registration-number">Car registration number</label>
-          <input type="text" name="car-registration-number" id="car-registration-number" placeholder="e.g., B 1234 CD" />
-        </div>
-
         <button type="submit" class="submit button button--tertiary cursor-pointer">Submit</button>
       </form>
     </section>
@@ -892,6 +883,13 @@
       });
 
       $("#char-count").text(`${$("#message").val().length} / 1000`);
+
+      $("#message").on("input", function () {
+        const currentLength = $(this).val().length;
+        $("#pop-char-count").text(`${currentLength} / 1000`);
+      });
+
+      $("#pop-char-count").text(`${$("#message").val().length} / 1000`);
     </script>
     <script>
       const maxFiles = 5; // The maximum number of files that can be uploaded

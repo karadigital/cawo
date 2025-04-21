@@ -9,21 +9,20 @@ form {
     "name"
     "mobile-number"
     "email"
-    "crn"
-    "message"
     "caryear"
     "carcolor"
     "damage"
     "service"
     "bookdate"
     "booktime"
+    "message"
     "picture"
     "submit";
 
   column-gap: 2rem;
   @include desktop-up {
     grid-template-areas:
-      "name crn"
+      "name"
       "mobile-number email"
       "caryear carcolor"
       "damage service"
@@ -34,9 +33,6 @@ form {
   }
   .name {
     grid-area: name;
-  }
-  .car-registration-number {
-    grid-area: crn;
   }
   .mobile-number {
     grid-area: mobile-number;
