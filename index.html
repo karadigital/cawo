@@ -30,42 +30,38 @@
             <p>Autofill your car information by entering your rego</p>
           </div>
         </div>
-        <form name="contact-form" class="d-grid rg-24px rg-md-32px" enctype="multipart/form-data" netlify method="post">
+        <form name="contactQuote" netlify class="cols-2 rg-24px rg-md-32px" enctype="multipart/form-data">
           <div class="input__layout-modal name">
-            <label class="medium" for="name">Name <sup class="text-error">*</sup></label>
-            <input type="text" name="name" id="name" placeholder="Your Full Name" required />
+            <label class="medium" for="pop-name">Name <sup class="text-error">*</sup></label>
+            <input type="text" name="name" id="pop-name" placeholder="Your Full Name" required />
           </div>
           <div class="input__layout_modal car-registration-number">
-            <label class="medium" for="car-registration-number">Car registration number</label>
-            <input type="text" name="car-registration-number" id="car-registration-number" placeholder="e.g., B 1234 CD" />
+            <label class="medium" for="pop-car-registration-number">Car registration number</label>
+            <input type="text" name="car-registration-number" id="pop-car-registration-number" placeholder="e.g., B 1234 CD" />
           </div>
 
           <div class="input__layout_modalmobile-number">
-            <label class="medium" for="mobile-number">Mobile number <sup class="text-error">*</sup></label>
-            <input type="tel" name="mobile-number" id="mobile-number" placeholder="Your Mobile Number" required />
+            <label class="medium" for="pop-mobile-number">Mobile number <sup class="text-error">*</sup></label>
+            <input type="tel" name="mobile-number" id="pop-mobile-number" placeholder="Your Mobile Number" required />
           </div>
 
           <div class="input__layout_modal email">
-            <label class="medium" for="email">Email <sup class="text-error">*</sup></label>
-            <input type="email" name="email" id="email" placeholder="For Invoicing" required />
+            <label class="medium" for="pop-email">Email <sup class="text-error">*</sup></label>
+            <input type="email" name="email" id="pop-email" placeholder="For Invoicing" required />
           </div>
 
           <div class="input__layout_modal car-year">
-            <label class="medium" for="car-year">Manufacture and Year of Car</label>
-            <input type="text" name="car-year" id="car-year" placeholder="e.g., Honda Accord 2020" />
+            <label class="medium" for="pop-car-year">Manufacture and Year of Car</label>
+            <input type="text" name="car-year" id="pop-car-year" placeholder="e.g., Honda Accord 2020" />
           </div>
           <div class="input__layout_modal car-color">
-            <label class="medium" for="car-color">Car Color</label>
-            <input type="text" name="car-color" id="car-color" placeholder="e.g., Blue" />
+            <label class="medium" for="pop-car-color">Car Color</label>
+            <input type="text" name="car-color" id="pop-car-color" placeholder="e.g., Blue" />
           </div>
 
           <div class="input__layout_modal damage-type">
-            <label class="medium" for="damage-type">Type of Damage</label>
-            <input type="text" name="service-type" id="service-type" placeholder="damage type" />
-          </div>
-          <div class="input__layout_modal service-type">
-            <label class="medium" for="service-type">Service Type</label>
-            <select name="damage-type" id="damage-type">
+            <label class="medium" for="pop-damage-type">Type of Damage</label>
+            <select name="damage-type" id="pop-damage-type">
               <option value="">Select...</option>
               <option value="bumper-repair">Bumper Repair</option>
               <option value="alloy-wheel-repair">Alloy Wheel Repair</option>
@@ -78,39 +74,52 @@
               <option value="ceramic-coating">Ceramic Coating</option>
             </select>
           </div>
+          <div class="input__layout_modal service-type">
+            <label class="medium" for="pop-service-type">Service Type</label>
+            <input type="text" name="service-type" id="pop-service-type" placeholder="e.g., Blue" />
+          </div>
+
           <div class="input__layout_modal book-date">
-            <label class="medium" for="book-date">Booking Date</label>
-            <input type="date" name="book-date" id="book-date" placeholder="" />
+            <label class="medium" for="pop-book-date">Booking Date</label>
+            <input type="date" name="book-date" id="pop-book-date" placeholder="" />
           </div>
           <div class="input__layout_modal book-time">
-            <label class="medium" for="book-time">Booking Time</label>
-            <input type="time" name="book-time" id="book-time" placeholder="" />
+            <label class="medium" for="pop-book-time">Booking Time</label>
+            <input type="time" name="book-time" id="pop-book-time" placeholder="" />
           </div>
 
           <div class="input__layout_modal message">
-            <label class="medium" for="message">Comment or message</label>
+            <label class="medium" for="pop-message">Comment or message</label>
             <textarea
               name="message"
-              id="message"
+              id="pop-message"
               placeholder="Briefly describe the issue or any specific requests"
               rows="4"
               maxlength="1000"
             ></textarea>
-            <p id="char-count" class="text-scale-xs opacity-70 ml-auto">0 / 1000</p>
+            <p id="pop-char-count" class="text-scale-xs opacity-70 ml-auto">0 / 1000</p>
           </div>
-          <div class="input__layout_modal picture">
-            <div class="upload-container" id="drop-area">
-              <input type="file" id="file-input" multiple accept="image/*,.pdf,.doc,.docx" />
-              <label for="file-input"><span class="text-primary m-2">Choose Files</span><span class="text-secondary">or drop here</span></label>
-              <p class="error" id="file-error"></p>
+
+          <div class="input__layout-modal picture">
+            <ul id="file-list" class="file-list"></ul>
+            <!-- File List -->
+            <!-- Image previews will appear here -->
+            <p class="help-text">Upload File or Damaged Photo</p>
+            <div class="d-flex">
+              <div class="preview-container" id="preview-container"></div>
+              <!-- Add File Button -->
+              <div class="input__layout-modal file-upload my-bottom px-4">
+                <button type="button" id="add-file-button" class="button button--upload">Upload</button>
+              </div>
             </div>
 
-            <div class="file-list" id="file-list">
-              <!-- Files will be listed here -->
-            </div>
-
-            <div class="preview-container" id="preview-container">
-              <!-- Image previews will appear here -->
+            <!-- Hidden file inputs -->
+            <div id="hidden-file-block" style="display: none">
+              <input type="file" name="upload-image-1" id="upload-image-1" onchange="handleFileChange(1)" />
+              <input type="file" name="upload-image-2" id="upload-image-2" onchange="handleFileChange(2)" />
+              <input type="file" name="upload-image-3" id="upload-image-3" onchange="handleFileChange(3)" />
+              <input type="file" name="upload-image-4" id="upload-image-4" onchange="handleFileChange(4)" />
+              <input type="file" name="upload-image-5" id="upload-image-5" onchange="handleFileChange(5)" />
             </div>
           </div>
 
@@ -118,6 +127,7 @@
         </form>
       </div>
     </section>
+
     <section class="hero__section img-behind-text__wrapper">
       <nav class="nav section__wrapper">
         <div class="nav-link__desktop">
@@ -323,7 +333,7 @@
       <div class="cta-home__body">
         <h2 class="text-scale-xl bold text-white text-center text-md-left">Ready to Fix Your Car?</h2>
         <div class="d-grid rg-24px justify-content-center">
-          <button class="open-btn button" id="openModalBtn">Get a Free Quote Now</button>
+          <a href="#contact-form" class="button button--big">Get an Instant Quote</a>
           <p class="text-scale-2md semi-bold text-white text-center">in Under 2 Minutes!</p>
         </div>
       </div>
@@ -431,7 +441,7 @@
         <h2 class="text-scale-xl medium text-white">Special Offers for You</h2>
         <p class="text-scale-sm text-white text-center text-md-left">Save big on premium services with our exclusive promotions and discounts.</p>
         <div class="d-grid d-md-flex align-items-center cg-24px rg-24px">
-          <button class="open-btn button" name="openModalBtn">Get an Instant Quote</button>
+          <a href="#contact-form" class="button button--big button--secondary">Get an Instant Quote</a>
           <p class="text-scale-2md semi-bold text-white text-center text-md-left">in Under 2 Minutes!</p>
         </div>
       </div>
@@ -641,7 +651,7 @@
                 </div>
               </div>
               <p class="text-size-24 mb-3 d-none">About Us</p>
-              <button class="open-btn button" id="openModalBtn">Get a Quote</button>
+              <a href="#contact-form" class="text-size-24 mb-3">Get a Quote</a>
             </div>
             <div class="">
               <p class="text-size-24 mb-3">Follow Us</p>
@@ -671,7 +681,7 @@
         const $span = $(".close-btn");
         const $fileInput = $("#file-input");
         const $fileList = $("#file-list");
-        const $previewContainer = $("#preview-container");
+
         const $dropArea = $("#drop-area");
         const $fileError = $("#file-error");
         const $submitBtn = $("#submit-btn");
@@ -839,25 +849,6 @@
           });
 
           // Update previews for image files
-          updatePreviews();
-        }
-        function updatePreviews() {
-          $previewContainer.empty();
-
-          files.forEach(function (file, index) {
-            if (file.type.startsWith("image/")) {
-              const previewItem = $('<div class="preview-item"></div>');
-              const img = $("<img>").attr("src", URL.createObjectURL(file));
-              const removeBtn = $('<button class="remove-preview">&times;</button>');
-
-              removeBtn.on("click", function () {
-                removeFile(index);
-              });
-
-              previewItem.append(img, removeBtn);
-              $previewContainer.append(previewItem);
-            }
-          });
         }
 
         // Inisialisasi awal (default active image desktop sesuai item aktif)
@@ -869,81 +860,6 @@
           $(".how-it-works__img-desktop .accordion__img").removeClass("active");
           $(".how-it-works__img-desktop ." + initialImgClass).addClass("active");
         }
-
-        $form.on("submit", function (e) {
-          e.preventDefault();
-
-          if (files.length === 0) {
-            $fileError.text("Please select at least one file");
-            return;
-          }
-
-          // Create FormData and append files
-          const formData = new FormData();
-          const name = $("#name").val();
-          const crn = $("#car-registration-number").val();
-          const mobile = $("#mobile-number").val();
-          const email = $("#email").val();
-          const cmy = $("#car-manufacturer-year").val();
-          const carColor = $("#car-color").val();
-          const damageType = $("#damage-type").val();
-          const serviceType = $("#service-type").val();
-          const date = $("#date").val();
-          const time = $("#time").val();
-
-          formData.append("name", name);
-          formData.append("car-registration-number", name);
-          formData.append("mobile-number", name);
-          formData.append("car-manufacturer-year", cmy);
-          formData.append("email", email);
-          formData.append("car-color", carColor);
-          formData.append("damage-type", damageType);
-          formData.append("service-type", serviceType);
-          formData.append("date", date);
-          formData.append("time", time);
-
-          files.forEach(function (file, index) {
-            formData.append(`file_${index}`, file);
-          });
-
-          // Here you would send the files to your server
-          // This is just a simulation
-          $submitBtn.prop("disabled", true);
-          $submitBtn.text("Uploading...");
-
-          // Simulate AJAX request
-          setTimeout(function () {
-            alert(`${files.length} files uploaded successfully!`);
-            files = [];
-            updateFileList();
-            updatePreviews();
-            updateSubmitButton();
-            $submitBtn.text("Upload Files");
-          }, 1500);
-
-          // Actual AJAX request would look like:
-
-          $.ajax({
-            url: "/",
-            type: "POST",
-            data: formData,
-            processData: false,
-            contentType: false,
-            success: function (data) {
-              alert("Upload successful!");
-              files = [];
-              updateFileList();
-              updatePreviews();
-              updateSubmitButton();
-              $submitBtn.text("Upload Files");
-            },
-            error: function (error) {
-              alert("Error uploading files: " + error.responseText);
-              $submitBtn.prop("disabled", false);
-              $submitBtn.text("Upload Files");
-            },
-          });
-        });
       });
 
       document.addEventListener("DOMContentLoaded", function () {
@@ -971,6 +887,133 @@
       });
 
       $("#char-count").text(`${$("#message").val().length} / 1000`);
+    </script>
+    <script>
+      const maxFiles = 5; // The maximum number of files that can be uploaded
+      const fileInputs = []; // Track which inputs are filled
+      const fileList = []; // Track file objects for display
+      const fileListElement = document.getElementById("file-list"); // The file list display
+      const hiddenFileBlock = document.getElementById("hidden-file-block"); // Hidden block for file inputs
+
+      // Trigger the hidden file input to simulate clicking
+      function triggerFileInput(event) {
+        console.log("Triggering file input");
+        if (fileList.length >= maxFiles) {
+          alert("You can only upload up to 5 files.");
+          return;
+        }
+
+        // Find the next available file input
+        const availableInput = getNextAvailableFileInput();
+        if (availableInput) {
+          console.log("Triggering file input", availableInput);
+          availableInput.click(); // Programmatically trigger the input
+        }
+      }
+
+      // Handle file input changes
+      function handleFileChange(index) {
+        const input = document.getElementById(`upload-image-${index}`);
+        if (!input || !input.files || input.files.length === 0) return;
+
+        const file = input.files[0]; // Get the selected file
+        if (validateFile(file)) {
+          addFile(file, index); // Add the file to the list
+        } else {
+          input.value = ""; // Clear the invalid file
+        }
+      }
+
+      // Validate a file before adding
+      function validateFile(file) {
+        const maxFileSize = 5 * 1024 * 1024; // Maximum size in bytes (5MB)
+        const allowedTypes = ["image/jpeg", "image/png", "application/pdf"]; // Allowed file types
+
+        if (!allowedTypes.includes(file.type)) {
+          alert(`${file.name} is not a valid file type. Only JPG, PNG, and PDF are allowed.`);
+          return false;
+        }
+
+        if (file.size > maxFileSize) {
+          alert(`${file.name} exceeds the maximum file size of 5MB.`);
+          return false;
+        }
+
+        return true;
+      }
+
+      // Add a file to the list and update UI
+      function addFile(file, index) {
+        // Check if the file already exists in the list
+        if (fileList.find((f) => f.name === file.name)) {
+          alert(`${file.name} has already been added.`);
+          return;
+        }
+
+        // Add file to the list
+        fileList.push(file);
+        fileInputs.push(index);
+
+        // Update the file list display
+        updateFileList();
+      }
+
+      // Remove a file from the list
+      function removeFile(index) {
+        const fileName = fileList[index].name; // Get the file name to remove
+        fileList.splice(index, 1); // Remove the file from the list
+
+        // Clear the corresponding hidden input
+        const inputIndex = fileInputs[index];
+        const input = document.getElementById(`upload-image-${inputIndex}`);
+        if (input) input.value = "";
+
+        // Update the input tracking and the UI
+        fileInputs.splice(index, 1);
+        updateFileList();
+        console.log(`${fileName} has been removed.`);
+      }
+
+      // Display the file list in the UI
+      function updateFileList() {
+        fileListElement.innerHTML = ""; // Clear the existing list
+        document.querySelector(".preview-container").innerHTML = "";
+        // Add each file to the list
+        fileList.forEach((file, index) => {
+          if (file.type.startsWith("image/")) {
+            const previewItem = document.createElement("div");
+            previewItem.className = "preview-item";
+
+            const img = document.createElement("img");
+            img.src = URL.createObjectURL(file);
+
+            const removeBtn = document.createElement("button");
+            removeBtn.className = "remove-preview";
+            removeBtn.innerHTML = "&times;";
+
+            removeBtn.addEventListener("click", function () {
+              removeFile(index);
+            });
+
+            previewItem.appendChild(img);
+            previewItem.appendChild(removeBtn);
+
+            document.querySelector(".preview-container").appendChild(previewItem);
+          }
+        });
+      }
+
+      // Find the next available hidden file input
+      function getNextAvailableFileInput() {
+        for (let i = 1; i <= maxFiles; i++) {
+          const input = document.getElementById(`upload-image-${i}`);
+          if (input && !fileInputs.includes(i)) {
+            return input;
+          }
+        }
+        return null; // No available inputs
+      }
+      document.getElementById("add-file-button").addEventListener("click", triggerFileInput);
     </script>
   </body>
 </html>
