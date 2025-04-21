@@ -61,7 +61,11 @@
 
           <div class="input__layout_modal damage-type">
             <label class="medium" for="pop-damage-type">Type of Damage</label>
-            <select name="damage-type" id="pop-damage-type">
+            <input type="text" name="damage-type" id="pop-service-type" placeholder="e.g. Bump repair" />
+          </div>
+          <div class="input__layout_modal service-type">
+            <label class="medium" for="pop-service-type">Service Type</label>
+            <select name="service-type" id="pop-damage-type">
               <option value="">Select...</option>
               <option value="bumper-repair">Bumper Repair</option>
               <option value="alloy-wheel-repair">Alloy Wheel Repair</option>
@@ -73,10 +77,6 @@
               <option value="presale-exterior-car-cleanup">Presale Exterior Car Cleanup</option>
               <option value="ceramic-coating">Ceramic Coating</option>
             </select>
-          </div>
-          <div class="input__layout_modal service-type">
-            <label class="medium" for="pop-service-type">Service Type</label>
-            <input type="text" name="service-type" id="pop-service-type" placeholder="e.g., Blue" />
           </div>
 
           <div class="input__layout_modal book-date">
@@ -104,7 +104,7 @@
             <ul id="file-list" class="file-list"></ul>
             <!-- File List -->
             <!-- Image previews will appear here -->
-            <p class="help-text">Upload File or Damaged Photo</p>
+            <p class="help-text">Upload File or Damaged Photo (max 5 files)</p>
             <div class="d-flex">
               <div class="preview-container" id="preview-container"></div>
               <!-- Add File Button -->
