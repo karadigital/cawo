@@ -112,10 +112,11 @@
               <div class="d-flex">
                 <div class="preview-container" id="preview-container"></div>
                 <!-- Add File Button -->
-                <div class="input__layout-modal file-upload my-bottom px-4">
+                <div class="input__layout-modal file-upload my-bottom px-1">
                   <button type="button" id="add-file-button" class="button button--upload">Upload</button>
                 </div>
               </div>
+              <p class="text-scale-xs text-gray">Total size of all images combined must be under 150mb with .jpg, .png or .pdf file format</p>
 
               <!-- Hidden file inputs -->
               <div id="hidden-file-block" style="display: none">
@@ -991,7 +992,7 @@
             const img = document.createElement("img");
             img.src = URL.createObjectURL(file);
 
-            const removeBtn = document.createElement("button");
+            const removeBtn = document.createElement("span");
             removeBtn.className = "remove-preview";
             removeBtn.innerHTML = "&times;";
 
