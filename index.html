@@ -22,114 +22,113 @@
       <div class="modal-content">
         <div class="d-grid rg-16px rg-md-24px">
           <div class="d-grid rg-16px rg-md-24px">
-            <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-between my-2">
               <h2 class="text-scale-sm bold">Get a Quote</h2>
               <button class="close-btn" id="btn-close-modal"><span>&times;</span><span class="mx-2">Close</span></button>
             </div>
-            <div>
-              <span class="text-scale-xl medium text-primary">Instant Quote</span>
-              <span class="text-scale-xl medium text-secondary mx-2">in Under 2 minutes!</span>
-            </div>
-          </div>
-          <div class="modal-caption">
-            <p>Autofill your car information by entering your rego</p>
           </div>
         </div>
-        <form name="contactQuote" netlify class="d-grid rg-24px rg-md-32px" enctype="multipart/form-data">
-          <div class="input__layout-modal name">
-            <label class="medium" for="pop-name">Name <sup class="text-error">*</sup></label>
-            <input type="text" name="name" id="pop-name" placeholder="Your Full Name" required />
+        <div class="modal-form">
+          <div>
+            <span class="text-scale-xl medium text-primary">Instant Quote</span>
+            <span class="text-scale-xl medium text-secondary mx-2">in Under 2 minutes!</span>
           </div>
-          <div class="input__layout_modal car-registration-number">
-            <label class="medium" for="pop-car-registration-number">Car registration number</label>
-            <input type="text" name="car-registration-number" id="pop-car-registration-number" placeholder="e.g., B 1234 CD" />
-          </div>
+          <form name="contactQuote" netlify class="d-grid rg-24px rg-md-32px" enctype="multipart/form-data">
+            <div class="input__layout-modal name">
+              <label class="medium" for="pop-name">Name <sup class="text-error">*</sup></label>
+              <input type="text" name="name" id="pop-name" placeholder="Your Full Name" required />
+            </div>
+            <div class="input__layout car-registration-number">
+              <label class="medium" for="car-registration-number">Car registration number</label>
+              <input type="text" name="car-registration-number" id="car-registration-number" placeholder="e.g., B 1234 CD" />
+            </div>
 
-          <div class="input__layout_modalmobile-number">
-            <label class="medium" for="pop-mobile-number">Mobile number <sup class="text-error">*</sup></label>
-            <input type="tel" name="mobile-number" id="pop-mobile-number" placeholder="Your Mobile Number" required />
-          </div>
+            <div class="input__layout_modal mobile-number">
+              <label class="medium" for="pop-mobile-number">Mobile number <sup class="text-error">*</sup></label>
+              <input type="tel" name="mobile-number" id="pop-mobile-number" placeholder="Your Mobile Number" required />
+            </div>
 
-          <div class="input__layout_modal email">
-            <label class="medium" for="pop-email">Email <sup class="text-error">*</sup></label>
-            <input type="email" name="email" id="pop-email" placeholder="For Invoicing" required />
-          </div>
+            <div class="input__layout_modal email">
+              <label class="medium" for="pop-email">Email <sup class="text-error">*</sup></label>
+              <input type="email" name="email" id="pop-email" placeholder="For Invoicing" required />
+            </div>
 
-          <div class="input__layout_modal car-year">
-            <label class="medium" for="pop-car-year">Manufacture and Year of Car</label>
-            <input type="text" name="car-year" id="pop-car-year" placeholder="e.g., Honda Accord 2020" />
-          </div>
-          <div class="input__layout_modal car-color">
-            <label class="medium" for="pop-car-color">Car Color</label>
-            <input type="text" name="car-color" id="pop-car-color" placeholder="e.g., Blue" />
-          </div>
+            <div class="input__layout_modal car-year">
+              <label class="medium" for="pop-car-year">Manufacture and Year of Car</label>
+              <input type="text" name="car-year" id="pop-car-year" placeholder="e.g., Honda Accord 2020" />
+            </div>
+            <div class="input__layout_modal car-color">
+              <label class="medium" for="pop-car-color">Car Color</label>
+              <input type="text" name="car-color" id="pop-car-color" placeholder="e.g., Blue" />
+            </div>
 
-          <div class="input__layout_modal damage-type">
-            <label class="medium" for="pop-damage-type">Type of Damage</label>
-            <input type="text" name="damage-type" id="pop-service-type" placeholder="e.g. Bump repair" />
-          </div>
-          <div class="input__layout_modal service-type">
-            <label class="medium" for="pop-service-type">Service Type</label>
-            <select name="service-type" id="pop-damage-type">
-              <option value="">Select...</option>
-              <option value="bumper-repair">Bumper Repair</option>
-              <option value="alloy-wheel-repair">Alloy Wheel Repair</option>
-              <option value="wheel-arc-scratch-repair">Wheel Arc Scratch Repair</option>
-              <option value="paint-correction">Paint Correction</option>
-              <option value="car-door-scratch-repair">Car Door Scratch Repair</option>
-              <option value="small-car-dent-repair">Small Car Dent Repair</option>
-              <option value="minor-car-scratch-repair">Minor Car Scratch Repair</option>
-              <option value="presale-exterior-car-cleanup">Presale Exterior Car Cleanup</option>
-              <option value="ceramic-coating">Ceramic Coating</option>
-            </select>
-          </div>
+            <div class="input__layout_modal damage-type">
+              <label class="medium" for="pop-damage-type">Type of Damage</label>
+              <input type="text" name="damage-type" id="pop-service-type" placeholder="e.g. Bump repair" />
+            </div>
+            <div class="input__layout_modal service-type">
+              <label class="medium" for="pop-service-type">Service Type</label>
+              <select name="service-type" id="pop-damage-type">
+                <option value="">Select...</option>
+                <option value="bumper-repair">Bumper Repair</option>
+                <option value="alloy-wheel-repair">Alloy Wheel Repair</option>
+                <option value="wheel-arc-scratch-repair">Wheel Arc Scratch Repair</option>
+                <option value="paint-correction">Paint Correction</option>
+                <option value="car-door-scratch-repair">Car Door Scratch Repair</option>
+                <option value="small-car-dent-repair">Small Car Dent Repair</option>
+                <option value="minor-car-scratch-repair">Minor Car Scratch Repair</option>
+                <option value="presale-exterior-car-cleanup">Presale Exterior Car Cleanup</option>
+                <option value="ceramic-coating">Ceramic Coating</option>
+              </select>
+            </div>
 
-          <div class="input__layout_modal book-date">
-            <label class="medium" for="pop-book-date">Booking Date</label>
-            <input type="date" name="book-date" id="pop-book-date" placeholder="" />
-          </div>
-          <div class="input__layout_modal book-time">
-            <label class="medium" for="pop-book-time">Booking Time</label>
-            <input type="time" name="book-time" id="pop-book-time" placeholder="" />
-          </div>
+            <div class="input__layout_modal book-date">
+              <label class="medium" for="pop-book-date">Booking Date</label>
+              <input type="date" name="book-date" id="pop-book-date" placeholder="" />
+            </div>
+            <div class="input__layout_modal book-time">
+              <label class="medium" for="pop-book-time">Booking Time</label>
+              <input type="time" name="book-time" id="pop-book-time" placeholder="" />
+            </div>
 
-          <div class="input__layout_modal message">
-            <label class="medium" for="pop-message">Comment or message</label>
-            <textarea
-              name="message"
-              id="pop-message"
-              placeholder="Briefly describe the issue or any specific requests"
-              rows="4"
-              maxlength="1000"
-            ></textarea>
-            <p id="pop-char-count" class="text-scale-xs opacity-70 ml-auto">0 / 1000</p>
-          </div>
+            <div class="input__layout_modal message">
+              <label class="medium" for="pop-message">Comment or message</label>
+              <textarea
+                name="message"
+                id="pop-message"
+                placeholder="Briefly describe the issue or any specific requests"
+                rows="4"
+                maxlength="1000"
+              ></textarea>
+              <p id="pop-char-count" class="text-scale-xs opacity-70 ml-auto">0 / 1000</p>
+            </div>
 
-          <div class="input__layout-modal picture">
-            <ul id="file-list" class="file-list" style="display: none"></ul>
-            <!-- File List -->
-            <!-- Image previews will appear here -->
-            <p class="help-text">Upload File or Damaged Photo (max 5 files)</p>
-            <div class="d-flex">
-              <div class="preview-container" id="preview-container"></div>
-              <!-- Add File Button -->
-              <div class="input__layout-modal file-upload my-bottom px-4">
-                <button type="button" id="add-file-button" class="button button--upload">Upload</button>
+            <div class="input__layout-modal picture">
+              <ul id="file-list" class="file-list" style="display: none"></ul>
+              <!-- File List -->
+              <!-- Image previews will appear here -->
+              <p class="help-text">Upload File or Damaged Photo (max 5 files)</p>
+              <div class="d-flex">
+                <div class="preview-container" id="preview-container"></div>
+                <!-- Add File Button -->
+                <div class="input__layout-modal file-upload my-bottom px-4">
+                  <button type="button" id="add-file-button" class="button button--upload">Upload</button>
+                </div>
+              </div>
+
+              <!-- Hidden file inputs -->
+              <div id="hidden-file-block" style="display: none">
+                <input type="file" name="upload-image-1" id="upload-image-1" onchange="handleFileChange(1)" />
+                <input type="file" name="upload-image-2" id="upload-image-2" onchange="handleFileChange(2)" />
+                <input type="file" name="upload-image-3" id="upload-image-3" onchange="handleFileChange(3)" />
+                <input type="file" name="upload-image-4" id="upload-image-4" onchange="handleFileChange(4)" />
+                <input type="file" name="upload-image-5" id="upload-image-5" onchange="handleFileChange(5)" />
               </div>
             </div>
 
-            <!-- Hidden file inputs -->
-            <div id="hidden-file-block" style="display: none">
-              <input type="file" name="upload-image-1" id="upload-image-1" onchange="handleFileChange(1)" />
-              <input type="file" name="upload-image-2" id="upload-image-2" onchange="handleFileChange(2)" />
-              <input type="file" name="upload-image-3" id="upload-image-3" onchange="handleFileChange(3)" />
-              <input type="file" name="upload-image-4" id="upload-image-4" onchange="handleFileChange(4)" />
-              <input type="file" name="upload-image-5" id="upload-image-5" onchange="handleFileChange(5)" />
-            </div>
-          </div>
-
-          <button type="submit" class="submit button button--tertiary cursor-pointer">Submit</button>
-        </form>
+            <button type="submit" class="submit button button--tertiary cursor-pointer">Submit</button>
+          </form>
+        </div>
       </div>
     </section>
 
