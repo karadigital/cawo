@@ -8,17 +8,18 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
 }
 
 .modal-content {
   background-color: #fefefe;
   margin: 5% auto;
-  padding: 20px;
+  padding: 40px;
   border: 1px solid #888;
   width: 90%;
   max-width: 710px;
   max-height: 90vh;
-  border-radius: 8px;
+  border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   animation: modalopen 0.3s;
 }
