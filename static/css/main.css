@@ -1819,7 +1819,7 @@ button {
   padding: 1.5rem;
   background-color: #fff;
   display: grid;
-  grid-template-areas: "name" "mobile-number" "email" "message" "caryear" "carcolor" "damage" "service" "bookdate" "booktime" "picture";
+  grid-template-areas: "name" "mobile-number" "email" "caryear" "carcolor" "damage" "service" "bookdate" "booktime" "message" "picture";
   column-gap: 2rem;
 }
 @media (min-width: 1024px) {
