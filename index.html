@@ -35,7 +35,7 @@
             <div class="text-scale-xl medium text-secondary">in Under 2 minutes!</div>
           </div>
           <form name="contactQuote" netlify class="d-grid rg-24px rg-md-32px" enctype="multipart/form-data">
-            <div class="input__layout-modal name">
+            <div class="input__layout_modal name">
               <label class="medium" for="pop-name">Name <sup class="text-error">*</sup></label>
               <input type="text" name="name" id="pop-name" placeholder="Your Full Name" required />
             </div>
@@ -443,7 +443,7 @@
         <h2 class="text-scale-xl medium text-white">Special Offers for You</h2>
         <p class="text-scale-sm text-white text-center text-md-left">Save big on premium services with our exclusive promotions and discounts.</p>
         <div class="d-grid d-md-flex align-items-center cg-24px rg-24px">
-          <a href="#contact-form" class="button button--big button--secondary">Get an Instant Quote</a>
+          <button class="open-btn button button--big button--secondary openModalBtn" id="openModalBtn3">Get an Instant Quote</button>
           <p class="text-scale-2md semi-bold text-white text-center text-md-left">in Under 2 Minutes!</p>
         </div>
       </div>
@@ -567,17 +567,14 @@
           <label class="medium" for="name">Name <sup class="text-error">*</sup></label>
           <input type="text" name="name" id="name" placeholder="Your Full Name" required />
         </div>
-
         <div class="input__layout mobile-number">
           <label class="medium" for="mobile-number">Mobile number <sup class="text-error">*</sup></label>
           <input type="tel" name="mobile-number" id="mobile-number" placeholder="Your Mobile Number" required />
         </div>
-
         <div class="input__layout email">
           <label class="medium" for="email">Email <sup class="text-error">*</sup></label>
           <input type="email" name="email" id="email" placeholder="For Invoicing" required />
         </div>
-
         <div class="input__layout message">
           <label class="medium" for="message">Comment or message</label>
           <textarea
@@ -589,7 +586,6 @@
           ></textarea>
           <p id="char-count" class="text-scale-xs opacity-70 ml-auto">0 / 1000</p>
         </div>
-
         <button type="submit" class="submit button button--tertiary cursor-pointer">Submit</button>
       </form>
     </section>
