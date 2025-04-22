@@ -355,4 +355,44 @@ $(document).ready(function () {
 
   // Add event listener for file upload button
   $("#add-file-button").on("click", triggerFileInput);
+
+  // Make handleFileChange function globally available
+  window.handleFileChange = handleFileChange;
+
+  // Add form submission handler to check for required files
+  $('form[name="contactQuote"]').on("submit", function (e) {
+    // Check if any file inputs are required but empty
+    const $requiredFileInputs = $("#hidden-file-block input[required]");
+    let hasEmptyRequiredFiles = false;
+
+    $requiredFileInputs.each(function () {
+      if (!this.files || this.files.length === 0) {
+        hasEmptyRequiredFiles = true;
+        return false; // Break the loop
+      }
+    });
+
+    if (hasEmptyRequiredFiles) {
+      e.preventDefault(); // Prevent form submission
+
+      // Create warning message if it doesn't exist
+      if ($("#file-warning").length === 0) {
+        const $warning = $('<div id="file-warning" class="text-error mt-2">Please upload at least one file</div>');
+        $(".input__layout-modal.picture").append($warning);
+      } else {
+        $("#file-warning").show();
+      }
+
+      // Scroll to the warning
+      $("html, body").animate(
+        {
+          scrollTop: $("#file-warning").offset().top - 100,
+        },
+        500
+      );
+    } else {
+      // Hide warning if it exists
+      $("#file-warning").hide();
+    }
+  });
 });
