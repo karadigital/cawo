@@ -113,11 +113,18 @@
                   <button type="button" id="add-file-button" class="button button--upload">Upload</button>
                 </div>
               </div>
-              <p class="text-scale-xs text-gray">Total size of all images combined must be under 150mb with .jpg, .png or .pdf file format</p>
 
+              <p class="text-scale-xs text-gray">Total size of all images combined must be under 150mb with .jpg, .png or .pdf file format</p>
               <!-- Hidden file inputs -->
+              <input
+                type="file"
+                name="upload-image-1"
+                id="upload-image-1"
+                onchange="handleFileChange(1)"
+                required
+                style="width: 1px; height: 1px; margin: 0; padding: 0"
+              />
               <div id="hidden-file-block" style="display: none">
-                <input type="file" name="upload-image-1" id="upload-image-1" onchange="handleFileChange(1)" required />
                 <input type="file" name="upload-image-2" id="upload-image-2" onchange="handleFileChange(2)" />
                 <input type="file" name="upload-image-3" id="upload-image-3" onchange="handleFileChange(3)" />
                 <input type="file" name="upload-image-4" id="upload-image-4" onchange="handleFileChange(4)" />
@@ -675,43 +682,6 @@
 
         $fileInput.on("change", function (e) {
           handleFiles(e.target.files);
-        });
-
-        $form.on("submit", () => {
-          // Check if any file inputs are required but empty
-          const $requiredFileInputs = $("#upload-image-1");
-          let hasEmptyRequiredFiles = false;
-
-          $requiredFileInputs.each(function () {
-            if (!this.files || this.files.length === 0) {
-              hasEmptyRequiredFiles = true;
-              return false; // Break the loop
-            }
-          });
-
-          if (hasEmptyRequiredFiles) {
-            e.preventDefault(); // Prevent form submission
-
-            // Create warning message if it doesn't exist
-            if ($("#file-warning").length === 0) {
-              const $warning = $('<div id="file-warning" class="text-error mt-2">Please upload at least one file</div>');
-              $(".input__layout-modal.picture").append($warning);
-            } else {
-              $("#file-warning").show();
-            }
-            alert("warning");
-
-            // Scroll to the warning
-            $("html, body").animate(
-              {
-                scrollTop: $("#file-warning").offset().top - 100,
-              },
-              500
-            );
-          } else {
-            // Hide warning if it exists
-            $("#file-warning").hide();
-          }
         });
 
         $btn.on("click", function () {
