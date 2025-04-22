@@ -1786,7 +1786,40 @@ button {
   vertical-align: middle;
 }
 
-form {
+.form-page {
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.1019607843);
+  display: grid;
+  grid-template-areas: "name" "mobile-number" "email" "message" "submit";
+  column-gap: 2rem;
+}
+@media (min-width: 1024px) {
+  .form-page {
+    grid-template-areas: "name name" "mobile-number email" "message message" "submit .";
+  }
+}
+.form-page .name {
+  grid-area: name;
+}
+.form-page .car-registration-number {
+  grid-area: crn;
+}
+.form-page .mobile-number {
+  grid-area: mobile-number;
+}
+.form-page .email {
+  grid-area: email;
+}
+.form-page .message {
+  grid-area: message;
+}
+.form-page .submit {
+  grid-area: submit;
+}
+
+.form-modal {
   padding: 1.5rem;
   background-color: #fff;
   border-radius: 16px;
@@ -1796,47 +1829,47 @@ form {
   column-gap: 2rem;
 }
 @media (min-width: 1024px) {
-  form {
+  .form-modal {
     grid-template-areas: "name name" "mobile-number email" "caryear carcolor" "damage service" "bookdate booktime" "message message" "picture picture" "submit .";
   }
 }
-form .name {
+.form-modal .name {
   grid-area: name;
 }
-form .car-registration-number {
+.form-modal .car-registration-number {
   grid-area: crn;
 }
-form .mobile-number {
+.form-modal .mobile-number {
   grid-area: mobile-number;
 }
-form .email {
+.form-modal .email {
   grid-area: email;
 }
-form .car-year {
+.form-modal .car-year {
   grid-area: caryear;
 }
-form .car-color {
+.form-modal .car-color {
   grid-area: carcolor;
 }
-form .damage-type {
+.form-modal .damage-type {
   grid-area: damage;
 }
-form .service-type {
+.form-modal .service-type {
   grid-area: service;
 }
-form .book-date {
+.form-modal .book-date {
   grid-area: bookdate;
 }
-form .book-time {
+.form-modal .book-time {
   grid-area: booktime;
 }
-form .message {
+.form-modal .message {
   grid-area: message;
 }
-form .picture {
+.form-modal .picture {
   grid-area: picture;
 }
-form .submit {
+.form-modal .submit {
   grid-area: submit;
 }
 

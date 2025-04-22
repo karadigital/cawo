@@ -1,4 +1,48 @@
-form {
+.form-page {
+  padding: 1.5rem;
+  background-color: $white;
+  border-radius: 16px;
+  box-shadow: 0px 4px 24px 0px #0000001a;
+
+  display: grid;
+  grid-template-areas:
+    "name"
+    "mobile-number"
+    "email"
+    "message"
+    "submit";
+
+  column-gap: 2rem;
+  @include desktop-up {
+    grid-template-areas:
+      "name name"
+      "mobile-number email"
+      "message message"
+      "submit .";
+  }
+  .name {
+    grid-area: name;
+  }
+  .car-registration-number {
+    grid-area: crn;
+  }
+  .mobile-number {
+    grid-area: mobile-number;
+  }
+  .email {
+    grid-area: email;
+  }
+
+  .message {
+    grid-area: message;
+  }
+
+  .submit {
+    grid-area: submit;
+  }
+}
+
+.form-modal {
   padding: 1.5rem;
   background-color: $white;
   border-radius: 16px;
