@@ -585,13 +585,14 @@
           <input type="email" name="email" id="email" placeholder="For Invoicing" required />
         </div>
         <div class="input__layout message">
-          <label class="medium" for="message">Comment or message</label>
+          <label class="medium" for="message">Comment or message <sup class="text-error">*</sup></label>
           <textarea
             name="message"
             id="message"
             placeholder="Briefly describe the issue or any specific requests"
             rows="4"
             maxlength="1000"
+            required
           ></textarea>
           <p id="char-count" class="text-scale-xs opacity-70 ml-auto">0 / 1000</p>
         </div>
