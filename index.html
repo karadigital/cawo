@@ -109,29 +109,31 @@
               <div class="d-flex">
                 <div class="preview-container" id="preview-container"></div>
                 <!-- Add File Button -->
+
                 <div class="input__layout-modal file-upload my-bottom px-1">
                   <button type="button" id="add-file-button" class="button button--upload">Upload</button>
+                  <input
+                    type="file"
+                    name="upload-image-1"
+                    id="upload-image-1"
+                    onchange="handleFileChange(1)"
+                    required
+                    style="width: 1px; height: 1px; margin: 0; padding: 0"
+                  />
                 </div>
               </div>
 
               <p class="text-scale-xs text-gray">Total size of all images combined must be under 150mb with .jpg, .png or .pdf file format</p>
               <!-- Hidden file inputs -->
-              <input
-                type="file"
-                name="upload-image-1"
-                id="upload-image-1"
-                onchange="handleFileChange(1)"
-                required
-                style="width: 1px; height: 1px; margin: 0; padding: 0"
-              />
+
               <div id="hidden-file-block" style="display: none">
                 <input type="file" name="upload-image-2" id="upload-image-2" onchange="handleFileChange(2)" />
                 <input type="file" name="upload-image-3" id="upload-image-3" onchange="handleFileChange(3)" />
                 <input type="file" name="upload-image-4" id="upload-image-4" onchange="handleFileChange(4)" />
                 <input type="file" name="upload-image-5" id="upload-image-5" onchange="handleFileChange(5)" />
               </div>
+              <button type="submit" class="submit button button--tertiary cursor-pointer mt-4">Submit</button>
             </div>
-            <button type="submit" class="submit button button--tertiary cursor-pointer">Submit</button>
           </form>
         </div>
       </div>
@@ -593,7 +595,7 @@
           ></textarea>
           <p id="char-count" class="text-scale-xs opacity-70 ml-auto">0 / 1000</p>
         </div>
-        <button type="submit" class="submit button button--tertiary cursor-pointer">Submit</button>
+        <button type="submit" class="submit button button--tertiary cursor-pointer mt-0">Submit</button>
       </form>
     </section>
 

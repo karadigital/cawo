@@ -52,8 +52,7 @@
     "service"
     "bookdate"
     "booktime"
-    "picture"
-    "submit";
+    "picture";
 
   column-gap: 2rem;
   @include desktop-up {
@@ -64,8 +63,7 @@
       "damage service"
       "bookdate booktime"
       "message message"
-      "picture picture"
-      "submit .";
+      "picture picture";
   }
   .name {
     grid-area: name;
@@ -103,9 +101,5 @@
   }
   .picture {
     grid-area: picture;
-  }
-
-  .submit {
-    grid-area: submit;
   }
 }
