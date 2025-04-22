@@ -1819,12 +1819,12 @@ button {
   padding: 1.5rem;
   background-color: #fff;
   display: grid;
-  grid-template-areas: "name" "mobile-number" "email" "message" "caryear" "carcolor" "damage" "service" "bookdate" "booktime" "picture";
+  grid-template-areas: "name" "mobile-number" "email" "message" "caryear" "carcolor" "damage" "service" "bookdate" "booktime" "picture" "submit";
   column-gap: 2rem;
 }
 @media (min-width: 1024px) {
   .form-modal {
-    grid-template-areas: "name name" "mobile-number email" "caryear carcolor" "damage service" "bookdate booktime" "message message" "picture picture";
+    grid-template-areas: "name name" "mobile-number email" "caryear carcolor" "damage service" "bookdate booktime" "message message" "picture picture" "submit .";
   }
 }
 .form-modal .name {
@@ -1862,6 +1862,9 @@ button {
 }
 .form-modal .picture {
   grid-area: picture;
+}
+.form-modal .submit {
+  grid-area: submit;
 }
 
 .cols-2fr-1fr {
