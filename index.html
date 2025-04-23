@@ -882,12 +882,12 @@
 
       $("#char-count").text(`${$("#message").val().length} / 1000`);
 
-      $("#message").on("input", function () {
+      $("#pop-message").on("input", function () {
         const currentLength = $(this).val().length;
         $("#pop-char-count").text(`${currentLength} / 1000`);
       });
 
-      $("#pop-char-count").text(`${$("#message").val().length} / 1000`);
+      $("#pop-char-count").text(`${$("#pop-message").val().length} / 1000`);
     </script>
     <script>
       const maxFiles = 5; // The maximum number of files that can be uploaded
