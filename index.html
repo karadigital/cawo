@@ -11,10 +11,16 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Third party -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
   </head>
   <body>
     <!-- The Modal -->
@@ -22,46 +28,96 @@
       <div class="modal-content">
         <div class="d-grid rg-16px rg-md-24px">
           <div class="d-grid rg-16px rg-md-24px">
-            <div class="d-flex justify-content-between my-2">
+            <div class="d-flex justify-content-between align-items-center mb-3">
               <h2 class="text-scale-sm bold">Get a Quote</h2>
-              <button class="close-btn" id="btn-close-modal"><span>&times;</span><span class="mx-2">Close</span></button>
+              <button class="close-btn" id="btn-close-modal">
+                <span>&times;</span><span class="mx-2">Close</span>
+              </button>
             </div>
           </div>
         </div>
         <div class="modal-form">
-          <div>
+          <div class="mb-5">
             <span class="text-scale-xl medium text-primary">Instant Quote</span>
             <span class="text-scale-xl medium text-secondary mx-2">in</span>
-            <div class="text-scale-xl medium text-secondary">Under 2 minutes!</div>
+            <div class="text-scale-xl medium text-secondary">
+              Under 2 minutes!
+            </div>
           </div>
-          <form name="contactQuote" netlify class="form-modal d-grid rg-24px rg-md-32px" enctype="multipart/form-data">
+          <form
+            name="contactQuote"
+            netlify
+            class="form-modal d-grid rg-24px rg-md-32px"
+            enctype="multipart/form-data"
+          >
             <div class="input__layout_modal name">
-              <label class="medium" for="pop-name">Name <sup class="text-error">*</sup></label>
-              <input type="text" name="name" id="pop-name" placeholder="Your Full Name" required />
+              <label class="medium" for="pop-name"
+                >Name <sup class="text-error">*</sup></label
+              >
+              <input
+                type="text"
+                name="name"
+                id="pop-name"
+                placeholder="Your Full Name"
+                required
+              />
             </div>
 
             <div class="input__layout_modal mobile-number">
-              <label class="medium" for="pop-mobile-number">Mobile number <sup class="text-error">*</sup></label>
-              <input type="tel" name="mobile-number" id="pop-mobile-number" placeholder="Your Mobile Number" required />
+              <label class="medium" for="pop-mobile-number"
+                >Mobile number <sup class="text-error">*</sup></label
+              >
+              <input
+                type="tel"
+                name="mobile-number"
+                id="pop-mobile-number"
+                placeholder="Your Mobile Number"
+                required
+              />
             </div>
 
             <div class="input__layout_modal email">
-              <label class="medium" for="pop-email">Email <sup class="text-error">*</sup></label>
-              <input type="email" name="email" id="pop-email" placeholder="For Invoicing" required />
+              <label class="medium" for="pop-email"
+                >Email <sup class="text-error">*</sup></label
+              >
+              <input
+                type="email"
+                name="email"
+                id="pop-email"
+                placeholder="For Invoicing"
+                required
+              />
             </div>
 
             <div class="input__layout_modal car-year">
-              <label class="medium" for="pop-car-year">Manufacture and Year of Car</label>
-              <input type="text" name="car-year" id="pop-car-year" placeholder="e.g. Honda Accord 2020" />
+              <label class="medium" for="pop-car-year"
+                >Manufacture and Year of Car</label
+              >
+              <input
+                type="text"
+                name="car-year"
+                id="pop-car-year"
+                placeholder="e.g. Honda Accord 2020"
+              />
             </div>
             <div class="input__layout_modal car-color">
               <label class="medium" for="pop-car-color">Car Color</label>
-              <input type="text" name="car-color" id="pop-car-color" placeholder="e.g. Blue" />
+              <input
+                type="text"
+                name="car-color"
+                id="pop-car-color"
+                placeholder="e.g. Blue"
+              />
             </div>
 
             <div class="input__layout_modal damage-type">
               <label class="medium" for="pop-damage-type">Type of Damage</label>
-              <input type="text" name="damage-type" id="pop-service-type" placeholder="e.g. Dent" />
+              <input
+                type="text"
+                name="damage-type"
+                id="pop-service-type"
+                placeholder="e.g. Dent"
+              />
             </div>
             <div class="input__layout_modal service-type">
               <label class="medium" for="pop-service-type">Service Type</label>
@@ -69,27 +125,49 @@
                 <option value="">Select...</option>
                 <option value="bumper-repair">Bumper Repair</option>
                 <option value="alloy-wheel-repair">Alloy Wheel Repair</option>
-                <option value="wheel-arc-scratch-repair">Wheel Arc Scratch Repair</option>
+                <option value="wheel-arc-scratch-repair">
+                  Wheel Arc Scratch Repair
+                </option>
                 <option value="paint-correction">Paint Correction</option>
-                <option value="car-door-scratch-repair">Car Door Scratch Repair</option>
-                <option value="small-car-dent-repair">Small Car Dent Repair</option>
-                <option value="minor-car-scratch-repair">Minor Car Scratch Repair</option>
-                <option value="presale-exterior-car-cleanup">Presale Exterior Car Cleanup</option>
+                <option value="car-door-scratch-repair">
+                  Car Door Scratch Repair
+                </option>
+                <option value="small-car-dent-repair">
+                  Small Car Dent Repair
+                </option>
+                <option value="minor-car-scratch-repair">
+                  Minor Car Scratch Repair
+                </option>
+                <option value="presale-exterior-car-cleanup">
+                  Presale Exterior Car Cleanup
+                </option>
                 <option value="ceramic-coating">Ceramic Coating</option>
               </select>
             </div>
 
             <div class="input__layout_modal book-date">
               <label class="medium" for="pop-book-date">Booking Date</label>
-              <input type="date" name="book-date" id="pop-book-date" placeholder="" />
+              <input
+                type="date"
+                name="book-date"
+                id="pop-book-date"
+                placeholder=""
+              />
             </div>
             <div class="input__layout_modal book-time">
               <label class="medium" for="pop-book-time">Booking Time</label>
-              <input type="time" name="book-time" id="pop-book-time" placeholder="" />
+              <input
+                type="time"
+                name="book-time"
+                id="pop-book-time"
+                placeholder=""
+              />
             </div>
 
             <div class="input__layout_modal message">
-              <label class="medium" for="pop-message">Comment or message<sup class="text-error">*</sup></label>
+              <label class="medium" for="pop-message"
+                >Comment or message<sup class="text-error">*</sup></label
+              >
               <textarea
                 name="comment-or-message"
                 id="pop-message"
@@ -98,20 +176,36 @@
                 maxlength="1000"
                 required
               ></textarea>
-              <p id="pop-char-count" class="text-scale-xs opacity-70 ml-auto">0 / 1000</p>
+              <p id="pop-char-count" class="text-scale-xs opacity-70 ml-auto">
+                0 / 1000
+              </p>
             </div>
 
-            <div class="input__layout-modal picture">
+            <div class="d-grid rg-12px input__layout-modal picture">
               <ul id="file-list" class="file-list" style="display: none"></ul>
               <!-- File List -->
               <!-- Image previews will appear here -->
-              <p class="help-text">Upload File or Damaged Photo (max 5 files)<sup class="text-error">*</sup></p>
-              <div class="d-flex">
-                <div class="preview-container d-flex" id="preview-container"></div>
+              <p class="text-size-14">
+                Upload File or Damaged Photo (max 5 files)<sup
+                  class="text-error"
+                  >*</sup
+                >
+              </p>
+              <div class="d-flex cg-8pcx">
+                <div
+                  class="preview-container d-flex"
+                  id="preview-container"
+                ></div>
                 <!-- Add File Button -->
 
                 <div class="input__layout-modal file-upload my-bottom px-1">
-                  <button type="button" id="add-file-button" class="button button--upload">Upload</button>
+                  <button
+                    type="button"
+                    id="add-file-button"
+                    class="button button--upload"
+                  >
+                    Upload
+                  </button>
                   <input
                     type="file"
                     name="upload-image-1"
@@ -123,16 +217,44 @@
                 </div>
               </div>
 
-              <p class="text-scale-xs text-gray">Total size of all images combined must be under 150mb with .jpg, .png or .pdf file format</p>
+              <p class="small text-base-10">
+                Total size of all images combined must be under 150mb with .jpg,
+                .png or .pdf file format
+              </p>
               <!-- Hidden file inputs -->
 
               <div id="hidden-file-block" style="display: none">
-                <input type="file" name="upload-image-2" id="upload-image-2" onchange="handleFileChange(2)" />
-                <input type="file" name="upload-image-3" id="upload-image-3" onchange="handleFileChange(3)" />
-                <input type="file" name="upload-image-4" id="upload-image-4" onchange="handleFileChange(4)" />
-                <input type="file" name="upload-image-5" id="upload-image-5" onchange="handleFileChange(5)" />
+                <input
+                  type="file"
+                  name="upload-image-2"
+                  id="upload-image-2"
+                  onchange="handleFileChange(2)"
+                />
+                <input
+                  type="file"
+                  name="upload-image-3"
+                  id="upload-image-3"
+                  onchange="handleFileChange(3)"
+                />
+                <input
+                  type="file"
+                  name="upload-image-4"
+                  id="upload-image-4"
+                  onchange="handleFileChange(4)"
+                />
+                <input
+                  type="file"
+                  name="upload-image-5"
+                  id="upload-image-5"
+                  onchange="handleFileChange(5)"
+                />
               </div>
-              <button type="submit" class="submit button button--tertiary cursor-pointer mt-4">Submit</button>
+              <button
+                type="submit"
+                class="submit button button--tertiary cursor-pointer mt-4"
+              >
+                Submit
+              </button>
             </div>
           </form>
         </div>
@@ -151,7 +273,11 @@
           <a href="" class="text-white">About Us</a>
           <a href="" class="text-white">Contact Us</a> -->
         </div>
-        <img src="./static/images/instant-fix-logo.png" alt="company logo" class="" />
+        <img
+          src="./static/images/instant-fix-logo.png"
+          alt="company logo"
+          class=""
+        />
         <!-- Hide first. Enabled after there is new pages -->
         <!-- <div class="menu__mobile d-flex align-items-center cg-16px">
           <p>Menu</p>
@@ -160,43 +286,91 @@
       </nav>
       <!-- Hero -->
       <div class="">
-        <img src="./static/images/hero-banner.png" alt="Hero Banner" class="img-behind-text__item img-cover" />
+        <img
+          src="./static/images/hero-banner.png"
+          alt="Hero Banner"
+          class="img-behind-text__item img-cover"
+        />
         <div class="section__wrapper section__padding">
           <div class="hero__header d-grid rg-16px">
-            <h1 class="text-scale-2xl bold text-white">Expert Car Dent & Scratch Repairs Save Up to 40%</h1>
-            <p class="text-size-24 medium text-white mb-2">Sydney's Trusted Network of Mobile Repairers</p>
+            <h1 class="text-scale-2xl bold text-white">
+              Expert Car Dent & Scratch Repairs Save Up to 40%
+            </h1>
+            <p class="text-size-24 medium text-white mb-2">
+              Sydney's Trusted Network of Mobile Repairers
+            </p>
             <div class="hero__buttons">
-              <button class="open-btn button openModalBtn" id="openModalBtn1">Get a Free Quote Now</button>
-              <a href="#our-services" class="button button--white">Our Services</a>
+              <button class="open-btn button openModalBtn" id="openModalBtn1">
+                Get a Free Quote Now
+              </button>
+              <a href="#our-services" class="button button--white"
+                >Our Services</a
+              >
             </div>
           </div>
         </div>
         <div class="desktop-only hero__bottom">
           <div class="section__wrapper hero__text">
             <div class="d-grid rg-24px rg-md-32px">
-              <h2 class="text-scale-xl text-white medium">We Are Always Here For You</h2>
-              <p class="text-scale-sm text-white medium">Your Needs, Our Priority.</p>
+              <h2 class="text-scale-xl text-white medium">
+                We Are Always Here For You
+              </h2>
+              <p class="text-scale-sm text-white medium">
+                Your Needs, Our Priority.
+              </p>
             </div>
             <ul class="d-grid cols-2 cols-md-4 rg-32px">
               <li>
-                <img src="./static/images/star-big.svg" alt="customer rating" class="d-flex mx-auto mb-1" />
-                <p class="text-scale-md bold text-white text-center mb-2">4.8/5</p>
-                <p class="text-scale-xs medium text-white text-center">Customer Rating</p>
+                <img
+                  src="./static/images/star-big.svg"
+                  alt="customer rating"
+                  class="d-flex mx-auto mb-1"
+                />
+                <p class="text-scale-md bold text-white text-center mb-2">
+                  4.8/5
+                </p>
+                <p class="text-scale-xs medium text-white text-center">
+                  Customer Rating
+                </p>
               </li>
               <li>
-                <img src="./static/images/check-orange-filled.svg" alt="verified reviews" class="d-flex mx-auto mb-1" />
-                <p class="text-scale-md bold text-white text-center mb-2">2.000+</p>
-                <p class="text-scale-xs medium text-white text-center">Verified Reviews</p>
+                <img
+                  src="./static/images/check-orange-filled.svg"
+                  alt="verified reviews"
+                  class="d-flex mx-auto mb-1"
+                />
+                <p class="text-scale-md bold text-white text-center mb-2">
+                  2.000+
+                </p>
+                <p class="text-scale-xs medium text-white text-center">
+                  Verified Reviews
+                </p>
               </li>
               <li>
-                <img src="./static/images/tools.svg" alt="qualified repairs" class="d-flex mx-auto mb-1" />
-                <p class="text-scale-md bold text-white text-center mb-2">500+</p>
-                <p class="text-scale-xs medium text-white text-center">Qualified Repairs</p>
+                <img
+                  src="./static/images/tools.svg"
+                  alt="qualified repairs"
+                  class="d-flex mx-auto mb-1"
+                />
+                <p class="text-scale-md bold text-white text-center mb-2">
+                  500+
+                </p>
+                <p class="text-scale-xs medium text-white text-center">
+                  Qualified Repairs
+                </p>
               </li>
               <li>
-                <img src="./static/images/clock.svg" alt="average respond time" class="d-flex mx-auto mb-1" />
-                <p class="text-scale-md bold text-white text-center mb-2">6 hours</p>
-                <p class="text-scale-xs medium text-white text-center">Average Respond Time</p>
+                <img
+                  src="./static/images/clock.svg"
+                  alt="average respond time"
+                  class="d-flex mx-auto mb-1"
+                />
+                <p class="text-scale-md bold text-white text-center mb-2">
+                  6 hours
+                </p>
+                <p class="text-scale-xs medium text-white text-center">
+                  Average Respond Time
+                </p>
               </li>
             </ul>
           </div>
@@ -206,151 +380,286 @@
     <!--  -->
     <section class="mobile-only section__padding bg-secondary">
       <div class="d-grid rg-24px rg-md-32px">
-        <h2 class="text-scale-xl text-white text-center text-md-left medium">We Are Always Here For You</h2>
-        <p class="text-scale-xs text-scale-sm text-white text-center text-md-left medium">Your Needs, Our Priority.</p>
+        <h2 class="text-scale-xl text-white text-center text-md-left medium">
+          We Are Always Here For You
+        </h2>
+        <p
+          class="text-scale-xs text-scale-sm text-white text-center text-md-left medium"
+        >
+          Your Needs, Our Priority.
+        </p>
       </div>
       <ul class="d-grid cols-2 rg-32px">
         <li>
-          <img src="./static/images/star-big.svg" alt="customer rating" class="d-flex mx-auto mb-1" />
+          <img
+            src="./static/images/star-big.svg"
+            alt="customer rating"
+            class="d-flex mx-auto mb-1"
+          />
           <p class="text-scale-md bold text-white text-center mb-2">4.8/5</p>
-          <p class="text-scale-xs medium text-white text-center">Customer Rating</p>
+          <p class="text-scale-xs medium text-white text-center">
+            Customer Rating
+          </p>
         </li>
         <li>
-          <img src="./static/images/check-orange-filled.svg" alt="verified reviews" class="d-flex mx-auto mb-1" />
+          <img
+            src="./static/images/check-orange-filled.svg"
+            alt="verified reviews"
+            class="d-flex mx-auto mb-1"
+          />
           <p class="text-scale-md bold text-white text-center mb-2">2.000+</p>
-          <p class="text-scale-xs medium text-white text-center">Verified Reviews</p>
+          <p class="text-scale-xs medium text-white text-center">
+            Verified Reviews
+          </p>
         </li>
         <li>
-          <img src="./static/images/tools.svg" alt="qualified repairs" class="d-flex mx-auto mb-1" />
+          <img
+            src="./static/images/tools.svg"
+            alt="qualified repairs"
+            class="d-flex mx-auto mb-1"
+          />
           <p class="text-scale-md bold text-white text-center mb-2">500+</p>
-          <p class="text-scale-xs medium text-white text-center">Qualified Repairs</p>
+          <p class="text-scale-xs medium text-white text-center">
+            Qualified Repairs
+          </p>
         </li>
         <li>
-          <img src="./static/images/clock.svg" alt="average respond time" class="d-flex mx-auto mb-1" />
+          <img
+            src="./static/images/clock.svg"
+            alt="average respond time"
+            class="d-flex mx-auto mb-1"
+          />
           <p class="text-scale-md bold text-white text-center mb-2">6 hours</p>
-          <p class="text-scale-xs medium text-white text-center">Average Respond Time</p>
+          <p class="text-scale-xs medium text-white text-center">
+            Average Respond Time
+          </p>
         </li>
       </ul>
     </section>
     <!-- Services -->
-    <section id="our-services" class="section__wrapper section__padding our-services__section">
-      <div class="our-services__header d-grid rg-24px cols-md-2 align-items-center cg-48px">
+    <section
+      id="our-services"
+      class="section__wrapper section__padding our-services__section"
+    >
+      <div
+        class="our-services__header d-grid rg-24px cols-md-2 align-items-center cg-48px"
+      >
         <div class="d-grid rg-16px rg-md-24px">
           <h2 class="text-scale-sm bold text-base">Our Services</h2>
-          <p class="text-scale-xl text-primary medium text-primary">Professional Mobile Repairs in The Comfort of Your Home or Workplace</p>
+          <p class="text-scale-xl text-primary medium text-primary">
+            Professional Mobile Repairs in The Comfort of Your Home or Workplace
+          </p>
         </div>
         <div class="d-grid rg-24px">
           <p class="text-base opacity-70">
-            InstantFix delivers body shop quality repairs at your location, specializing in bumpers, panels, wheels, and paint correction for sale
-            preparation.
+            InstantFix delivers body shop quality repairs at your location,
+            specializing in bumpers, panels, wheels, and paint correction for
+            sale preparation.
           </p>
           <p class="text-base opacity-70">
-            We save time and money compared to traditional shops, ensuring high-standard repairs without shortcuts. We prioritize proper preparation
-            for lasting results, unlike quick-fix services that risk paint peeling. We offers mobile bumper and alloy wheel repairs in Sydney,
-            focusing on quality and fair pricing for long-term customer satisfaction.
+            We save time and money compared to traditional shops, ensuring
+            high-standard repairs without shortcuts. We prioritize proper
+            preparation for lasting results, unlike quick-fix services that risk
+            paint peeling. We offers mobile bumper and alloy wheel repairs in
+            Sydney, focusing on quality and fair pricing for long-term customer
+            satisfaction.
           </p>
         </div>
       </div>
       <div class="d-grid cols-md-3 rg-16px rg-lg-32px cg-md-16px cg-lg-32px">
-        <div id="bumper-repair" class="card-services img-behind-text__wrapper linear-black">
-          <img src="./static/images/bumper-repair.png" alt="Bumper repair" class="img-behind-text__item img-cover" />
+        <div
+          id="bumper-repair"
+          class="card-services img-behind-text__wrapper linear-black"
+        >
+          <img
+            src="./static/images/bumper-repair.png"
+            alt="Bumper repair"
+            class="img-behind-text__item img-cover"
+          />
           <div class="card-services__body">
             <p class="text-size-24 bold text-white">Bumper Repair</p>
             <p class="text-white">
-              We can repair minor and major bumper damage, restoring your car's appearance and protecting it from further damage.
+              We can repair minor and major bumper damage, restoring your car's
+              appearance and protecting it from further damage.
             </p>
           </div>
         </div>
-        <div id="alloy-wheel-repair" class="card-services img-behind-text__wrapper linear-black">
-          <img src="./static/images/aloy-wheel-repair.png" alt="Aloy wheel repair" class="img-behind-text__item img-cover" />
+        <div
+          id="alloy-wheel-repair"
+          class="card-services img-behind-text__wrapper linear-black"
+        >
+          <img
+            src="./static/images/aloy-wheel-repair.png"
+            alt="Aloy wheel repair"
+            class="img-behind-text__item img-cover"
+          />
           <div class="card-services__body">
             <p class="text-size-24 bold text-white">Alloy Wheel Repair</p>
             <p class="text-white">
-              Our alloy wheel repair service can restore your wheels to their original condition, removing scratches and scuffs.
+              Our alloy wheel repair service can restore your wheels to their
+              original condition, removing scratches and scuffs.
             </p>
           </div>
         </div>
-        <div id="wheel-arc-scratch-repair" class="card-services img-behind-text__wrapper linear-black">
-          <img src="./static/images/wheel-arc-scratch repair.png" alt="Wheel Arc Scratch repair" class="img-behind-text__item img-cover" />
+        <div
+          id="wheel-arc-scratch-repair"
+          class="card-services img-behind-text__wrapper linear-black"
+        >
+          <img
+            src="./static/images/wheel-arc-scratch repair.png"
+            alt="Wheel Arc Scratch repair"
+            class="img-behind-text__item img-cover"
+          />
           <div class="card-services__body">
             <p class="text-size-24 bold text-white">Wheel Arc Scratch Repair</p>
             <p class="text-white">
-              Our expert technicians can repair wheel arch scratches, restoring your car's appearance and protecting it from further damage.
+              Our expert technicians can repair wheel arch scratches, restoring
+              your car's appearance and protecting it from further damage.
             </p>
           </div>
         </div>
-        <div id="paint-correction" class="card-services img-behind-text__wrapper linear-black">
-          <img src="./static/images/paint-correction.png" alt="Paint correction" class="img-behind-text__item img-cover" />
+        <div
+          id="paint-correction"
+          class="card-services img-behind-text__wrapper linear-black"
+        >
+          <img
+            src="./static/images/paint-correction.png"
+            alt="Paint correction"
+            class="img-behind-text__item img-cover"
+          />
           <div class="card-services__body">
             <p class="text-size-24 bold text-white">Paint Correction</p>
             <p class="text-white">
-              Our paint correction service removes imperfections and restores your car's original shine, leaving it looking like new.
+              Our paint correction service removes imperfections and restores
+              your car's original shine, leaving it looking like new.
             </p>
           </div>
         </div>
-        <div id="card-door-scratch-repair" class="card-services img-behind-text__wrapper linear-black">
-          <img src="./static/images/car-door-scratch repair.png" alt="Car door scratch repair" class="img-behind-text__item img-cover" />
+        <div
+          id="card-door-scratch-repair"
+          class="card-services img-behind-text__wrapper linear-black"
+        >
+          <img
+            src="./static/images/car-door-scratch repair.png"
+            alt="Car door scratch repair"
+            class="img-behind-text__item img-cover"
+          />
           <div class="card-services__body">
             <p class="text-size-24 bold text-white">Car Door Scratch Repair</p>
-            <p class="text-white">Repair scratches on your car doors, restoring their original appearance and protecting them from further damage.</p>
+            <p class="text-white">
+              Repair scratches on your car doors, restoring their original
+              appearance and protecting them from further damage.
+            </p>
           </div>
         </div>
-        <div id="small-car-dent-repair" class="card-services img-behind-text__wrapper linear-black">
-          <img src="./static/images/small-car-dent-repair.png" alt="Small car dent repair" class="img-behind-text__item img-cover" />
+        <div
+          id="small-car-dent-repair"
+          class="card-services img-behind-text__wrapper linear-black"
+        >
+          <img
+            src="./static/images/small-car-dent-repair.png"
+            alt="Small car dent repair"
+            class="img-behind-text__item img-cover"
+          />
           <div class="card-services__body">
             <p class="text-size-24 bold text-white">Small Car Dent Repair</p>
             <p class="text-white">
-              We use the latest technology and techniques to repair small dents and dings without the need for costly bodywork.
+              We use the latest technology and techniques to repair small dents
+              and dings without the need for costly bodywork.
             </p>
           </div>
         </div>
-        <div id="minor-car-scratch-repair" class="card-services img-behind-text__wrapper linear-black">
-          <img src="./static/images/minor-car-scratch-repair.png" alt="Minor car scratch repair repair" class="img-behind-text__item img-cover" />
+        <div
+          id="minor-car-scratch-repair"
+          class="card-services img-behind-text__wrapper linear-black"
+        >
+          <img
+            src="./static/images/minor-car-scratch-repair.png"
+            alt="Minor car scratch repair repair"
+            class="img-behind-text__item img-cover"
+          />
           <div class="card-services__body">
             <p class="text-size-24 bold text-white">Minor Car Scratch Repair</p>
             <p class="text-white">
-              Our skilled technicians can restore your car's paint to its original luster by expertly removing minor scratches and scuffs.
+              Our skilled technicians can restore your car's paint to its
+              original luster by expertly removing minor scratches and scuffs.
             </p>
           </div>
         </div>
-        <div id="presale-exterior-car-cleanup" class="card-services img-behind-text__wrapper linear-black">
-          <img src="./static/images/presale-exterior-car-cleanup.png" alt="Presale exterior car cleanup" class="img-behind-text__item img-cover" />
+        <div
+          id="presale-exterior-car-cleanup"
+          class="card-services img-behind-text__wrapper linear-black"
+        >
+          <img
+            src="./static/images/presale-exterior-car-cleanup.png"
+            alt="Presale exterior car cleanup"
+            class="img-behind-text__item img-cover"
+          />
           <div class="card-services__body">
-            <p class="text-size-24 bold text-white">Presale Exterior Car Cleanup</p>
+            <p class="text-size-24 bold text-white">
+              Presale Exterior Car Cleanup
+            </p>
             <p class="text-white">
-              Our comprehensive presale exterior car cleanup service will ensure your vehicle looks its best before being sold.
+              Our comprehensive presale exterior car cleanup service will ensure
+              your vehicle looks its best before being sold.
             </p>
           </div>
         </div>
-        <div id="ceramic-coating" class="card-services img-behind-text__wrapper linear-black">
-          <img src="./static/images/ceramic-coating.png" alt="Ceramic coating" class="img-behind-text__item img-cover" />
+        <div
+          id="ceramic-coating"
+          class="card-services img-behind-text__wrapper linear-black"
+        >
+          <img
+            src="./static/images/ceramic-coating.png"
+            alt="Ceramic coating"
+            class="img-behind-text__item img-cover"
+          />
           <div class="card-services__body">
             <p class="text-size-24 bold text-white">Ceramic Coating</p>
-            <p class="text-white">Protect your car's paint from the elements with our durable and long-lasting ceramic coating.</p>
+            <p class="text-white">
+              Protect your car's paint from the elements with our durable and
+              long-lasting ceramic coating.
+            </p>
           </div>
         </div>
         <!-- Hide first and enabled later when services page is added -->
-        <a href="" class="button button--outline w-100 d-none">See More Services</a>
+        <a href="" class="button button--outline w-100 d-none"
+          >See More Services</a
+        >
       </div>
     </section>
     <!--  -->
-    <section class="cta-home__section img-behind-text__wrapper section__wrapper section__padding">
-      <img src="./static/images/cta-home.png" alt="image with call to action button to form section" class="img-behind-text__item desktop-only" />
+    <section
+      class="cta-home__section img-behind-text__wrapper section__wrapper section__padding"
+    >
+      <img
+        src="./static/images/cta-home.png"
+        alt="image with call to action button to form section"
+        class="img-behind-text__item desktop-only"
+      />
       <img
         src="./static/images/cta-home-mobile.png"
         alt="image with call to action button to form section"
         class="img-behind-text__item img-cover mobile-only"
       />
       <div class="cta-home__body">
-        <h2 class="text-scale-xl bold text-white text-center text-md-left">Ready to Fix Your Car?</h2>
+        <h2 class="text-scale-xl bold text-white text-center text-md-left">
+          Ready to Fix Your Car?
+        </h2>
         <div class="d-grid rg-24px justify-content-center">
-          <button class="open-btn button openModalBtn" id="openModalBtn2">Get an Instant Quote</button>
-          <p class="text-scale-2md semi-bold text-white text-center">in Under 2 Minutes!</p>
+          <button class="open-btn button openModalBtn" id="openModalBtn2">
+            Get an Instant Quote
+          </button>
+          <p class="text-scale-2md semi-bold text-white text-center">
+            in Under 2 Minutes!
+          </p>
         </div>
       </div>
     </section>
     <!-- Why Choose Us -->
-    <section class="section__wrapper section__padding why-choose-us__section d-grid cols-md-2">
+    <section
+      class="section__wrapper section__padding why-choose-us__section d-grid cols-md-2"
+    >
       <div class="d-grid rg-32px">
         <div class="d-grid">
           <div class="d-grid rg-16px rg-md-24px mb-2">
@@ -360,7 +669,10 @@
               <span class="text-scale-xl medium text-primary">Difference</span>
             </p>
           </div>
-          <p class="text-scale-sm">Discover why FixinMoto is the trusted choice for hundreds of car owners.</p>
+          <p class="text-scale-sm">
+            Discover why FixinMoto is the trusted choice for hundreds of car
+            owners.
+          </p>
         </div>
         <ul class="check__list d-grid rg-24px">
           <li class="text-list">Mobile Service Available</li>
@@ -374,14 +686,28 @@
         <!-- <a href="javascript:void(0)" class="button">Learn More</a> -->
       </div>
       <div class="why-choose-us__img desktop-only">
-        <img src="./static/images/why-choose-us-1.png" alt="Image added to why choose us section" class="img-1 w-100 border-radius-md-16px" />
-        <img src="./static/images/why-choose-us-2.png" alt="Image added to why choose us section" class="desktop-only border-radius-md-16px" />
+        <img
+          src="./static/images/why-choose-us-1.png"
+          alt="Image added to why choose us section"
+          class="img-1 w-100 border-radius-md-16px"
+        />
+        <img
+          src="./static/images/why-choose-us-2.png"
+          alt="Image added to why choose us section"
+          class="desktop-only border-radius-md-16px"
+        />
       </div>
     </section>
-    <img src="./static/images/why-choose-us-1.png" alt="Image added to why choose us section" class="w-100 mobile-only" />
+    <img
+      src="./static/images/why-choose-us-1.png"
+      alt="Image added to why choose us section"
+      class="w-100 mobile-only"
+    />
     <!-- How it works -->
     <section class="bg-secondary">
-      <div class="how-it-works__section section__wrapper section__padding position-relative overflow-hidden">
+      <div
+        class="how-it-works__section section__wrapper section__padding position-relative overflow-hidden"
+      >
         <div class="text-with-curved__wrapper">
           <div class="d-grid rg-16px rg-md-24px">
             <h2 class="text-scale-sm bold text-white">How It Works</h2>
@@ -390,77 +716,151 @@
               <span class="text-scale-xl medium text-primary">InstantFix</span>
             </p>
           </div>
-          <p class="text-with-curved-border text-white opacity-70">A smooth and transparent process for all your vehicle needs.</p>
-          <img src="./static/images/decorative-bg-curved-white.svg" alt="" class="bg-decorative" />
+          <p class="text-with-curved-border text-white opacity-70">
+            A smooth and transparent process for all your vehicle needs.
+          </p>
+          <img
+            src="./static/images/decorative-bg-curved-white.svg"
+            alt=""
+            class="bg-decorative"
+          />
         </div>
         <div class="how-it-works__wrapper d-grid rg-24px cg-32px cols-md-2">
           <div class="how-it-works__img-desktop">
-            <img src="./static/images/aloy-wheel-repair.png" alt="" class="accordion__img accordion__img-1 img-cover active" />
-            <img src="./static/images/aloy-wheel-repair.png" alt="" class="accordion__img accordion__img-2 img-cover" />
-            <img src="./static/images/aloy-wheel-repair.png" alt="" class="accordion__img accordion__img-3 img-cover" />
-            <img src="./static/images/aloy-wheel-repair.png" alt="" class="accordion__img accordion__img-4 img-cover" />
+            <img
+              src="./static/images/aloy-wheel-repair.png"
+              alt=""
+              class="accordion__img accordion__img-1 img-cover active"
+            />
+            <img
+              src="./static/images/aloy-wheel-repair.png"
+              alt=""
+              class="accordion__img accordion__img-2 img-cover"
+            />
+            <img
+              src="./static/images/aloy-wheel-repair.png"
+              alt=""
+              class="accordion__img accordion__img-3 img-cover"
+            />
+            <img
+              src="./static/images/aloy-wheel-repair.png"
+              alt=""
+              class="accordion__img accordion__img-4 img-cover"
+            />
           </div>
           <div class="d-grid rg-32px">
             <div class="accordion__item active">
               <div class="accordion__body">
-                <h3 class="accordion__title text-size-32 bold opacity-70">Submit Photos</h3>
+                <h3 class="accordion__title text-size-32 bold opacity-70">
+                  Submit Photos
+                </h3>
                 <p class="text-white opacity-50">
-                  Take clear photos of the damage to your car from multiple angles. This will help repairers accurately assess the extent of the
-                  damage and provide you with an accurate quote.
+                  Take clear photos of the damage to your car from multiple
+                  angles. This will help repairers accurately assess the extent
+                  of the damage and provide you with an accurate quote.
                 </p>
               </div>
-              <img src="./static/images/aloy-wheel-repair.png" alt="" class="accordion__img accordion__img-1 img-cover" />
+              <img
+                src="./static/images/aloy-wheel-repair.png"
+                alt=""
+                class="accordion__img accordion__img-1 img-cover"
+              />
             </div>
             <div class="accordion__item">
               <div class="accordion__body">
-                <h3 class="accordion__title text-size-32 bold opacity-70">Get Multiple Quotes</h3>
+                <h3 class="accordion__title text-size-32 bold opacity-70">
+                  Get Multiple Quotes
+                </h3>
                 <p class="text-white opacity-50">
-                  Sit back and relax! We'll send your photos to our network of trusted repairers. They'll take a look and send you personalized quotes
-                  for the repairs.
+                  Sit back and relax! We'll send your photos to our network of
+                  trusted repairers. They'll take a look and send you
+                  personalized quotes for the repairs.
                 </p>
               </div>
-              <img src="./static/images/aloy-wheel-repair.png" alt="" class="accordion__img accordion__img-2 img-cover" />
+              <img
+                src="./static/images/aloy-wheel-repair.png"
+                alt=""
+                class="accordion__img accordion__img-2 img-cover"
+              />
             </div>
             <div class="accordion__item">
               <div class="accordion__body">
-                <h3 class="accordion__title text-size-32 bold opacity-70">Choose Your Repairer</h3>
+                <h3 class="accordion__title text-size-32 bold opacity-70">
+                  Choose Your Repairer
+                </h3>
                 <p class="text-white opacity-50">
-                  Once you have a few quotes in hand, it's time to pick your repair hero! Compare the quotes, read reviews, and choose the repairer
-                  that best fits your budget and needs.
+                  Once you have a few quotes in hand, it's time to pick your
+                  repair hero! Compare the quotes, read reviews, and choose the
+                  repairer that best fits your budget and needs.
                 </p>
               </div>
-              <img src="./static/images/aloy-wheel-repair.png" alt="" class="accordion__img accordion__img-3 img-cover" />
+              <img
+                src="./static/images/aloy-wheel-repair.png"
+                alt=""
+                class="accordion__img accordion__img-3 img-cover"
+              />
             </div>
             <div class="accordion__item">
               <div class="accordion__body">
-                <h3 class="accordion__title text-size-32 bold opacity-70">Get Your Car Fixed</h3>
+                <h3 class="accordion__title text-size-32 bold opacity-70">
+                  Get Your Car Fixed
+                </h3>
                 <p class="text-white opacity-50">
-                  You've chosen your repairer, now it's time to schedule a convenient time for them to come to you. Sit back and relax knowing your
-                  car is in good hands!
+                  You've chosen your repairer, now it's time to schedule a
+                  convenient time for them to come to you. Sit back and relax
+                  knowing your car is in good hands!
                 </p>
               </div>
-              <img src="./static/images/aloy-wheel-repair.png" alt="" class="accordion__img accordion__img-4 img-cover" />
+              <img
+                src="./static/images/aloy-wheel-repair.png"
+                alt=""
+                class="accordion__img accordion__img-4 img-cover"
+              />
             </div>
           </div>
         </div>
       </div>
     </section>
     <!-- Special Offers -->
-    <section class="special-offers__section section__wrapper section__padding img-behind-text__wrapper">
-      <img src="./static/images/special-offers.png" alt="" class="special-offers__img img-behind-text__item img-behind-text__item--right img-cover" />
+    <section
+      class="special-offers__section section__wrapper section__padding img-behind-text__wrapper"
+    >
+      <img
+        src="./static/images/special-offers.png"
+        alt=""
+        class="special-offers__img img-behind-text__item img-behind-text__item--right img-cover"
+      />
       <div class="special-offers__body d-grid rg-32px">
         <h2 class="text-scale-xl medium text-white">Special Offers for You</h2>
-        <p class="text-scale-sm text-white text-center text-md-left">Save big on premium services with our exclusive promotions and discounts.</p>
+        <p class="text-scale-sm text-white text-center text-md-left">
+          Save big on premium services with our exclusive promotions and
+          discounts.
+        </p>
         <div class="d-grid d-md-flex align-items-center cg-24px rg-24px">
-          <button class="open-btn button button--big button--secondary openModalBtn" id="openModalBtn3">Get an Instant Quote</button>
-          <p class="text-scale-2md semi-bold text-white text-center text-md-left">in Under 2 Minutes!</p>
+          <button
+            class="open-btn button button--big button--secondary openModalBtn"
+            id="openModalBtn3"
+          >
+            Get an Instant Quote
+          </button>
+          <p
+            class="text-scale-2md semi-bold text-white text-center text-md-left"
+          >
+            in Under 2 Minutes!
+          </p>
         </div>
       </div>
     </section>
     <!-- Testimonials -->
     <section class="testimonials__section overflow-hidden">
-      <div class="section__padding text-with-curved__wrapper section__wrapper position-relative d-grid rg-8px">
-        <img src="./static/images/decorative-bg-curved-orange.svg" alt="" class="bg-decorative" />
+      <div
+        class="section__padding text-with-curved__wrapper section__wrapper position-relative d-grid rg-8px"
+      >
+        <img
+          src="./static/images/decorative-bg-curved-orange.svg"
+          alt=""
+          class="bg-decorative"
+        />
         <div class="d-grid rg-16px rg-md-24px">
           <h2 class="text-scale-sm bold">Testimonials</h2>
           <p class="text-scale-xl medium">
@@ -469,7 +869,8 @@
           </p>
         </div>
         <p class="text-with-curved-border w-lg-75 ml-auto opacity-70">
-          Read what our satisfied customers have to say about our products and services
+          Read what our satisfied customers have to say about our products and
+          services
         </p>
       </div>
       <div class="testimonials__list__wrapper">
@@ -480,9 +881,11 @@
                 <li class="splide__slide">
                   <div class="testimonials__item">
                     <p class="text-base-darkest opacity-50">
-                      For years, I've trusted my car to InstantFix, and they've never let me down. The staff is not only friendly but also incredibly
-                      knowledgeable, taking the time to walk me through every repair. I wholeheartedly recommend them to anyone in need of dependable
-                      auto repair services.
+                      For years, I've trusted my car to InstantFix, and they've
+                      never let me down. The staff is not only friendly but also
+                      incredibly knowledgeable, taking the time to walk me
+                      through every repair. I wholeheartedly recommend them to
+                      anyone in need of dependable auto repair services.
                     </p>
                     <div class="text-base-darker">
                       <p class="text-scale-sm">Albert Flores</p>
@@ -493,9 +896,11 @@
                 <li class="splide__slide">
                   <div class="testimonials__item">
                     <p class="text-base-darkest opacity-50">
-                      When I faced a sudden issue with my vehicle, InstantFix managed to fit me in for an appointment on the same day. Their team
-                      quickly diagnosed the problem and had my car back on the road in no time. I truly appreciated their prompt and effective
-                      service.
+                      When I faced a sudden issue with my vehicle, InstantFix
+                      managed to fit me in for an appointment on the same day.
+                      Their team quickly diagnosed the problem and had my car
+                      back on the road in no time. I truly appreciated their
+                      prompt and effective service.
                     </p>
                     <div class="text-base-darker">
                       <p class="text-scale-sm">Robert Fox</p>
@@ -506,8 +911,11 @@
                 <li class="splide__slide">
                   <div class="testimonials__item">
                     <p class="text-base-darkest opacity-50">
-                      I encountered an urgent problem with my vehicle and was fortunate to secure a same-day appointment at InstantFix. The staff
-                      swiftly identified the issue and got my car running again in no time. Their quick and efficient service was greatly appreciated.
+                      I encountered an urgent problem with my vehicle and was
+                      fortunate to secure a same-day appointment at InstantFix.
+                      The staff swiftly identified the issue and got my car
+                      running again in no time. Their quick and efficient
+                      service was greatly appreciated.
                     </p>
                     <div>
                       <p>Eleanor Pena</p>
@@ -520,12 +928,28 @@
 
             <div class="splide__arrows">
               <button class="splide__arrow splide__arrow--prev">
-                <img src="./static/images/arrow-left-black.svg" alt="previous" class="mobile-only" />
-                <img src="./static/images/arrow-left-white.svg" alt="previous" class="desktop-only" />
+                <img
+                  src="./static/images/arrow-left-black.svg"
+                  alt="previous"
+                  class="mobile-only"
+                />
+                <img
+                  src="./static/images/arrow-left-white.svg"
+                  alt="previous"
+                  class="desktop-only"
+                />
               </button>
               <button class="splide__arrow splide__arrow--next">
-                <img src="./static/images/arrow-right-black.svg" alt="next" class="mobile-only" />
-                <img src="./static/images/arrow-right-white.svg" alt="next" class="desktop-only" />
+                <img
+                  src="./static/images/arrow-right-black.svg"
+                  alt="next"
+                  class="mobile-only"
+                />
+                <img
+                  src="./static/images/arrow-right-white.svg"
+                  alt="next"
+                  class="desktop-only"
+                />
               </button>
             </div>
           </div>
@@ -538,20 +962,33 @@
         <h2 class="text-scale-sm bold">Coverage Area</h2>
         <div class="d-grid rg-8px rg-md-24px">
           <p class="text-scale-lg medium">
-            <span class="text-scale-lg medium text-primary">InstantFix is Near You</span>
+            <span class="text-scale-lg medium text-primary"
+              >InstantFix is Near You</span
+            >
             <br />
             Quality, Convenience, and Expertise
           </p>
-          <p class="opacity-70">Whether you’re near or far, our expert services are just around the corner.</p>
+          <p class="opacity-70">
+            Whether you’re near or far, our expert services are just around the
+            corner.
+          </p>
         </div>
       </div>
       <div class="coverage__body d-grid cols-md-2 cg-48px align-items-center">
-        <img src="./static/images/australia-map.png" alt="A map of Australia" class="d-flex w-100 border-radius-md-16px" />
+        <img
+          src="./static/images/australia-map.png"
+          alt="A map of Australia"
+          class="d-flex w-100 border-radius-md-16px"
+        />
 
         <div class="coverage__text d-grid rg-32px">
           <div class="d-grid rg-16px">
-            <p class="text-scale-md bold text-primary">Areas We Service in Sydney</p>
-            <p class="text-scale-sm">Our mobile car repair teams cover all Sydney metropolitan regions</p>
+            <p class="text-scale-md bold text-primary">
+              Areas We Service in Sydney
+            </p>
+            <p class="text-scale-sm">
+              Our mobile car repair teams cover all Sydney metropolitan regions
+            </p>
           </div>
           <ul class="check__list d-grid rg-24px">
             <li id="eastern-suburbs" class="text-list">Eastern Suburbs</li>
@@ -565,27 +1002,60 @@
       </div>
     </section>
     <!-- Form -->
-    <section id="contact-form" class="section__wrapper section__padding d-grid rg-24px cols-md-2 cg-32px align-items-start">
+    <section
+      id="contact-form"
+      class="section__wrapper section__padding d-grid rg-24px cols-md-2 cg-32px align-items-start"
+    >
       <div class="d-grid rg-16px rg-md-24px">
         <h2 class="text-scale-sm bold">Get a Quote</h2>
         <span class="text-scale-xl medium text-primary">Instant Quote</span>
         <p class="text-scale-xl medium">in Under 2 minutes!</p>
       </div>
-      <form name="contact" netlify class="form-page d-grid rg-24px rg-md-32px">
+      <form
+        name="contact"
+        netlify
+        class="form-page d-grid rg-24px rg-md-32px cols-md-2"
+      >
         <div class="input__layout name">
-          <label class="medium" for="name">Name <sup class="text-error">*</sup></label>
-          <input type="text" name="name" id="name" placeholder="Your Full Name" required />
+          <label class="medium" for="name"
+            >Name <sup class="text-error">*</sup></label
+          >
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Your Full Name"
+            required
+          />
         </div>
         <div class="input__layout mobile-number">
-          <label class="medium" for="mobile-number">Mobile number <sup class="text-error">*</sup></label>
-          <input type="tel" name="mobile-number" id="mobile-number" placeholder="Your Mobile Number" required />
+          <label class="medium" for="mobile-number"
+            >Mobile number <sup class="text-error">*</sup></label
+          >
+          <input
+            type="tel"
+            name="mobile-number"
+            id="mobile-number"
+            placeholder="Your Mobile Number"
+            required
+          />
         </div>
         <div class="input__layout email">
-          <label class="medium" for="email">Email <sup class="text-error">*</sup></label>
-          <input type="email" name="email" id="email" placeholder="For Invoicing" required />
+          <label class="medium" for="email"
+            >Email <sup class="text-error">*</sup></label
+          >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="For Invoicing"
+            required
+          />
         </div>
         <div class="input__layout message">
-          <label class="medium" for="message">Comment or message <sup class="text-error">*</sup></label>
+          <label class="medium" for="message"
+            >Comment or message <sup class="text-error">*</sup></label
+          >
           <textarea
             name="message"
             id="message"
@@ -594,20 +1064,35 @@
             maxlength="1000"
             required
           ></textarea>
-          <p id="char-count" class="text-scale-xs opacity-70 ml-auto">0 / 1000</p>
+          <p id="char-count" class="text-scale-xs opacity-70 ml-auto">
+            0 / 1000
+          </p>
         </div>
 
-        <div class="input__layout-modal picture">
+        <div class="d-grid rg-12px input__layout-modal picture">
           <ul id="file-list" class="file-list" style="display: none"></ul>
           <!-- File List -->
           <!-- Image previews will appear here -->
-          <p class="help-text">Upload File or Damaged Photo (max 5 files)<sup class="text-error">*</sup></p>
-          <div class="d-flex">
-            <div class="preview-container-p d-flex" id="preview-container-p"></div>
+          <p class="text-size-14">
+            Upload File or Damaged Photo (max 5 files)<sup class="text-error"
+              >*</sup
+            >
+          </p>
+          <div class="d-flex cg-8pcx">
+            <div
+              class="preview-container-p d-flex"
+              id="preview-container-p"
+            ></div>
             <!-- Add File Button -->
 
-            <div class="input__layout-modal file-upload my-bottom px-1">
-              <button type="button" id="add-file-button-p" class="button button--upload">Upload</button>
+            <div class="input__layout-modal file-upload my-bottom">
+              <button
+                type="button"
+                id="add-file-button-p"
+                class="button button--upload"
+              >
+                Upload
+              </button>
               <input
                 type="file"
                 name="upload-image-1"
@@ -619,16 +1104,44 @@
             </div>
           </div>
 
-          <p class="text-scale-xs text-gray">Total size of all images combined must be under 150mb with .jpg, .png or .pdf file format</p>
+          <p class="small text-base-10">
+            Total size of all images combined must be under 150mb with .jpg,
+            .png or .pdf file format
+          </p>
           <!-- Hidden file inputs -->
 
           <div id="hidden-file-block" style="display: none">
-            <input type="file" name="upload-image-2" id="upload-image-p2" onchange="handleFileChangeP(2)" />
-            <input type="file" name="upload-image-3" id="upload-image-p3" onchange="handleFileChangeP(3)" />
-            <input type="file" name="upload-image-4" id="upload-image-p4" onchange="handleFileChangeP(4)" />
-            <input type="file" name="upload-image-5" id="upload-image-p5" onchange="handleFileChangeP(5)" />
+            <input
+              type="file"
+              name="upload-image-2"
+              id="upload-image-p2"
+              onchange="handleFileChangeP(2)"
+            />
+            <input
+              type="file"
+              name="upload-image-3"
+              id="upload-image-p3"
+              onchange="handleFileChangeP(3)"
+            />
+            <input
+              type="file"
+              name="upload-image-4"
+              id="upload-image-p4"
+              onchange="handleFileChangeP(4)"
+            />
+            <input
+              type="file"
+              name="upload-image-5"
+              id="upload-image-p5"
+              onchange="handleFileChangeP(5)"
+            />
           </div>
-          <button type="submit" class="submit button button--tertiary cursor-pointer mt-4">Submit</button>
+          <button
+            type="submit"
+            class="submit button button--tertiary cursor-pointer mt-4"
+          >
+            Submit
+          </button>
         </div>
       </form>
     </section>
@@ -640,39 +1153,72 @@
           <img src="./static/images/instant-fix-logo.png" alt="Company logo" />
           <div class="d-grid rg-42px cols-md-4">
             <div class="">
-              <a href="#coverage-area" class="d-block text-size-24 mb-3">Service Area</a>
+              <a href="#coverage-area" class="d-block text-size-24 mb-3"
+                >Service Area</a
+              >
               <div class="d-grid rg-8px">
-                <a href="#eastern-suburbs" class="opacity-50">Eastern Suburbs</a>
+                <a href="#eastern-suburbs" class="opacity-50"
+                  >Eastern Suburbs</a
+                >
                 <a href="#inner-west" class="opacity-50">Inner West</a>
                 <a href="#north-shore" class="opacity-50">North Shore</a>
                 <a href="#eastern-sydney" class="opacity-50">Western Sydney</a>
-                <a href="#southern-sydney" class="opacity-50">Southern Sydney</a>
-                <a href="#northern-beaches" class="opacity-50">Northern Beaches</a>
+                <a href="#southern-sydney" class="opacity-50"
+                  >Southern Sydney</a
+                >
+                <a href="#northern-beaches" class="opacity-50"
+                  >Northern Beaches</a
+                >
               </div>
             </div>
             <div class="">
-              <a href="#our-services" class="text-size-24 mb-3 d-block">Services</a>
+              <a href="#our-services" class="text-size-24 mb-3 d-block"
+                >Services</a
+              >
               <div class="d-grid rg-8px">
                 <a href="#bumper-repair" class="opacity-50">Bumper Repair</a>
-                <a href="#alloy-wheel-repair" class="opacity-50">Alloy Wheel Repair</a>
-                <a href="#wheel-arc-scratch-repair" class="opacity-50">Wheel Arc Scratch Repair</a>
-                <a href="#paint-correction" class="opacity-50">Paint Correction</a>
-                <a href="#card-door-scratch-repair" class="opacity-50">Car Door Scratch Repair</a>
-                <a href="#small-car-dent-repair" class="opacity-50">Small Car Dent Repair</a>
-                <a href="#minor-car-scratch-repair" class="opacity-50">Minor Car Scratch Repair</a>
-                <a href="#presale-exterior-car-cleanup" class="opacity-50">Presale Exterior Car Cleanup</a>
-                <a href="#ceramic-coating" class="opacity-50">Ceramic Coating</a>
+                <a href="#alloy-wheel-repair" class="opacity-50"
+                  >Alloy Wheel Repair</a
+                >
+                <a href="#wheel-arc-scratch-repair" class="opacity-50"
+                  >Wheel Arc Scratch Repair</a
+                >
+                <a href="#paint-correction" class="opacity-50"
+                  >Paint Correction</a
+                >
+                <a href="#card-door-scratch-repair" class="opacity-50"
+                  >Car Door Scratch Repair</a
+                >
+                <a href="#small-car-dent-repair" class="opacity-50"
+                  >Small Car Dent Repair</a
+                >
+                <a href="#minor-car-scratch-repair" class="opacity-50"
+                  >Minor Car Scratch Repair</a
+                >
+                <a href="#presale-exterior-car-cleanup" class="opacity-50"
+                  >Presale Exterior Car Cleanup</a
+                >
+                <a href="#ceramic-coating" class="opacity-50"
+                  >Ceramic Coating</a
+                >
               </div>
             </div>
             <div class="d-grid rg-32px">
               <div class="">
                 <p class="text-size-24 mb-3">Contact Us</p>
                 <div class="d-grid rg-8px">
-                  <a href="tel:+61292726888" class="d-flex align-items-center cg-12px">
+                  <a
+                    href="tel:+61292726888"
+                    class="d-flex align-items-center cg-12px"
+                  >
                     <img src="./static/images/phone.svg" alt="Phone number" />
                     <p class="opacity-50">+61 292726888</p>
                   </a>
-                  <a href="mailto:hello@instantfix.com" target="_blank" class="d-flex align-items-center cg-12px">
+                  <a
+                    href="mailto:hello@instantfix.com"
+                    target="_blank"
+                    class="d-flex align-items-center cg-12px"
+                  >
                     <img src="./static/images/email.svg" alt="email" />
                     <p class="opacity-50">hello@instantfix.com</p>
                   </a>
@@ -681,7 +1227,10 @@
                     <p class="opacity-50">www.instantfix.com.au</p>
                   </div>
                   <div class="d-flex align-items-center cg-12px">
-                    <img src="./static/images/clock-small.svg" alt="work hours" />
+                    <img
+                      src="./static/images/clock-small.svg"
+                      alt="work hours"
+                    />
                     <p class="opacity-50">Mon - Sat: 7am - 6pm</p>
                   </div>
                 </div>
@@ -692,7 +1241,9 @@
           </div>
         </div>
         <div class="footnote text-center">
-          <p class="opacity-50">Copyright © 2025 InstantFix. All rights reserved.</p>
+          <p class="opacity-50">
+            Copyright © 2025 InstantFix. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
@@ -773,7 +1324,9 @@
         // Upload button click handler
         $("#uploadBtn").click(function () {
           if (selectedFiles.length === 0) {
-            $("#status").html('<span class="error">Please select at least one file</span>');
+            $("#status").html(
+              '<span class="error">Please select at least one file</span>'
+            );
             return;
           }
 
@@ -849,7 +1402,9 @@
           const k = 1024;
           const sizes = ["Bytes", "KB", "MB", "GB"];
           const i = Math.floor(Math.log(bytes) / Math.log(k));
-          return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + " " + sizes[i];
+          return (
+            parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + " " + sizes[i]
+          );
         }
         function updateFileList() {
           $fileList.empty();
@@ -862,8 +1417,12 @@
           files.forEach(function (file, index) {
             const fileItem = $('<div class="file-item"></div>');
             const fileInfo = $('<div class="file-info"></div>');
-            const fileIcon = $(`<span class="file-icon">${getFileIcon(file.type)}</span>`);
-            const fileName = $(`<span>${file.name} (${formatFileSize(file.size)})</span>`);
+            const fileIcon = $(
+              `<span class="file-icon">${getFileIcon(file.type)}</span>`
+            );
+            const fileName = $(
+              `<span>${file.name} (${formatFileSize(file.size)})</span>`
+            );
             const removeBtn = $('<button class="remove-btn">&times;</button>');
 
             removeBtn.on("click", function () {
@@ -885,7 +1444,9 @@
 
         if (initialImgClass) {
           $(".how-it-works__img-desktop .accordion__img").removeClass("active");
-          $(".how-it-works__img-desktop ." + initialImgClass).addClass("active");
+          $(".how-it-works__img-desktop ." + initialImgClass).addClass(
+            "active"
+          );
         }
       });
 
@@ -988,7 +1549,9 @@
         const allowedTypes = ["image/jpeg", "image/png", "application/pdf"]; // Allowed file types
 
         if (!allowedTypes.includes(file.type)) {
-          alert(`${file.name} is not a valid file type. Only JPG, PNG, and PDF are allowed.`);
+          alert(
+            `${file.name} is not a valid file type. Only JPG, PNG, and PDF are allowed.`
+          );
           return false;
         }
 
@@ -1084,7 +1647,9 @@
             previewItem.appendChild(img);
             previewItem.appendChild(removeBtn);
 
-            document.querySelector(".preview-container").appendChild(previewItem);
+            document
+              .querySelector(".preview-container")
+              .appendChild(previewItem);
           }
         });
       }
@@ -1111,7 +1676,9 @@
             previewItem.appendChild(img);
             previewItem.appendChild(removeBtn);
 
-            document.querySelector(".preview-container-p").appendChild(previewItem);
+            document
+              .querySelector(".preview-container-p")
+              .appendChild(previewItem);
           }
         });
       }
@@ -1135,8 +1702,12 @@
         }
         return null; // No available inputs
       }
-      document.getElementById("add-file-button").addEventListener("click", triggerFileInput);
-      document.getElementById("add-file-button-p").addEventListener("click", triggerFileInputP);
+      document
+        .getElementById("add-file-button")
+        .addEventListener("click", triggerFileInput);
+      document
+        .getElementById("add-file-button-p")
+        .addEventListener("click", triggerFileInputP);
     </script>
   </body>
 </html>

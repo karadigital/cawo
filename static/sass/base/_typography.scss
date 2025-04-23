@@ -93,7 +93,7 @@ a {
 }
 
 .text-scale-xs {
-  @include font-size(0.875rem, 1rem); //14rem, 16rem
+  @include font-size(0.875rem, 1rem); //14px, 16px
 }
 
 // .text-scale-2xs {
@@ -293,6 +293,6 @@ Others
 .italic {
   font-style: italic;
 }
-.text-gray {
-  color: gray;
+.text-base-10 {
+  color: $base-10;
 }

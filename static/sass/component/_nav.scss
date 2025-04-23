@@ -4,8 +4,12 @@
   justify-content: space-between;
 
   padding: 1rem 5%;
-  @include desktop-up {
-    padding: 3.25rem 5% 0;
+  height: 79px;
+  box-sizing: border-box;
+  &--home {
+    @include desktop-up {
+      padding: 3.25rem 5% 0;
+    }
   }
 }
 .menu__mobile {

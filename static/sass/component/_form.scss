@@ -1,21 +1,22 @@
 .form-page {
-  padding: 1.5rem;
-  background-color: $white;
-
   display: grid;
   grid-template-areas:
     "name"
     "mobile-number"
     "email"
     "message"
+    "picture"
     "submit";
+  column-gap: 1rem;
 
-  column-gap: 2rem;
+  padding: 1.5rem;
+  background-color: $white;
   @include desktop-up {
     grid-template-areas:
       "name name"
       "mobile-number email"
       "message message"
+      "picture picture"
       "submit .";
   }
   .name {
@@ -34,10 +35,13 @@
   .message {
     grid-area: message;
   }
+  .picture {
+    grid-area: picture;
+  }
 }
 
 .form-modal {
-  padding: 1.5rem;
+  // padding: 1.5rem;
   background-color: $white;
 
   display: grid;
