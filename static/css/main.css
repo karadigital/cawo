@@ -302,13 +302,6 @@ a {
   color: inherit;
 }
 
-.small,
-.label,
-.text-scale-2xs {
-  font-family: "Source Sans 3", sans-serif;
-  line-height: 120%;
-}
-
 .text-scale-2xl {
   font-size: 2.625rem;
   line-height: 52px;
@@ -438,12 +431,12 @@ a {
 }
 
 .text-size-14 {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   line-height: 22px;
 }
 @media (min-width: 1024px) {
   .text-size-14 {
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
   }
 }
 @media (min-width: 1024px) {
@@ -1447,12 +1440,15 @@ hr {
 }
 
 .modal-content {
+  display: grid;
+  row-gap: 1rem;
   box-sizing: border-box;
   background-color: #fefefe;
   margin: 5% auto;
   padding: 1.5rem 1rem;
   border: 1px solid #888;
   width: 90%;
+  height: 90%;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   animation: modalopen 0.3s;
@@ -1651,6 +1647,7 @@ button {
   color: #fff;
   box-sizing: border-box;
   text-align: center;
+  cursor: pointer;
 }
 @media (min-width: 1024px) {
   .button--big {
@@ -1827,10 +1824,10 @@ button {
 }
 
 .form-modal {
-  background-color: #fff;
   display: grid;
   grid-template-areas: "name" "mobile-number" "email" "caryear" "carcolor" "damage" "service" "bookdate" "booktime" "message" "picture";
   column-gap: 2rem;
+  background-color: #fff;
 }
 @media (min-width: 1024px) {
   .form-modal {

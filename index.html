@@ -26,15 +26,11 @@
     <!-- The Modal -->
     <section id="registration-modal" class="modal">
       <div class="modal-content">
-        <div class="d-grid rg-16px rg-md-24px">
-          <div class="d-grid rg-16px rg-md-24px">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <h2 class="text-scale-sm bold">Get a Quote</h2>
-              <button class="close-btn" id="btn-close-modal">
-                <span>&times;</span><span class="mx-2">Close</span>
-              </button>
-            </div>
-          </div>
+        <div class="d-flex justify-content-between align-items-center">
+          <h2 class="text-scale-sm bold">Get a Quote</h2>
+          <button class="close-btn" id="btn-close-modal">
+            <span>&times;</span><span class="mx-2">Close</span>
+          </button>
         </div>
         <div class="modal-form">
           <div class="mb-5">
@@ -176,7 +172,7 @@
                 maxlength="1000"
                 required
               ></textarea>
-              <p id="pop-char-count" class="text-scale-xs opacity-70 ml-auto">
+              <p id="pop-char-count" class="small opacity-70 ml-auto">
                 0 / 1000
               </p>
             </div>
@@ -300,7 +296,10 @@
               Sydney's Trusted Network of Mobile Repairers
             </p>
             <div class="hero__buttons">
-              <button class="open-btn button openModalBtn" id="openModalBtn1">
+              <button
+                class="open-btn button cursor-pointer openModalBtn"
+                id="openModalBtn1"
+              >
                 Get a Free Quote Now
               </button>
               <a href="#our-services" class="button button--white"
@@ -856,11 +855,11 @@
       <div
         class="section__padding text-with-curved__wrapper section__wrapper position-relative d-grid rg-8px"
       >
-        <img
+        <!-- <img
           src="./static/images/decorative-bg-curved-orange.svg"
           alt=""
           class="bg-decorative"
-        />
+        /> -->
         <div class="d-grid rg-16px rg-md-24px">
           <h2 class="text-scale-sm bold">Testimonials</h2>
           <p class="text-scale-xl medium">
@@ -1064,9 +1063,7 @@
             maxlength="1000"
             required
           ></textarea>
-          <p id="char-count" class="text-scale-xs opacity-70 ml-auto">
-            0 / 1000
-          </p>
+          <p id="char-count" class="small opacity-70 ml-auto">0 / 1000</p>
         </div>
 
         <div class="d-grid rg-12px input__layout-modal picture">
@@ -1157,18 +1154,12 @@
                 >Service Area</a
               >
               <div class="d-grid rg-8px">
-                <a href="#eastern-suburbs" class="opacity-50"
-                  >Eastern Suburbs</a
-                >
-                <a href="#inner-west" class="opacity-50">Inner West</a>
-                <a href="#north-shore" class="opacity-50">North Shore</a>
-                <a href="#eastern-sydney" class="opacity-50">Western Sydney</a>
-                <a href="#southern-sydney" class="opacity-50"
-                  >Southern Sydney</a
-                >
-                <a href="#northern-beaches" class="opacity-50"
-                  >Northern Beaches</a
-                >
+                <a href="#coverage-area" class="opacity-50">Eastern Suburbs</a>
+                <a href="#coverage-area" class="opacity-50">Inner West</a>
+                <a href="#coverage-area" class="opacity-50">North Shore</a>
+                <a href="#coverage-area" class="opacity-50">Western Sydney</a>
+                <a href="#coverage-area" class="opacity-50">Southern Sydney</a>
+                <a href="#coverage-area" class="opacity-50">Northern Beaches</a>
               </div>
             </div>
             <div class="">
@@ -1176,31 +1167,27 @@
                 >Services</a
               >
               <div class="d-grid rg-8px">
-                <a href="#bumper-repair" class="opacity-50">Bumper Repair</a>
-                <a href="#alloy-wheel-repair" class="opacity-50"
+                <a href="#our-services" class="opacity-50">Bumper Repair</a>
+                <a href="#our-services" class="opacity-50"
                   >Alloy Wheel Repair</a
                 >
-                <a href="#wheel-arc-scratch-repair" class="opacity-50"
+                <a href="#our-services" class="opacity-50"
                   >Wheel Arc Scratch Repair</a
                 >
-                <a href="#paint-correction" class="opacity-50"
-                  >Paint Correction</a
-                >
-                <a href="#card-door-scratch-repair" class="opacity-50"
+                <a href="#our-services" class="opacity-50">Paint Correction</a>
+                <a href="#our-services" class="opacity-50"
                   >Car Door Scratch Repair</a
                 >
-                <a href="#small-car-dent-repair" class="opacity-50"
+                <a href="#our-services" class="opacity-50"
                   >Small Car Dent Repair</a
                 >
-                <a href="#minor-car-scratch-repair" class="opacity-50"
+                <a href="#our-services" class="opacity-50"
                   >Minor Car Scratch Repair</a
                 >
-                <a href="#presale-exterior-car-cleanup" class="opacity-50"
+                <a href="#our-services" class="opacity-50"
                   >Presale Exterior Car Cleanup</a
                 >
-                <a href="#ceramic-coating" class="opacity-50"
-                  >Ceramic Coating</a
-                >
+                <a href="#our-services" class="opacity-50">Ceramic Coating</a>
               </div>
             </div>
             <div class="d-grid rg-32px">
@@ -1222,10 +1209,14 @@
                     <img src="./static/images/email.svg" alt="email" />
                     <p class="opacity-50">hello@instantfix.com</p>
                   </a>
-                  <div class="d-flex align-items-center cg-12px">
+                  <a
+                    href="https://instantfix.com.au/"
+                    target="_blank"
+                    class="d-flex align-items-center cg-12px"
+                  >
                     <img src="./static/images/website.svg" alt="website" />
                     <p class="opacity-50">www.instantfix.com.au</p>
-                  </div>
+                  </a>
                   <div class="d-flex align-items-center cg-12px">
                     <img
                       src="./static/images/clock-small.svg"

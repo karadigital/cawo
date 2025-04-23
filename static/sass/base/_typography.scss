@@ -51,12 +51,6 @@ footer {
 a {
   color: inherit;
 }
-.small,
-.label,
-.text-scale-2xs {
-  font-family: "Source Sans 3", sans-serif;
-  line-height: 120%;
-}
 
 .text-scale-2xl {
   @include font-size(2.625rem, 4rem); //42px, 64px
@@ -115,7 +109,7 @@ a {
 }
 
 .text-size-14 {
-  @include font-size(0.8125rem); //14px
+  @include font-size(0.875rem); //14px
   @include line-height(22px);
 }
 
