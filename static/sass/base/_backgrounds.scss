@@ -1,6 +1,16 @@
 .bg-primary {
   background-color: $primary;
 }
+.bg-base-lightest {
+  background-color: $base-lightest;
+}
+
+.bg-sm-white {
+  @include mobile {
+    background-color: $white;
+  }
+}
+
 .bg-md-primary {
   @include desktop-up {
     background-color: $primary;

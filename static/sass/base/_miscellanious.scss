@@ -16,6 +16,12 @@
   width: 100% !important;
 }
 
+.w-md-75 {
+  @include desktop-up {
+    width: 75%;
+  }
+}
+
 .w-lg-75 {
   @include monitor-up {
     width: 75%;

@@ -105,21 +105,18 @@ a {
 
 .text-size-24 {
   @include font-size(1.5rem); //24px
-  @include line-height(24px, 48px);
+  @include line-height(36px, 48px);
 }
 
-.text-size-14 {
+.text-size-14,
+label {
   @include font-size(0.875rem); //14px
   @include line-height(22px);
+  letter-spacing: -2%;
 }
 
 .small {
   @include font-size(0.75rem, 0.75rem); //12px
-  line-height: normal;
-}
-
-.label {
-  @include font-size(0.625rem, 1rem); //10px, 16px
   line-height: normal;
 }
 
@@ -289,4 +286,7 @@ Others
 }
 .text-base-10 {
   color: $base-10;
+}
+.text-neutral-black {
+  color: $neutral-black;
 }

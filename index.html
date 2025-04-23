@@ -25,234 +25,250 @@
   <body>
     <!-- The Modal -->
     <section id="registration-modal" class="modal">
-      <div class="modal-content">
-        <div class="d-flex justify-content-between align-items-center">
-          <h2 class="text-scale-sm bold">Get a Quote</h2>
-          <button class="close-btn" id="btn-close-modal">
-            <span>&times;</span><span class="mx-2">Close</span>
-          </button>
-        </div>
-        <div class="modal-form">
-          <div class="mb-5">
-            <span class="text-scale-xl medium text-primary">Instant Quote</span>
-            <span class="text-scale-xl medium text-secondary mx-2">in</span>
-            <div class="text-scale-xl medium text-secondary">
-              Under 2 minutes!
-            </div>
+      <div class="position-relative w-100 h-100">
+        <div class="modal-content">
+          <div class="d-flex justify-content-between align-items-center">
+            <h2 class="text-scale-sm bold">Get a Quote</h2>
+            <button class="close-btn" id="btn-close-modal">
+              <span>&times;</span
+              ><span class="text-size-14 text-neutral-black mx-2 desktop-only"
+                >Close</span
+              >
+            </button>
           </div>
-          <form
-            name="contactQuote"
-            netlify
-            class="form-modal d-grid rg-24px rg-md-32px"
-            enctype="multipart/form-data"
-          >
-            <div class="input__layout_modal name">
-              <label class="medium" for="pop-name"
-                >Name <sup class="text-error">*</sup></label
+          <div class="modal-form">
+            <div class="mb-4">
+              <span class="text-scale-xl medium text-primary"
+                >Instant Quote</span
               >
-              <input
-                type="text"
-                name="name"
-                id="pop-name"
-                placeholder="Your Full Name"
-                required
-              />
+              <span class="text-scale-xl medium text-secondary mx-2">in</span>
+              <div class="text-scale-xl medium text-secondary">
+                Under 2 minutes!
+              </div>
             </div>
-
-            <div class="input__layout_modal mobile-number">
-              <label class="medium" for="pop-mobile-number"
-                >Mobile number <sup class="text-error">*</sup></label
-              >
-              <input
-                type="tel"
-                name="mobile-number"
-                id="pop-mobile-number"
-                placeholder="Your Mobile Number"
-                required
-              />
-            </div>
-
-            <div class="input__layout_modal email">
-              <label class="medium" for="pop-email"
-                >Email <sup class="text-error">*</sup></label
-              >
-              <input
-                type="email"
-                name="email"
-                id="pop-email"
-                placeholder="For Invoicing"
-                required
-              />
-            </div>
-
-            <div class="input__layout_modal car-year">
-              <label class="medium" for="pop-car-year"
-                >Manufacture and Year of Car</label
-              >
-              <input
-                type="text"
-                name="car-year"
-                id="pop-car-year"
-                placeholder="e.g. Honda Accord 2020"
-              />
-            </div>
-            <div class="input__layout_modal car-color">
-              <label class="medium" for="pop-car-color">Car Color</label>
-              <input
-                type="text"
-                name="car-color"
-                id="pop-car-color"
-                placeholder="e.g. Blue"
-              />
-            </div>
-
-            <div class="input__layout_modal damage-type">
-              <label class="medium" for="pop-damage-type">Type of Damage</label>
-              <input
-                type="text"
-                name="damage-type"
-                id="pop-service-type"
-                placeholder="e.g. Dent"
-              />
-            </div>
-            <div class="input__layout_modal service-type">
-              <label class="medium" for="pop-service-type">Service Type</label>
-              <select name="service-type" id="pop-damage-type">
-                <option value="">Select...</option>
-                <option value="bumper-repair">Bumper Repair</option>
-                <option value="alloy-wheel-repair">Alloy Wheel Repair</option>
-                <option value="wheel-arc-scratch-repair">
-                  Wheel Arc Scratch Repair
-                </option>
-                <option value="paint-correction">Paint Correction</option>
-                <option value="car-door-scratch-repair">
-                  Car Door Scratch Repair
-                </option>
-                <option value="small-car-dent-repair">
-                  Small Car Dent Repair
-                </option>
-                <option value="minor-car-scratch-repair">
-                  Minor Car Scratch Repair
-                </option>
-                <option value="presale-exterior-car-cleanup">
-                  Presale Exterior Car Cleanup
-                </option>
-                <option value="ceramic-coating">Ceramic Coating</option>
-              </select>
-            </div>
-
-            <div class="input__layout_modal book-date">
-              <label class="medium" for="pop-book-date">Booking Date</label>
-              <input
-                type="date"
-                name="book-date"
-                id="pop-book-date"
-                placeholder=""
-              />
-            </div>
-            <div class="input__layout_modal book-time">
-              <label class="medium" for="pop-book-time">Booking Time</label>
-              <input
-                type="time"
-                name="book-time"
-                id="pop-book-time"
-                placeholder=""
-              />
-            </div>
-
-            <div class="input__layout_modal message">
-              <label class="medium" for="pop-message"
-                >Comment or message<sup class="text-error">*</sup></label
-              >
-              <textarea
-                name="comment-or-message"
-                id="pop-message"
-                placeholder="Briefly describe the issue or any specific requests"
-                rows="4"
-                maxlength="1000"
-                required
-              ></textarea>
-              <p id="pop-char-count" class="small opacity-70 ml-auto">
-                0 / 1000
-              </p>
-            </div>
-
-            <div class="d-grid rg-12px input__layout-modal picture">
-              <ul id="file-list" class="file-list" style="display: none"></ul>
-              <!-- File List -->
-              <!-- Image previews will appear here -->
-              <p class="text-size-14">
-                Upload File or Damaged Photo (max 5 files)<sup
-                  class="text-error"
-                  >*</sup
+            <form
+              name="contactQuote"
+              netlify
+              class="form-modal d-grid rg-24px rg-md-32px"
+              enctype="multipart/form-data"
+            >
+              <div class="input__layout_modal name">
+                <label class="medium" for="pop-name"
+                  >Name <sup class="text-error">*</sup></label
                 >
-              </p>
-              <div class="d-flex cg-8pcx">
-                <div
-                  class="preview-container d-flex"
-                  id="preview-container"
-                ></div>
-                <!-- Add File Button -->
+                <input
+                  type="text"
+                  name="name"
+                  id="pop-name"
+                  placeholder="Your Full Name"
+                  required
+                />
+              </div>
 
-                <div class="input__layout-modal file-upload my-bottom px-1">
-                  <button
-                    type="button"
-                    id="add-file-button"
-                    class="button button--upload"
+              <div class="input__layout_modal mobile-number">
+                <label class="medium" for="pop-mobile-number"
+                  >Mobile number <sup class="text-error">*</sup></label
+                >
+                <input
+                  type="tel"
+                  name="mobile-number"
+                  id="pop-mobile-number"
+                  placeholder="Your Mobile Number"
+                  required
+                />
+              </div>
+
+              <div class="input__layout_modal email">
+                <label class="medium" for="pop-email"
+                  >Email Address <sup class="text-error">*</sup></label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  id="pop-email"
+                  placeholder="For Invoicing"
+                  required
+                />
+              </div>
+
+              <div class="input__layout_modal car-year">
+                <label class="medium" for="pop-car-year"
+                  >Manufacture and Year of Car</label
+                >
+                <input
+                  type="text"
+                  name="car-year"
+                  id="pop-car-year"
+                  placeholder="e.g. Honda Accord 2020"
+                />
+              </div>
+              <div class="input__layout_modal car-color">
+                <label class="medium" for="pop-car-color">Car Color</label>
+                <input
+                  type="text"
+                  name="car-color"
+                  id="pop-car-color"
+                  placeholder="e.g. Blue"
+                />
+              </div>
+
+              <div class="input__layout_modal damage-type">
+                <label class="medium" for="pop-damage-type"
+                  >Type of Damage</label
+                >
+                <input
+                  type="text"
+                  name="damage-type"
+                  id="pop-service-type"
+                  placeholder="e.g. Dent"
+                />
+              </div>
+              <div class="input__layout_modal service-type">
+                <label class="medium" for="pop-service-type"
+                  >Service Type</label
+                >
+                <select name="service-type" id="pop-damage-type">
+                  <option value="" class="text-base-10">Select service</option>
+                  <option value="bumper-repair">Bumper Repair</option>
+                  <option value="alloy-wheel-repair">Alloy Wheel Repair</option>
+                  <option value="wheel-arc-scratch-repair">
+                    Wheel Arc Scratch Repair
+                  </option>
+                  <option value="paint-correction">Paint Correction</option>
+                  <option value="car-door-scratch-repair">
+                    Car Door Scratch Repair
+                  </option>
+                  <option value="small-car-dent-repair">
+                    Small Car Dent Repair
+                  </option>
+                  <option value="minor-car-scratch-repair">
+                    Minor Car Scratch Repair
+                  </option>
+                  <option value="presale-exterior-car-cleanup">
+                    Presale Exterior Car Cleanup
+                  </option>
+                  <option value="ceramic-coating">Ceramic Coating</option>
+                </select>
+              </div>
+
+              <div class="input__layout_modal book-date">
+                <label class="medium" for="pop-book-date"
+                  >Preferred Booking Date</label
+                >
+                <input
+                  type="date"
+                  name="book-date"
+                  id="pop-book-date"
+                  placeholder="Select date"
+                  onfocus="(this.placeholder='')"
+                />
+              </div>
+              <div class="input__layout_modal book-time">
+                <label class="medium" for="pop-book-time"
+                  >Preferred Booking Time</label
+                >
+                <input
+                  type="time"
+                  name="book-time"
+                  id="pop-book-time"
+                  placeholder=""
+                />
+              </div>
+
+              <div class="input__layout_modal message">
+                <label class="medium" for="pop-message"
+                  >Comment or message<sup class="text-error">*</sup></label
+                >
+                <textarea
+                  name="comment-or-message"
+                  id="pop-message"
+                  placeholder="Briefly describe the issue or any specific requests"
+                  rows="4"
+                  maxlength="1000"
+                  required
+                ></textarea>
+                <p id="pop-char-count" class="small opacity-70 ml-auto">
+                  0 / 1000
+                </p>
+              </div>
+
+              <div class="d-grid rg-12px input__layout-modal picture">
+                <ul id="file-list" class="file-list" style="display: none"></ul>
+                <!-- File List -->
+                <!-- Image previews will appear here -->
+                <p class="text-size-14 medium">
+                  Upload File or Damaged Photo (max 5 files)<sup
+                    class="text-error"
+                    >*</sup
                   >
-                    Upload
-                  </button>
+                </p>
+                <div class="d-flex cg-8pcx">
+                  <div
+                    class="preview-container d-flex"
+                    id="preview-container"
+                  ></div>
+                  <!-- Add File Button -->
+
+                  <div class="input__layout-modal file-upload my-bottom px-1">
+                    <button
+                      type="button"
+                      id="add-file-button"
+                      class="button button--upload"
+                    >
+                      Upload
+                    </button>
+                    <input
+                      type="file"
+                      name="upload-image-1"
+                      id="upload-image-1"
+                      onchange="handleFileChange(1)"
+                      required
+                      style="width: 1px; height: 1px; margin: 0; padding: 0"
+                    />
+                  </div>
+                </div>
+
+                <p class="small text-base-10">
+                  Total size of all images combined must be under 5mb with .jpg,
+                  .png or .pdf file format
+                </p>
+                <!-- Hidden file inputs -->
+
+                <div id="hidden-file-block" style="display: none">
                   <input
                     type="file"
-                    name="upload-image-1"
-                    id="upload-image-1"
-                    onchange="handleFileChange(1)"
-                    required
-                    style="width: 1px; height: 1px; margin: 0; padding: 0"
+                    name="upload-image-2"
+                    id="upload-image-2"
+                    onchange="handleFileChange(2)"
+                  />
+                  <input
+                    type="file"
+                    name="upload-image-3"
+                    id="upload-image-3"
+                    onchange="handleFileChange(3)"
+                  />
+                  <input
+                    type="file"
+                    name="upload-image-4"
+                    id="upload-image-4"
+                    onchange="handleFileChange(4)"
+                  />
+                  <input
+                    type="file"
+                    name="upload-image-5"
+                    id="upload-image-5"
+                    onchange="handleFileChange(5)"
                   />
                 </div>
+                <button
+                  type="submit"
+                  class="submit button button--tertiary cursor-pointer mt-4"
+                >
+                  Submit
+                </button>
               </div>
-
-              <p class="small text-base-10">
-                Total size of all images combined must be under 150mb with .jpg,
-                .png or .pdf file format
-              </p>
-              <!-- Hidden file inputs -->
-
-              <div id="hidden-file-block" style="display: none">
-                <input
-                  type="file"
-                  name="upload-image-2"
-                  id="upload-image-2"
-                  onchange="handleFileChange(2)"
-                />
-                <input
-                  type="file"
-                  name="upload-image-3"
-                  id="upload-image-3"
-                  onchange="handleFileChange(3)"
-                />
-                <input
-                  type="file"
-                  name="upload-image-4"
-                  id="upload-image-4"
-                  onchange="handleFileChange(4)"
-                />
-                <input
-                  type="file"
-                  name="upload-image-5"
-                  id="upload-image-5"
-                  onchange="handleFileChange(5)"
-                />
-              </div>
-              <button
-                type="submit"
-                class="submit button button--tertiary cursor-pointer mt-4"
-              >
-                Submit
-              </button>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -440,29 +456,29 @@
       id="our-services"
       class="section__wrapper section__padding our-services__section"
     >
-      <div
-        class="our-services__header d-grid rg-24px cols-md-2 align-items-center cg-48px"
-      >
-        <div class="d-grid rg-16px rg-md-24px">
-          <h2 class="text-scale-sm bold text-base">Our Services</h2>
+      <div class="our-services__header d-grid rg-16px rg-md-24px cg-48px">
+        <h2 class="text-scale-sm bold text-base">Our Services</h2>
+        <div class="d-grid align-items-start cols-md-2 cg-32px rg-24px">
           <p class="text-scale-xl text-primary medium text-primary">
             Professional Mobile Repairs in The Comfort of Your Home or Workplace
           </p>
-        </div>
-        <div class="d-grid rg-24px">
-          <p class="text-base opacity-70">
-            InstantFix delivers body shop quality repairs at your location,
-            specializing in bumpers, panels, wheels, and paint correction for
-            sale preparation.
-          </p>
-          <p class="text-base opacity-70">
-            We save time and money compared to traditional shops, ensuring
-            high-standard repairs without shortcuts. We prioritize proper
-            preparation for lasting results, unlike quick-fix services that risk
-            paint peeling. We offers mobile bumper and alloy wheel repairs in
-            Sydney, focusing on quality and fair pricing for long-term customer
-            satisfaction.
-          </p>
+          <div
+            class="d-grid align-items-center rg-16px rg-24px w-lg-85 ml-auto"
+          >
+            <p class="text-base opacity-70">
+              InstantFix delivers body shop quality repairs at your location,
+              specializing in bumpers, panels, wheels, and paint correction for
+              sale preparation.
+            </p>
+            <p class="text-base opacity-70">
+              We save time and money compared to traditional shops, ensuring
+              high-standard repairs without shortcuts. We prioritize proper
+              preparation for lasting results, unlike quick-fix services that
+              risk paint peeling. We offers mobile bumper and alloy wheel
+              repairs in Sydney, focusing on quality and fair pricing for
+              long-term customer satisfaction.
+            </p>
+          </div>
         </div>
       </div>
       <div class="d-grid cols-md-3 rg-16px rg-lg-32px cg-md-16px cg-lg-32px">
@@ -659,7 +675,7 @@
     <section
       class="section__wrapper section__padding why-choose-us__section d-grid cols-md-2"
     >
-      <div class="d-grid rg-32px">
+      <div class="d-grid rg-32px w-md-75">
         <div class="d-grid">
           <div class="d-grid rg-16px rg-md-24px mb-2">
             <h2 class="text-scale-sm bold">Why Choose Us</h2>
@@ -718,11 +734,11 @@
           <p class="text-with-curved-border text-white opacity-70">
             A smooth and transparent process for all your vehicle needs.
           </p>
-          <img
+          <!-- <img
             src="./static/images/decorative-bg-curved-white.svg"
             alt=""
             class="bg-decorative"
-          />
+          /> -->
         </div>
         <div class="how-it-works__wrapper d-grid rg-24px cg-32px cols-md-2">
           <div class="how-it-works__img-desktop">
@@ -867,7 +883,7 @@
             <span class="text-scale-xl medium text-primary">InstantFix</span>
           </p>
         </div>
-        <p class="text-with-curved-border w-lg-75 ml-auto opacity-70">
+        <p class="text-with-curved-border w-lg-85 ml-auto opacity-70">
           Read what our satisfied customers have to say about our products and
           services
         </p>
@@ -956,54 +972,57 @@
       </div>
     </section>
     <!-- Coverage Area -->
-    <section id="coverage-area" class="section__wrapper coverage__section">
-      <div class="coverage__header d-grid rg-16px">
-        <h2 class="text-scale-sm bold">Coverage Area</h2>
-        <div class="d-grid rg-8px rg-md-24px">
-          <p class="text-scale-lg medium">
-            <span class="text-scale-lg medium text-primary"
-              >InstantFix is Near You</span
-            >
-            <br />
-            Quality, Convenience, and Expertise
-          </p>
-          <p class="opacity-70">
-            Whether you’re near or far, our expert services are just around the
-            corner.
-          </p>
-        </div>
-      </div>
-      <div class="coverage__body d-grid cols-md-2 cg-48px align-items-center">
-        <img
-          src="./static/images/australia-map.png"
-          alt="A map of Australia"
-          class="d-flex w-100 border-radius-md-16px"
-        />
-
-        <div class="coverage__text d-grid rg-32px">
-          <div class="d-grid rg-16px">
-            <p class="text-scale-md bold text-primary">
-              Areas We Service in Sydney
+    <section id="coverage-area" class="bg-base-lightest">
+      <div class="section__wrapper coverage__section">
+        <div class="coverage__header d-grid rg-16px">
+          <h2 class="text-scale-sm bold">Coverage Area</h2>
+          <div class="d-grid rg-8px rg-md-24px">
+            <p class="text-scale-lg medium">
+              <span class="text-scale-lg medium text-primary"
+                >InstantFix is Near You</span
+              >
+              <br />
+              Quality, Convenience, and Expertise
             </p>
-            <p class="text-scale-sm">
-              Our mobile car repair teams cover all Sydney metropolitan regions
+            <p class="opacity-70">
+              Whether you’re near or far, our expert services are just around
+              the corner.
             </p>
           </div>
-          <ul class="check__list d-grid rg-24px">
-            <li id="eastern-suburbs" class="text-list">Eastern Suburbs</li>
-            <li id="inner-west" class="text-list">Inner West</li>
-            <li id="north-shore" class="text-list">North Shore</li>
-            <li id="eastern-sydney" class="text-list">Western Sydney</li>
-            <li id="southern-sydney" class="text-list">Southern Sydney</li>
-            <li id="northern-beaches" class="text-list">Northern Beaches</li>
-          </ul>
+        </div>
+        <div class="coverage__body d-grid cols-md-2 cg-48px align-items-center">
+          <img
+            src="./static/images/australia-map.png"
+            alt="A map of Australia"
+            class="d-flex w-100 border-radius-md-16px"
+          />
+
+          <div class="coverage__text d-grid rg-32px">
+            <div class="d-grid rg-16px">
+              <p class="text-scale-md bold text-primary">
+                Areas We Service in Sydney
+              </p>
+              <p class="text-scale-sm">
+                Our mobile car repair teams cover all Sydney metropolitan
+                regions
+              </p>
+            </div>
+            <ul class="check__list d-grid rg-24px">
+              <li id="eastern-suburbs" class="text-list">Eastern Suburbs</li>
+              <li id="inner-west" class="text-list">Inner West</li>
+              <li id="north-shore" class="text-list">North Shore</li>
+              <li id="eastern-sydney" class="text-list">Western Sydney</li>
+              <li id="southern-sydney" class="text-list">Southern Sydney</li>
+              <li id="northern-beaches" class="text-list">Northern Beaches</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
     <!-- Form -->
     <section
       id="contact-form"
-      class="section__wrapper section__padding d-grid rg-24px cols-md-2 cg-32px align-items-start"
+      class="section__wrapper section__padding d-grid rg-24px cols-md-2 cg-32px align-items-start bg-sm-white"
     >
       <div class="d-grid rg-16px rg-md-24px">
         <h2 class="text-scale-sm bold">Get a Quote</h2>
@@ -1041,7 +1060,7 @@
         </div>
         <div class="input__layout email">
           <label class="medium" for="email"
-            >Email <sup class="text-error">*</sup></label
+            >Email Address <sup class="text-error">*</sup></label
           >
           <input
             type="email"
@@ -1070,7 +1089,7 @@
           <ul id="file-list" class="file-list" style="display: none"></ul>
           <!-- File List -->
           <!-- Image previews will appear here -->
-          <p class="text-size-14">
+          <p class="text-size-14 medium">
             Upload File or Damaged Photo (max 5 files)<sup class="text-error"
               >*</sup
             >
@@ -1102,8 +1121,8 @@
           </div>
 
           <p class="small text-base-10">
-            Total size of all images combined must be under 150mb with .jpg,
-            .png or .pdf file format
+            Total size of all images combined must be under 5mb with .jpg, .png
+            or .pdf file format
           </p>
           <!-- Hidden file inputs -->
 

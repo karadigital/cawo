@@ -11,6 +11,8 @@
 
   padding: 1.5rem;
   background-color: $white;
+  box-shadow: 0px 4px 24px 0px #0000001a;
+  border-radius: 16px;
   @include desktop-up {
     grid-template-areas:
       "name name"
@@ -57,6 +59,11 @@
   column-gap: 2rem;
 
   background-color: $white;
+  @include mobile {
+    box-shadow: 0px 4px 24px 0px #0000001a;
+  }
+  padding: 1.5rem 1rem;
+  border-radius: 16px;
   @include desktop-up {
     grid-template-areas:
       "name name"
