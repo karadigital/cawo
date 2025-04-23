@@ -1,0 +1,55 @@
+.our-services {
+  &__section {
+    display: grid;
+    row-gap: 1.5rem;
+
+    @include desktop-up {
+      row-gap: 4rem;
+    }
+
+    .card-services {
+      position: relative;
+
+      height: 250px;
+      padding: 2rem 1.75rem;
+      border-radius: 1rem;
+
+      @include mobile {
+        &:nth-of-type(10),
+        &:nth-of-type(11),
+        &:nth-of-type(12) {
+          display: none;
+        }
+      }
+
+      @include desktop-up {
+        height: 330px;
+      }
+
+      @include monitor-up {
+        height: 455px;
+      }
+
+      &__body {
+        display: grid;
+        row-gap: 8px;
+        align-content: end;
+
+        @include mobile {
+          height: 100%;
+        }
+
+        @include desktop-up {
+          position: absolute;
+          top: 45%;
+          left: 1.75rem;
+          right: 1.75rem;
+        }
+
+        @include monitor-up {
+          top: 70%;
+        }
+      }
+    }
+  }
+}

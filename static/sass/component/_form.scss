@@ -1,24 +1,24 @@
-form {
-  padding: 1.5rem;
-  background-color: $white;
-  border-radius: 16px;
-  box-shadow: 0px 4px 24px 0px #0000001a;
-
+.form-page {
   display: grid;
   grid-template-areas:
     "name"
     "mobile-number"
     "email"
-    "crn"
     "message"
+    "picture"
     "submit";
+  column-gap: 1rem;
 
-  column-gap: 2rem;
+  padding: 1.5rem;
+  background-color: $white;
+  box-shadow: 0px 4px 24px 0px #0000001a;
+  border-radius: 16px;
   @include desktop-up {
     grid-template-areas:
-      "name crn"
+      "name name"
       "mobile-number email"
       "message message"
+      "picture picture"
       "submit .";
   }
   .name {
@@ -33,10 +33,82 @@ form {
   .email {
     grid-area: email;
   }
+
   .message {
     grid-area: message;
   }
-  .submit {
-    grid-area: submit;
+  .picture {
+    grid-area: picture;
+  }
+}
+
+.form-modal {
+  display: grid;
+  grid-template-areas:
+    "name"
+    "mobile-number"
+    "email"
+    "caryear"
+    "carcolor"
+    "damage"
+    "service"
+    "bookdate"
+    "booktime"
+    "message"
+    "picture";
+  column-gap: 2rem;
+
+  background-color: $white;
+  @include mobile {
+    box-shadow: 0px 4px 24px 0px #0000001a;
+  }
+  padding: 1.5rem 1rem;
+  border-radius: 16px;
+  @include desktop-up {
+    grid-template-areas:
+      "name name"
+      "mobile-number email"
+      "caryear carcolor"
+      "damage service"
+      "bookdate booktime"
+      "message message"
+      "picture picture";
+  }
+  .name {
+    grid-area: name;
+  }
+  .car-registration-number {
+    grid-area: crn;
+  }
+  .mobile-number {
+    grid-area: mobile-number;
+  }
+  .email {
+    grid-area: email;
+  }
+  .car-year {
+    grid-area: caryear;
+  }
+  .car-color {
+    grid-area: carcolor;
+  }
+  .damage-type {
+    grid-area: damage;
+  }
+  .service-type {
+    grid-area: service;
+  }
+  .book-date {
+    grid-area: bookdate;
+  }
+  .book-time {
+    grid-area: booktime;
+  }
+
+  .message {
+    grid-area: message;
+  }
+  .picture {
+    grid-area: picture;
   }
 }

@@ -45,6 +45,7 @@ $button-stroke: inset 0 0 0 2px;
   box-sizing: border-box;
   text-align: center;
 
+  cursor: pointer;
   // BIG
   &--big {
     @include desktop-up {
@@ -118,6 +119,15 @@ $button-stroke: inset 0 0 0 2px;
   //   background-color: $secondary-darker;
   // }
 }
+.button--upload {
+  background-color: #e4f4ff;
+  padding: 2px !important;
+  font-weight: 500;
+  color: #4318ff;
+  border: 1px solid #e4f4ff;
+  text-align: center;
+  border-radius: 30px;
+}
 
 .button--tertiary {
   background-color: #4318ff;
@@ -154,4 +164,11 @@ $button-stroke: inset 0 0 0 2px;
   background-color: transparent;
   color: $white;
   border: 1px solid $white;
+}
+
+.button-dynamic {
+  width: 100%;
+  @include desktop-up {
+    width: max-content;
+  }
 }

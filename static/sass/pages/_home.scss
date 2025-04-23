@@ -68,69 +68,6 @@
   }
 }
 
-.our-services {
-  &__section {
-    display: grid;
-    row-gap: 1.5rem;
-
-    @include desktop-up {
-      row-gap: 4rem;
-    }
-
-    .card-services {
-      position: relative;
-
-      height: 250px;
-      padding: 2rem 1.75rem;
-      border-radius: 1rem;
-
-      @include mobile {
-        &:nth-of-type(10),
-        &:nth-of-type(11),
-        &:nth-of-type(12) {
-          display: none;
-        }
-      }
-
-      @include desktop-up {
-        height: 330px;
-      }
-
-      @include monitor-up {
-        height: 455px;
-      }
-
-      &__body {
-        display: grid;
-        row-gap: 8px;
-        align-content: end;
-
-        @include mobile {
-          height: 100%;
-        }
-
-        @include desktop-up {
-          position: absolute;
-          top: 45%;
-          left: 1.75rem;
-          right: 1.75rem;
-        }
-
-        @include monitor-up {
-          top: 70%;
-        }
-      }
-    }
-  }
-
-  &__header > div:nth-child(2) {
-    @include desktop-up {
-      width: 75%;
-      margin-left: auto;
-    }
-  }
-}
-
 .cta-home {
   &__section {
     position: relative;
@@ -181,6 +118,10 @@
       height: 200px;
       width: 200px;
       box-shadow: 0px 4px 16px 0px #00000040;
+
+      @include desktop-up {
+        left: -70px;
+      }
 
       @include monitor-up {
         left: -150px;
@@ -241,7 +182,7 @@
   }
 
   &__list {
-    padding-left: 1rem;
+    padding: 0 0 2rem 1rem;
 
     @include desktop-up {
       background-color: $primary;
@@ -256,7 +197,7 @@
     box-sizing: border-box;
     height: 100%;
     padding: 1rem;
-    background-color: $base-light;
+    background-color: $base-20;
     border-radius: 16px;
 
     @include desktop-up {
@@ -291,7 +232,7 @@
 
   &__text {
     @include mobile {
-      padding: 0 5% 5rem;
+      padding: 0 5% 2rem;
     }
   }
 }

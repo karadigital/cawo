@@ -7,6 +7,11 @@
     position: relative;
     padding-left: 2.25rem;
   }
+  &--small {
+    li {
+      padding-left: 1.875rem;
+    }
+  }
   li::before {
     content: "";
 

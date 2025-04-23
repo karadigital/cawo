@@ -23,6 +23,256 @@
     />
   </head>
   <body>
+    <!-- The Modal -->
+    <section id="registration-modal" class="modal">
+      <div class="position-relative w-100 h-100">
+        <div class="modal-content">
+          <div class="d-flex justify-content-between align-items-center">
+            <h2 class="text-scale-sm bold">Get a Quote</h2>
+            <button class="close-btn" id="btn-close-modal">
+              <img src="./static/images/close-black.svg" alt="close modal" />
+              <span class="text-size-14 text-neutral-black mx-2 desktop-only"
+                >Close</span
+              >
+            </button>
+          </div>
+          <div class="modal-form">
+            <div class="mb-4">
+              <span class="text-scale-xl medium text-primary"
+                >Instant Quote</span
+              >
+              <span class="text-scale-xl medium text-secondary mx-2">in</span>
+              <div class="text-scale-xl medium text-secondary">
+                Under 2 minutes!
+              </div>
+            </div>
+            <form
+              name="contactQuote"
+              netlify
+              class="form-modal d-grid rg-24px rg-md-32px"
+              enctype="multipart/form-data"
+            >
+              <div class="input__layout_modal name">
+                <label class="medium" for="pop-name"
+                  >Name <sup class="text-error">*</sup></label
+                >
+                <input
+                  type="text"
+                  name="name"
+                  id="pop-name"
+                  placeholder="Your Full Name"
+                  required
+                />
+              </div>
+
+              <div class="input__layout_modal mobile-number">
+                <label class="medium" for="pop-mobile-number"
+                  >Mobile number <sup class="text-error">*</sup></label
+                >
+                <input
+                  type="tel"
+                  name="mobile-number"
+                  id="pop-mobile-number"
+                  placeholder="Your Mobile Number"
+                  required
+                />
+              </div>
+
+              <div class="input__layout_modal email">
+                <label class="medium" for="pop-email"
+                  >Email Address <sup class="text-error">*</sup></label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  id="pop-email"
+                  placeholder="For Invoicing"
+                  required
+                />
+              </div>
+
+              <div class="input__layout_modal car-year">
+                <label class="medium" for="pop-car-year"
+                  >Manufacture and Year of Car</label
+                >
+                <input
+                  type="text"
+                  name="car-year"
+                  id="pop-car-year"
+                  placeholder="e.g. Honda Accord 2020"
+                />
+              </div>
+              <div class="input__layout_modal car-color">
+                <label class="medium" for="pop-car-color">Car Color</label>
+                <input
+                  type="text"
+                  name="car-color"
+                  id="pop-car-color"
+                  placeholder="e.g. Blue"
+                />
+              </div>
+
+              <div class="input__layout_modal damage-type">
+                <label class="medium" for="pop-damage-type"
+                  >Type of Damage</label
+                >
+                <input
+                  type="text"
+                  name="damage-type"
+                  id="pop-service-type"
+                  placeholder="e.g. Dent"
+                />
+              </div>
+              <div class="input__layout_modal service-type">
+                <label class="medium" for="pop-service-type"
+                  >Service Type</label
+                >
+                <select name="service-type" id="pop-damage-type">
+                  <option value="" class="text-base-10">Select service</option>
+                  <option value="bumper-repair">Bumper Repair</option>
+                  <option value="alloy-wheel-repair">Alloy Wheel Repair</option>
+                  <option value="wheel-arc-scratch-repair">
+                    Wheel Arc Scratch Repair
+                  </option>
+                  <option value="paint-correction">Paint Correction</option>
+                  <option value="car-door-scratch-repair">
+                    Car Door Scratch Repair
+                  </option>
+                  <option value="small-car-dent-repair">
+                    Small Car Dent Repair
+                  </option>
+                  <option value="minor-car-scratch-repair">
+                    Minor Car Scratch Repair
+                  </option>
+                  <option value="presale-exterior-car-cleanup">
+                    Presale Exterior Car Cleanup
+                  </option>
+                  <option value="ceramic-coating">Ceramic Coating</option>
+                </select>
+              </div>
+
+              <div class="input__layout_modal book-date">
+                <label class="medium" for="pop-book-date"
+                  >Preferred Booking Date</label
+                >
+                <input
+                  type="date"
+                  name="book-date"
+                  id="pop-book-date"
+                  placeholder="Select date"
+                  onfocus="(this.placeholder='')"
+                />
+              </div>
+              <div class="input__layout_modal book-time">
+                <label class="medium" for="pop-book-time"
+                  >Preferred Booking Time</label
+                >
+                <input
+                  type="time"
+                  name="book-time"
+                  id="pop-book-time"
+                  placeholder=""
+                />
+              </div>
+
+              <div class="input__layout_modal message">
+                <label class="medium" for="pop-message"
+                  >Comment or message<sup class="text-error">*</sup></label
+                >
+                <textarea
+                  name="comment-or-message"
+                  id="pop-message"
+                  placeholder="Briefly describe the issue or any specific requests"
+                  rows="4"
+                  maxlength="1000"
+                  required
+                ></textarea>
+                <p id="pop-char-count" class="small opacity-70 ml-auto">
+                  0 / 1000
+                </p>
+              </div>
+
+              <div class="d-grid rg-12px input__layout-modal picture">
+                <ul id="file-list" class="file-list" style="display: none"></ul>
+                <!-- File List -->
+                <!-- Image previews will appear here -->
+                <p class="text-size-14 medium">
+                  Upload File or Damaged Photo (max 5 files)<sup
+                    class="text-error"
+                    >*</sup
+                  >
+                </p>
+                <div class="d-flex cg-8pcx">
+                  <div
+                    class="preview-container d-flex"
+                    id="preview-container"
+                  ></div>
+                  <!-- Add File Button -->
+
+                  <div class="input__layout-modal file-upload my-bottom px-1">
+                    <button
+                      type="button"
+                      id="add-file-button"
+                      class="button button--upload"
+                    >
+                      Upload
+                    </button>
+                    <input
+                      type="file"
+                      name="upload-image-1"
+                      id="upload-image-1"
+                      onchange="handleFileChange(1)"
+                      required
+                      style="width: 1px; height: 1px; margin: 0; padding: 0"
+                    />
+                  </div>
+                </div>
+
+                <p class="small text-base-10">
+                  Total size of all images combined must be under 5mb with .jpg,
+                  .png or .pdf file format
+                </p>
+                <!-- Hidden file inputs -->
+
+                <div id="hidden-file-block" style="display: none">
+                  <input
+                    type="file"
+                    name="upload-image-2"
+                    id="upload-image-2"
+                    onchange="handleFileChange(2)"
+                  />
+                  <input
+                    type="file"
+                    name="upload-image-3"
+                    id="upload-image-3"
+                    onchange="handleFileChange(3)"
+                  />
+                  <input
+                    type="file"
+                    name="upload-image-4"
+                    id="upload-image-4"
+                    onchange="handleFileChange(4)"
+                  />
+                  <input
+                    type="file"
+                    name="upload-image-5"
+                    id="upload-image-5"
+                    onchange="handleFileChange(5)"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="submit button button--tertiary cursor-pointer mt-4 button-dynamic"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="hero__section img-behind-text__wrapper">
       <nav class="nav section__wrapper">
         <div class="nav-link__desktop">
@@ -62,7 +312,12 @@
               Sydney's Trusted Network of Mobile Repairers
             </p>
             <div class="hero__buttons">
-              <a href="#contact-form" class="button">Get a Free Quote Now</a>
+              <button
+                class="open-btn button cursor-pointer openModalBtn"
+                id="openModalBtn1"
+              >
+                Get a Free Quote Now
+              </button>
               <a href="#our-services" class="button button--white"
                 >Our Services</a
               >
@@ -201,29 +456,29 @@
       id="our-services"
       class="section__wrapper section__padding our-services__section"
     >
-      <div
-        class="our-services__header d-grid rg-24px cols-md-2 align-items-center cg-48px"
-      >
-        <div class="d-grid rg-16px rg-md-24px">
-          <h2 class="text-scale-sm bold text-base">Our Services</h2>
+      <div class="our-services__header d-grid rg-16px rg-md-24px cg-48px">
+        <h2 class="text-scale-sm bold text-base">Our Services</h2>
+        <div class="d-grid align-items-start cols-md-2 cg-32px rg-24px">
           <p class="text-scale-xl text-primary medium text-primary">
             Professional Mobile Repairs in The Comfort of Your Home or Workplace
           </p>
-        </div>
-        <div class="d-grid rg-24px">
-          <p class="text-base opacity-70">
-            InstantFix delivers body shop quality repairs at your location,
-            specializing in bumpers, panels, wheels, and paint correction for
-            sale preparation.
-          </p>
-          <p class="text-base opacity-70">
-            We save time and money compared to traditional shops, ensuring
-            high-standard repairs without shortcuts. We prioritize proper
-            preparation for lasting results, unlike quick-fix services that risk
-            paint peeling. We offers mobile bumper and alloy wheel repairs in
-            Sydney, focusing on quality and fair pricing for long-term customer
-            satisfaction.
-          </p>
+          <div
+            class="d-grid align-items-center rg-16px rg-24px w-lg-85 ml-auto"
+          >
+            <p class="text-base opacity-70">
+              InstantFix delivers body shop quality repairs at your location,
+              specializing in bumpers, panels, wheels, and paint correction for
+              sale preparation.
+            </p>
+            <p class="text-base opacity-70">
+              We save time and money compared to traditional shops, ensuring
+              high-standard repairs without shortcuts. We prioritize proper
+              preparation for lasting results, unlike quick-fix services that
+              risk paint peeling. We offers mobile bumper and alloy wheel
+              repairs in Sydney, focusing on quality and fair pricing for
+              long-term customer satisfaction.
+            </p>
+          </div>
         </div>
       </div>
       <div class="d-grid cols-md-3 rg-16px rg-lg-32px cg-md-16px cg-lg-32px">
@@ -407,9 +662,9 @@
           Ready to Fix Your Car?
         </h2>
         <div class="d-grid rg-24px justify-content-center">
-          <a href="#contact-form" class="button button--big"
-            >Get an Instant Quote</a
-          >
+          <button class="open-btn button openModalBtn" id="openModalBtn2">
+            Get an Instant Quote
+          </button>
           <p class="text-scale-2md semi-bold text-white text-center">
             in Under 2 Minutes!
           </p>
@@ -420,7 +675,7 @@
     <section
       class="section__wrapper section__padding why-choose-us__section d-grid cols-md-2"
     >
-      <div class="d-grid rg-32px">
+      <div class="d-grid rg-32px w-md-75">
         <div class="d-grid">
           <div class="d-grid rg-16px rg-md-24px mb-2">
             <h2 class="text-scale-sm bold">Why Choose Us</h2>
@@ -479,11 +734,11 @@
           <p class="text-with-curved-border text-white opacity-70">
             A smooth and transparent process for all your vehicle needs.
           </p>
-          <img
+          <!-- <img
             src="./static/images/decorative-bg-curved-white.svg"
             alt=""
             class="bg-decorative"
-          />
+          /> -->
         </div>
         <div class="how-it-works__wrapper d-grid rg-24px cg-32px cols-md-2">
           <div class="how-it-works__img-desktop">
@@ -597,9 +852,12 @@
           discounts.
         </p>
         <div class="d-grid d-md-flex align-items-center cg-24px rg-24px">
-          <a href="#contact-form" class="button button--big button--secondary"
-            >Get an Instant Quote</a
+          <button
+            class="open-btn button button--big button--secondary openModalBtn"
+            id="openModalBtn3"
           >
+            Get an Instant Quote
+          </button>
           <p
             class="text-scale-2md semi-bold text-white text-center text-md-left"
           >
@@ -613,11 +871,11 @@
       <div
         class="section__padding text-with-curved__wrapper section__wrapper position-relative d-grid rg-8px"
       >
-        <img
+        <!-- <img
           src="./static/images/decorative-bg-curved-orange.svg"
           alt=""
           class="bg-decorative"
-        />
+        /> -->
         <div class="d-grid rg-16px rg-md-24px">
           <h2 class="text-scale-sm bold">Testimonials</h2>
           <p class="text-scale-xl medium">
@@ -625,7 +883,7 @@
             <span class="text-scale-xl medium text-primary">InstantFix</span>
           </p>
         </div>
-        <p class="text-with-curved-border w-lg-75 ml-auto opacity-70">
+        <p class="text-with-curved-border w-lg-85 ml-auto opacity-70">
           Read what our satisfied customers have to say about our products and
           services
         </p>
@@ -714,61 +972,68 @@
       </div>
     </section>
     <!-- Coverage Area -->
-    <section id="coverage-area" class="section__wrapper coverage__section">
-      <div class="coverage__header d-grid rg-16px">
-        <h2 class="text-scale-sm bold">Coverage Area</h2>
-        <div class="d-grid rg-8px rg-md-24px">
-          <p class="text-scale-lg medium">
-            <span class="text-scale-lg medium text-primary"
-              >InstantFix is Near You</span
-            >
-            <br />
-            Quality, Convenience, and Expertise
-          </p>
-          <p class="opacity-70">
-            Whether you’re near or far, our expert services are just around the
-            corner.
-          </p>
-        </div>
-      </div>
-      <div class="coverage__body d-grid cols-md-2 cg-48px align-items-center">
-        <img
-          src="./static/images/australia-map.png"
-          alt="A map of Australia"
-          class="d-flex w-100 border-radius-md-16px"
-        />
-
-        <div class="coverage__text d-grid rg-32px">
-          <div class="d-grid rg-16px">
-            <p class="text-scale-md bold text-primary">
-              Areas We Service in Sydney
+    <section id="coverage-area" class="bg-base-lightest">
+      <div class="section__wrapper coverage__section">
+        <div class="coverage__header d-grid rg-16px">
+          <h2 class="text-scale-sm bold">Coverage Area</h2>
+          <div class="d-grid rg-8px rg-md-24px">
+            <p class="text-scale-lg medium">
+              <span class="text-scale-lg medium text-primary"
+                >InstantFix is Near You</span
+              >
+              <br />
+              Quality, Convenience, and Expertise
             </p>
-            <p class="text-scale-sm">
-              Our mobile car repair teams cover all Sydney metropolitan regions
+            <p class="opacity-70">
+              Whether you’re near or far, our expert services are just around
+              the corner.
             </p>
           </div>
-          <ul class="check__list d-grid rg-24px">
-            <li id="eastern-suburbs" class="text-list">Eastern Suburbs</li>
-            <li id="inner-west" class="text-list">Inner West</li>
-            <li id="north-shore" class="text-list">North Shore</li>
-            <li id="eastern-sydney" class="text-list">Western Sydney</li>
-            <li id="southern-sydney" class="text-list">Southern Sydney</li>
-            <li id="northern-beaches" class="text-list">Northern Beaches</li>
-          </ul>
+        </div>
+        <div class="coverage__body d-grid cols-md-2 cg-48px align-items-center">
+          <img
+            src="./static/images/australia-map.png"
+            alt="A map of Australia"
+            class="d-flex w-100 border-radius-md-16px"
+          />
+
+          <div class="coverage__text d-grid rg-32px">
+            <div class="d-grid rg-16px">
+              <p class="text-scale-md bold text-primary">
+                Areas We Service in Sydney
+              </p>
+              <p class="text-scale-sm">
+                Our mobile car repair teams cover all Sydney metropolitan
+                regions
+              </p>
+            </div>
+            <ul class="check__list d-grid rg-24px">
+              <li id="eastern-suburbs" class="text-list">Eastern Suburbs</li>
+              <li id="inner-west" class="text-list">Inner West</li>
+              <li id="north-shore" class="text-list">North Shore</li>
+              <li id="eastern-sydney" class="text-list">Western Sydney</li>
+              <li id="southern-sydney" class="text-list">Southern Sydney</li>
+              <li id="northern-beaches" class="text-list">Northern Beaches</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
     <!-- Form -->
     <section
       id="contact-form"
-      class="section__wrapper section__padding d-grid rg-24px cols-md-2 cg-32px align-items-start"
+      class="section__wrapper section__padding d-grid rg-24px cols-md-2 cg-32px align-items-start bg-sm-white"
     >
       <div class="d-grid rg-16px rg-md-24px">
         <h2 class="text-scale-sm bold">Get a Quote</h2>
         <span class="text-scale-xl medium text-primary">Instant Quote</span>
         <p class="text-scale-xl medium">in Under 2 minutes!</p>
       </div>
-      <form name="contact" netlify class="d-grid rg-24px rg-md-32px">
+      <form
+        name="contact"
+        netlify
+        class="form-page d-grid rg-24px rg-md-32px cols-md-2"
+      >
         <div class="input__layout name">
           <label class="medium" for="name"
             >Name <sup class="text-error">*</sup></label
@@ -781,7 +1046,6 @@
             required
           />
         </div>
-
         <div class="input__layout mobile-number">
           <label class="medium" for="mobile-number"
             >Mobile number <sup class="text-error">*</sup></label
@@ -794,10 +1058,9 @@
             required
           />
         </div>
-
         <div class="input__layout email">
           <label class="medium" for="email"
-            >Email <sup class="text-error">*</sup></label
+            >Email Address <sup class="text-error">*</sup></label
           >
           <input
             type="email"
@@ -807,41 +1070,98 @@
             required
           />
         </div>
-
         <div class="input__layout message">
-          <label class="medium" for="message">Comment or message</label>
+          <label class="medium" for="message"
+            >Comment or message <sup class="text-error">*</sup></label
+          >
           <textarea
             name="message"
             id="message"
             placeholder="Briefly describe the issue or any specific requests"
             rows="4"
             maxlength="1000"
+            required
           ></textarea>
-          <p id="char-count" class="text-scale-xs opacity-70 ml-auto">
-            0 / 1000
+          <p id="char-count" class="small opacity-70 ml-auto">0 / 1000</p>
+        </div>
+
+        <div class="d-grid rg-12px input__layout-modal picture">
+          <ul id="file-list" class="file-list" style="display: none"></ul>
+          <!-- File List -->
+          <!-- Image previews will appear here -->
+          <p class="text-size-14 medium">
+            Upload File or Damaged Photo (max 5 files)<sup class="text-error"
+              >*</sup
+            >
           </p>
-        </div>
+          <div class="d-flex cg-8pcx">
+            <div
+              class="preview-container-p d-flex"
+              id="preview-container-p"
+            ></div>
+            <!-- Add File Button -->
 
-        <div class="input__layout car-registration-number">
-          <label class="medium" for="car-registration-number"
-            >Car registration number</label
+            <div class="input__layout-modal file-upload my-bottom">
+              <button
+                type="button"
+                id="add-file-button-p"
+                class="button button--upload"
+              >
+                Upload
+              </button>
+              <input
+                type="file"
+                name="upload-image-1"
+                id="upload-image-p1"
+                onchange="handleFileChangeP(1)"
+                required
+                style="width: 1px; height: 1px; margin: 0; padding: 0"
+              />
+            </div>
+          </div>
+
+          <p class="small text-base-10">
+            Total size of all images combined must be under 5mb with .jpg, .png
+            or .pdf file format
+          </p>
+          <!-- Hidden file inputs -->
+
+          <div id="hidden-file-block" style="display: none">
+            <input
+              type="file"
+              name="upload-image-2"
+              id="upload-image-p2"
+              onchange="handleFileChangeP(2)"
+            />
+            <input
+              type="file"
+              name="upload-image-3"
+              id="upload-image-p3"
+              onchange="handleFileChangeP(3)"
+            />
+            <input
+              type="file"
+              name="upload-image-4"
+              id="upload-image-p4"
+              onchange="handleFileChangeP(4)"
+            />
+            <input
+              type="file"
+              name="upload-image-5"
+              id="upload-image-p5"
+              onchange="handleFileChangeP(5)"
+            />
+          </div>
+          <button
+            type="submit"
+            class="submit button button--tertiary cursor-pointer mt-4"
           >
-          <input
-            type="text"
-            name="car-registration-number"
-            id="car-registration-number"
-            placeholder="e.g., B 1234 CD"
-          />
+            Submit
+          </button>
         </div>
-
-        <button
-          type="submit"
-          class="submit button button--tertiary cursor-pointer"
-        >
-          Submit
-        </button>
       </form>
     </section>
+
     <!-- Footer -->
     <footer class="bg-secondary">
       <div class="section__wrapper">
@@ -853,18 +1173,12 @@
                 >Service Area</a
               >
               <div class="d-grid rg-8px">
-                <a href="#eastern-suburbs" class="opacity-50"
-                  >Eastern Suburbs</a
-                >
-                <a href="#inner-west" class="opacity-50">Inner West</a>
-                <a href="#north-shore" class="opacity-50">North Shore</a>
-                <a href="#eastern-sydney" class="opacity-50">Western Sydney</a>
-                <a href="#southern-sydney" class="opacity-50"
-                  >Southern Sydney</a
-                >
-                <a href="#northern-beaches" class="opacity-50"
-                  >Northern Beaches</a
-                >
+                <a href="#coverage-area" class="opacity-50">Eastern Suburbs</a>
+                <a href="#coverage-area" class="opacity-50">Inner West</a>
+                <a href="#coverage-area" class="opacity-50">North Shore</a>
+                <a href="#coverage-area" class="opacity-50">Western Sydney</a>
+                <a href="#coverage-area" class="opacity-50">Southern Sydney</a>
+                <a href="#coverage-area" class="opacity-50">Northern Beaches</a>
               </div>
             </div>
             <div class="">
@@ -872,31 +1186,27 @@
                 >Services</a
               >
               <div class="d-grid rg-8px">
-                <a href="#bumper-repair" class="opacity-50">Bumper Repair</a>
-                <a href="#alloy-wheel-repair" class="opacity-50"
+                <a href="#our-services" class="opacity-50">Bumper Repair</a>
+                <a href="#our-services" class="opacity-50"
                   >Alloy Wheel Repair</a
                 >
-                <a href="#wheel-arc-scratch-repair" class="opacity-50"
+                <a href="#our-services" class="opacity-50"
                   >Wheel Arc Scratch Repair</a
                 >
-                <a href="#paint-correction" class="opacity-50"
-                  >Paint Correction</a
-                >
-                <a href="#card-door-scratch-repair" class="opacity-50"
+                <a href="#our-services" class="opacity-50">Paint Correction</a>
+                <a href="#our-services" class="opacity-50"
                   >Car Door Scratch Repair</a
                 >
-                <a href="#small-car-dent-repair" class="opacity-50"
+                <a href="#our-services" class="opacity-50"
                   >Small Car Dent Repair</a
                 >
-                <a href="#minor-car-scratch-repair" class="opacity-50"
+                <a href="#our-services" class="opacity-50"
                   >Minor Car Scratch Repair</a
                 >
-                <a href="#presale-exterior-car-cleanup" class="opacity-50"
+                <a href="#our-services" class="opacity-50"
                   >Presale Exterior Car Cleanup</a
                 >
-                <a href="#ceramic-coating" class="opacity-50"
-                  >Ceramic Coating</a
-                >
+                <a href="#our-services" class="opacity-50">Ceramic Coating</a>
               </div>
             </div>
             <div class="d-grid rg-32px">
@@ -918,29 +1228,25 @@
                     <img src="./static/images/email.svg" alt="email" />
                     <p class="opacity-50">hello@instantfix.com</p>
                   </a>
-                  <div class="d-flex align-items-center cg-12px">
+                  <a
+                    href="https://instantfix.com.au/"
+                    target="_blank"
+                    class="d-flex align-items-center cg-12px"
+                  >
                     <img src="./static/images/website.svg" alt="website" />
                     <p class="opacity-50">www.instantfix.com.au</p>
-                  </div>
+                  </a>
                   <div class="d-flex align-items-center cg-12px">
                     <img
                       src="./static/images/clock-small.svg"
                       alt="work hours"
                     />
-                    <p class="opacity-50">Mon - Sat: 7.00am - 6pm</p>
+                    <p class="opacity-50">Mon - Sat: 7am - 6pm</p>
                   </div>
                 </div>
               </div>
               <p class="text-size-24 mb-3 d-none">About Us</p>
               <a href="#contact-form" class="text-size-24 mb-3">Get a Quote</a>
-            </div>
-            <div class="">
-              <p class="text-size-24 mb-3">Follow Us</p>
-              <div class="d-flex cg-16px">
-                <img src="./static/images/facebook.svg" alt="facebook" />
-                <img src="./static/images/twitter.svg" alt="twitter" />
-                <img src="./static/images/youtube.svg" alt="youtube" />
-              </div>
             </div>
           </div>
         </div>
@@ -954,9 +1260,34 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-
     <script>
+      //-- Modal-->
+
       $(document).ready(function () {
+        const $modal = $("#registration-modal");
+        const $btn = $(".openModalBtn");
+        const $span = $(".close-btn");
+        const $fileInput = $("#file-input");
+        const $fileList = $("#file-list");
+
+        const $dropArea = $("#drop-area");
+        const $fileError = $("#file-error");
+        const $submitBtn = $("#submit-btn");
+        const $form = $(".form-modal");
+        let files = [];
+
+        $fileInput.on("change", function (e) {
+          handleFiles(e.target.files);
+        });
+
+        $btn.on("click", function () {
+          $modal.css("display", "block");
+        });
+
+        $span.on("click", function () {
+          $modal.css("display", "none");
+        });
+
         $(".accordion__item").on("click", function () {
           const $this = $(this);
 
@@ -976,6 +1307,145 @@
             $(".how-it-works__img-desktop ." + imgClass).addClass("active");
           }
         });
+        // Array to hold selected files
+        let selectedFiles = [];
+
+        // When files are selected
+        $("#file-input").change(function (e) {
+          // Clear previous selection
+          selectedFiles = [];
+          $("#file-list").empty();
+
+          // Add new files to array and display them
+          $.each(e.target.files, function (index, file) {
+            selectedFiles.push(file);
+            $("#file-list").append(
+              `<div class="file-item" id="file-${index}">
+                    ${file.name} (${formatFileSize(file.size)})
+                    <div class="progress">
+                        <div class="progress-bar" id="progress-${index}" style="width: 0%">0%</div>
+                    </div>
+                    <div id="status-${index}"></div>
+                </div>`
+            );
+          });
+        });
+
+        // Upload button click handler
+        $("#uploadBtn").click(function () {
+          if (selectedFiles.length === 0) {
+            $("#status").html(
+              '<span class="error">Please select at least one file</span>'
+            );
+            return;
+          }
+
+          $("#status").html("Uploading files...");
+
+          // Upload each file
+          $.each(selectedFiles, function (index, file) {
+            uploadFile(index, file);
+          });
+        });
+
+        function handleFiles(selectedFiles) {
+          $fileError.text("");
+
+          // Check if files were selected
+          if (selectedFiles.length === 0) return;
+
+          // Check total files count (limit to 10 for example)
+          if (files.length + selectedFiles.length > 10) {
+            $fileError.text("Maximum 10 files allowed");
+            return;
+          }
+
+          // Check each file
+          for (let i = 0; i < selectedFiles.length; i++) {
+            const file = selectedFiles[i];
+
+            // Check file size (limit to 5MB)
+            if (file.size > 5 * 1024 * 1024) {
+              $fileError.text(`File ${file.name} is too large (max 5MB)`);
+              continue;
+            }
+
+            // Check file type
+            const validTypes = [
+              "image/jpeg",
+              "image/png",
+              "image/gif",
+              "application/pdf",
+              "application/msword",
+              "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            ];
+            if (!validTypes.includes(file.type)) {
+              $fileError.text(`File ${file.name} has invalid type`);
+              continue;
+            }
+
+            // Add to files array if valid
+            files.push(file);
+          }
+
+          updateFileList();
+          updateSubmitButton();
+        }
+        // Remove a file
+        function removeFile(index) {
+          files.splice(index, 1);
+          updateFileList();
+          updateSubmitButton();
+        }
+
+        // Get appropriate icon for file type
+        function getFileIcon(type) {
+          if (type.startsWith("image/")) return "📷";
+          if (type.includes("pdf")) return "📄";
+          if (type.includes("word")) return "📝";
+          return "📁";
+        }
+
+        // Format file size
+        function formatFileSize(bytes) {
+          if (bytes === 0) return "0 Bytes";
+          const k = 1024;
+          const sizes = ["Bytes", "KB", "MB", "GB"];
+          const i = Math.floor(Math.log(bytes) / Math.log(k));
+          return (
+            parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + " " + sizes[i]
+          );
+        }
+        function updateFileList() {
+          $fileList.empty();
+
+          if (files.length === 0) {
+            $fileList.html("<p>No files selected</p>");
+            return;
+          }
+
+          files.forEach(function (file, index) {
+            const fileItem = $('<div class="file-item"></div>');
+            const fileInfo = $('<div class="file-info"></div>');
+            const fileIcon = $(
+              `<span class="file-icon">${getFileIcon(file.type)}</span>`
+            );
+            const fileName = $(
+              `<span>${file.name} (${formatFileSize(file.size)})</span>`
+            );
+            const removeBtn = $('<button class="remove-btn">&times;</button>');
+
+            removeBtn.on("click", function () {
+              removeFile(index);
+            });
+
+            fileInfo.append(fileIcon, fileName);
+            fileItem.append(fileInfo, removeBtn);
+            $fileList.append(fileItem);
+          });
+
+          // Update previews for image files
+        }
 
         // Inisialisasi awal (default active image desktop sesuai item aktif)
         // const initialImgClass = $(".accordion__item.active .accordion__img")
@@ -1015,6 +1485,239 @@
       });
 
       $("#char-count").text(`${$("#message").val().length} / 1000`);
+
+      $("#pop-message").on("input", function () {
+        const currentLength = $(this).val().length;
+        $("#pop-char-count").text(`${currentLength} / 1000`);
+      });
+
+      $("#pop-char-count").text(`${$("#pop-message").val().length} / 1000`);
+    </script>
+    <script>
+      const maxFiles = 5; // The maximum number of files that can be uploaded
+      const fileInputs = []; // Track which inputs are filled
+      const fileList = []; // Track file objects for display
+      const hiddenFileBlock = document.getElementById("hidden-file-block"); // Hidden block for file inputs
+
+      // Trigger the hidden file input to simulate clicking
+      function triggerFileInput(event) {
+        console.log("Triggering file input");
+        if (fileList.length >= maxFiles) {
+          alert("You can only upload up to 5 files.");
+          return;
+        }
+
+        // Find the next available file input
+        const availableInput = getNextAvailableFileInput();
+        if (availableInput) {
+          console.log("Triggering file input", availableInput);
+          availableInput.click(); // Programmatically trigger the input
+        }
+      }
+      function triggerFileInputP(event) {
+        console.log("Triggering file input");
+        if (fileList.length >= maxFiles) {
+          alert("You can only upload up to 5 files.");
+          return;
+        }
+
+        // Find the next available file input
+        const availableInput = getNextAvailableFileInputP();
+        if (availableInput) {
+          console.log("Triggering file input", availableInput);
+          availableInput.click(); // Programmatically trigger the input
+        }
+      }
+
+      // Handle file input changes
+      function handleFileChange(index) {
+        const input = document.getElementById(`upload-image-${index}`);
+        if (!input || !input.files || input.files.length === 0) return;
+
+        const file = input.files[0]; // Get the selected file
+        if (validateFile(file)) {
+          addFile(file, index); // Add the file to the list
+        } else {
+          input.value = ""; // Clear the invalid file
+        }
+      }
+      function handleFileChangeP(index) {
+        const input = document.getElementById(`upload-image-p${index}`);
+        if (!input || !input.files || input.files.length === 0) return;
+
+        const file = input.files[0]; // Get the selected file
+        if (validateFile(file)) {
+          addFileP(file, index); // Add the file to the list
+        } else {
+          input.value = ""; // Clear the invalid file
+        }
+      }
+
+      // Validate a file before adding
+      function validateFile(file) {
+        const maxFileSize = 5 * 1024 * 1024; // Maximum size in bytes (5MB)
+        const allowedTypes = ["image/jpeg", "image/png", "application/pdf"]; // Allowed file types
+
+        if (!allowedTypes.includes(file.type)) {
+          alert(
+            `${file.name} is not a valid file type. Only JPG, PNG, and PDF are allowed.`
+          );
+          return false;
+        }
+
+        if (file.size > maxFileSize) {
+          alert(`${file.name} exceeds the maximum file size of 5MB.`);
+          return false;
+        }
+
+        return true;
+      }
+
+      // Add a file to the list and update UI
+      function addFile(file, index) {
+        // Check if the file already exists in the list
+        if (fileList.find((f) => f.name === file.name)) {
+          alert(`${file.name} has already been added.`);
+          return;
+        }
+
+        // Add file to the list
+        fileList.push(file);
+        fileInputs.push(index);
+
+        // Update the file list display
+        updateFileList();
+      }
+
+      function addFileP(file, index) {
+        // Check if the file already exists in the list
+        if (fileList.find((f) => f.name === file.name)) {
+          alert(`${file.name} has already been added.`);
+          return;
+        }
+
+        // Add file to the list
+        fileList.push(file);
+        fileInputs.push(index);
+
+        // Update the file list display
+        updateFileListP();
+      }
+
+      // Remove a file from the list
+      function removeFile(index) {
+        const fileName = fileList[index].name; // Get the file name to remove
+        fileList.splice(index, 1); // Remove the file from the list
+
+        // Clear the corresponding hidden input
+        const inputIndex = fileInputs[index];
+        const input = document.getElementById(`upload-image-${inputIndex}`);
+        if (input) input.value = "";
+
+        // Update the input tracking and the UI
+        fileInputs.splice(index, 1);
+        updateFileList();
+        console.log(`${fileName} has been removed.`);
+      }
+      function removeFileP(index) {
+        const fileName = fileList[index].name; // Get the file name to remove
+        fileList.splice(index, 1); // Remove the file from the list
+
+        // Clear the corresponding hidden input
+        const inputIndex = fileInputs[index];
+        const input = document.getElementById(`upload-image-p${inputIndex}`);
+        if (input) input.value = "";
+
+        // Update the input tracking and the UI
+        fileInputs.splice(index, 1);
+        updateFileListP();
+        console.log(`${fileName} has been removed.`);
+      }
+
+      // Display the file list in the UI
+      function updateFileList() {
+        document.querySelector(".preview-container").innerHTML = "";
+        // Add each file to the list
+        fileList.forEach((file, index) => {
+          if (file.type.startsWith("image/")) {
+            const previewItem = document.createElement("div");
+            previewItem.className = "preview-item";
+
+            const img = document.createElement("img");
+            img.src = URL.createObjectURL(file);
+
+            const removeBtn = document.createElement("span");
+            removeBtn.className = "remove-preview";
+            removeBtn.innerHTML = "&times;";
+
+            removeBtn.addEventListener("click", function () {
+              removeFile(index);
+            });
+
+            previewItem.appendChild(img);
+            previewItem.appendChild(removeBtn);
+
+            document
+              .querySelector(".preview-container")
+              .appendChild(previewItem);
+          }
+        });
+      }
+
+      function updateFileListP() {
+        document.querySelector(".preview-container-p").innerHTML = "";
+        // Add each file to the list
+        fileList.forEach((file, index) => {
+          if (file.type.startsWith("image/")) {
+            const previewItem = document.createElement("div");
+            previewItem.className = "preview-item";
+
+            const img = document.createElement("img");
+            img.src = URL.createObjectURL(file);
+
+            const removeBtn = document.createElement("span");
+            removeBtn.className = "remove-preview";
+            removeBtn.innerHTML = "&times;";
+
+            removeBtn.addEventListener("click", function () {
+              removeFileP(index);
+            });
+
+            previewItem.appendChild(img);
+            previewItem.appendChild(removeBtn);
+
+            document
+              .querySelector(".preview-container-p")
+              .appendChild(previewItem);
+          }
+        });
+      }
+
+      // Find the next available hidden file input
+      function getNextAvailableFileInput() {
+        for (let i = 1; i <= maxFiles; i++) {
+          const input = document.getElementById(`upload-image-${i}`);
+          if (input && !fileInputs.includes(i)) {
+            return input;
+          }
+        }
+        return null; // No available inputs
+      }
+      function getNextAvailableFileInputP() {
+        for (let i = 1; i <= maxFiles; i++) {
+          const input = document.getElementById(`upload-image-p${i}`);
+          if (input && !fileInputs.includes(i)) {
+            return input;
+          }
+        }
+        return null; // No available inputs
+      }
+      document
+        .getElementById("add-file-button")
+        .addEventListener("click", triggerFileInput);
+      document
+        .getElementById("add-file-button-p")
+        .addEventListener("click", triggerFileInputP);
     </script>
   </body>
 </html>

@@ -51,20 +51,18 @@ footer {
 a {
   color: inherit;
 }
-.small,
-.label,
-.text-scale-2xs {
-  font-family: "Source Sans 3", sans-serif;
-  line-height: 120%;
-}
 
 .text-scale-2xl {
   @include font-size(2.625rem, 4rem); //42px, 64px
   @include line-height(52px, 64px);
 }
 
+.text-64 {
+  font-size: 64px;
+}
+
 .text-scale-xl {
-  @include font-size(2rem, 4rem); //32px, 64px
+  @include font-size(32px, 64px); //32px, 64px
   @include line-height(42px, 64px);
 }
 
@@ -89,7 +87,7 @@ a {
 }
 
 .text-scale-xs {
-  @include font-size(0.875rem, 1rem); //14rem, 16rem
+  @include font-size(0.875rem, 1rem); //14px, 16px
 }
 
 // .text-scale-2xs {
@@ -107,21 +105,18 @@ a {
 
 .text-size-24 {
   @include font-size(1.5rem); //24px
-  @include line-height(24px, 48px);
+  @include line-height(36px, 48px);
 }
 
-.text-size-14 {
-  @include font-size(0.8125rem); //14px
+.text-size-14,
+label {
+  @include font-size(0.875rem); //14px
   @include line-height(22px);
+  letter-spacing: -2%;
 }
 
 .small {
   @include font-size(0.75rem, 0.75rem); //12px
-  line-height: normal;
-}
-
-.label {
-  @include font-size(0.625rem, 1rem); //10px, 16px
   line-height: normal;
 }
 
@@ -288,4 +283,10 @@ Others
 \*-------------------------------------------*/
 .italic {
   font-style: italic;
+}
+.text-base-10 {
+  color: $base-10;
+}
+.text-neutral-black {
+  color: $neutral-black;
 }
