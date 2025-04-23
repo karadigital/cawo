@@ -107,7 +107,7 @@
               <!-- Image previews will appear here -->
               <p class="help-text">Upload File or Damaged Photo (max 5 files)<sup class="text-error">*</sup></p>
               <div class="d-flex">
-                <div class="preview-container" id="preview-container"></div>
+                <div class="preview-container d-flex" id="preview-container"></div>
                 <!-- Add File Button -->
 
                 <div class="input__layout-modal file-upload my-bottom px-1">
@@ -596,7 +596,40 @@
           ></textarea>
           <p id="char-count" class="text-scale-xs opacity-70 ml-auto">0 / 1000</p>
         </div>
-        <button type="submit" class="submit button button--tertiary cursor-pointer mt-0">Submit</button>
+
+        <div class="input__layout-modal picture">
+          <ul id="file-list" class="file-list" style="display: none"></ul>
+          <!-- File List -->
+          <!-- Image previews will appear here -->
+          <p class="help-text">Upload File or Damaged Photo (max 5 files)<sup class="text-error">*</sup></p>
+          <div class="d-flex">
+            <div class="preview-container-p d-flex" id="preview-container-p"></div>
+            <!-- Add File Button -->
+
+            <div class="input__layout-modal file-upload my-bottom px-1">
+              <button type="button" id="add-file-button-p" class="button button--upload">Upload</button>
+              <input
+                type="file"
+                name="upload-image-1"
+                id="upload-image-p1"
+                onchange="handleFileChangeP(1)"
+                required
+                style="width: 1px; height: 1px; margin: 0; padding: 0"
+              />
+            </div>
+          </div>
+
+          <p class="text-scale-xs text-gray">Total size of all images combined must be under 150mb with .jpg, .png or .pdf file format</p>
+          <!-- Hidden file inputs -->
+
+          <div id="hidden-file-block" style="display: none">
+            <input type="file" name="upload-image-2" id="upload-image-p2" onchange="handleFileChangeP(2)" />
+            <input type="file" name="upload-image-3" id="upload-image-p3" onchange="handleFileChangeP(3)" />
+            <input type="file" name="upload-image-4" id="upload-image-p4" onchange="handleFileChangeP(4)" />
+            <input type="file" name="upload-image-5" id="upload-image-p5" onchange="handleFileChangeP(5)" />
+          </div>
+          <button type="submit" class="submit button button--tertiary cursor-pointer mt-4">Submit</button>
+        </div>
       </form>
     </section>
 
@@ -893,7 +926,6 @@
       const maxFiles = 5; // The maximum number of files that can be uploaded
       const fileInputs = []; // Track which inputs are filled
       const fileList = []; // Track file objects for display
-      const fileListElement = document.getElementById("file-list"); // The file list display
       const hiddenFileBlock = document.getElementById("hidden-file-block"); // Hidden block for file inputs
 
       // Trigger the hidden file input to simulate clicking
@@ -911,6 +943,20 @@
           availableInput.click(); // Programmatically trigger the input
         }
       }
+      function triggerFileInputP(event) {
+        console.log("Triggering file input");
+        if (fileList.length >= maxFiles) {
+          alert("You can only upload up to 5 files.");
+          return;
+        }
+
+        // Find the next available file input
+        const availableInput = getNextAvailableFileInputP();
+        if (availableInput) {
+          console.log("Triggering file input", availableInput);
+          availableInput.click(); // Programmatically trigger the input
+        }
+      }
 
       // Handle file input changes
       function handleFileChange(index) {
@@ -920,6 +966,17 @@
         const file = input.files[0]; // Get the selected file
         if (validateFile(file)) {
           addFile(file, index); // Add the file to the list
+        } else {
+          input.value = ""; // Clear the invalid file
+        }
+      }
+      function handleFileChangeP(index) {
+        const input = document.getElementById(`upload-image-p${index}`);
+        if (!input || !input.files || input.files.length === 0) return;
+
+        const file = input.files[0]; // Get the selected file
+        if (validateFile(file)) {
+          addFileP(file, index); // Add the file to the list
         } else {
           input.value = ""; // Clear the invalid file
         }
@@ -959,6 +1016,21 @@
         updateFileList();
       }
 
+      function addFileP(file, index) {
+        // Check if the file already exists in the list
+        if (fileList.find((f) => f.name === file.name)) {
+          alert(`${file.name} has already been added.`);
+          return;
+        }
+
+        // Add file to the list
+        fileList.push(file);
+        fileInputs.push(index);
+
+        // Update the file list display
+        updateFileListP();
+      }
+
       // Remove a file from the list
       function removeFile(index) {
         const fileName = fileList[index].name; // Get the file name to remove
@@ -974,10 +1046,23 @@
         updateFileList();
         console.log(`${fileName} has been removed.`);
       }
+      function removeFileP(index) {
+        const fileName = fileList[index].name; // Get the file name to remove
+        fileList.splice(index, 1); // Remove the file from the list
+
+        // Clear the corresponding hidden input
+        const inputIndex = fileInputs[index];
+        const input = document.getElementById(`upload-image-p${inputIndex}`);
+        if (input) input.value = "";
+
+        // Update the input tracking and the UI
+        fileInputs.splice(index, 1);
+        updateFileListP();
+        console.log(`${fileName} has been removed.`);
+      }
 
       // Display the file list in the UI
       function updateFileList() {
-        fileListElement.innerHTML = ""; // Clear the existing list
         document.querySelector(".preview-container").innerHTML = "";
         // Add each file to the list
         fileList.forEach((file, index) => {
@@ -1004,6 +1089,33 @@
         });
       }
 
+      function updateFileListP() {
+        document.querySelector(".preview-container-p").innerHTML = "";
+        // Add each file to the list
+        fileList.forEach((file, index) => {
+          if (file.type.startsWith("image/")) {
+            const previewItem = document.createElement("div");
+            previewItem.className = "preview-item";
+
+            const img = document.createElement("img");
+            img.src = URL.createObjectURL(file);
+
+            const removeBtn = document.createElement("span");
+            removeBtn.className = "remove-preview";
+            removeBtn.innerHTML = "&times;";
+
+            removeBtn.addEventListener("click", function () {
+              removeFileP(index);
+            });
+
+            previewItem.appendChild(img);
+            previewItem.appendChild(removeBtn);
+
+            document.querySelector(".preview-container-p").appendChild(previewItem);
+          }
+        });
+      }
+
       // Find the next available hidden file input
       function getNextAvailableFileInput() {
         for (let i = 1; i <= maxFiles; i++) {
@@ -1014,7 +1126,17 @@
         }
         return null; // No available inputs
       }
+      function getNextAvailableFileInputP() {
+        for (let i = 1; i <= maxFiles; i++) {
+          const input = document.getElementById(`upload-image-p${i}`);
+          if (input && !fileInputs.includes(i)) {
+            return input;
+          }
+        }
+        return null; // No available inputs
+      }
       document.getElementById("add-file-button").addEventListener("click", triggerFileInput);
+      document.getElementById("add-file-button-p").addEventListener("click", triggerFileInputP);
     </script>
   </body>
 </html>
