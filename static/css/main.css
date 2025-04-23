@@ -1731,6 +1731,15 @@ button {
   border: 1px solid #fff;
 }
 
+.button-dynamic {
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .button-dynamic {
+    width: max-content;
+  }
+}
+
 .accordion__body {
   position: relative;
   display: grid;
