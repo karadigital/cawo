@@ -48,7 +48,9 @@
             </div>
             <form
               name="contactQuote"
-              netlify
+              action="/thank-you.html"
+              method="POST"
+              data-netlify="true"
               class="form-modal d-grid rg-24px rg-md-32px"
               enctype="multipart/form-data"
             >
@@ -197,10 +199,7 @@
                 <!-- File List -->
                 <!-- Image previews will appear here -->
                 <p class="text-size-14 medium">
-                  Upload File or Damaged Photo (max 5 files)<sup
-                    class="text-error"
-                    >*</sup
-                  >
+                  Upload File or Damaged Photo (max 5 files)
                 </p>
                 <div class="d-flex cg-8pcx">
                   <div
@@ -222,7 +221,6 @@
                       name="upload-image-1"
                       id="upload-image-1"
                       onchange="handleFileChange(1)"
-                      required
                       style="width: 1px; height: 1px; margin: 0; padding: 0"
                     />
                   </div>
@@ -1031,7 +1029,9 @@
       </div>
       <form
         name="contact"
-        netlify
+        action="/thank-you.html"
+        method="POST"
+        data-netlify="true"
         class="form-page d-grid rg-24px rg-md-32px cols-md-2"
       >
         <div class="input__layout name">
@@ -1090,9 +1090,7 @@
           <!-- File List -->
           <!-- Image previews will appear here -->
           <p class="text-size-14 medium">
-            Upload File or Damaged Photo (max 5 files)<sup class="text-error"
-              >*</sup
-            >
+            Upload File or Damaged Photo (max 5 files)
           </p>
           <div class="d-flex cg-8pcx">
             <div
@@ -1114,7 +1112,6 @@
                 name="upload-image-1"
                 id="upload-image-p1"
                 onchange="handleFileChangeP(1)"
-                required
                 style="width: 1px; height: 1px; margin: 0; padding: 0"
               />
             </div>
@@ -1213,21 +1210,7 @@
               <div class="">
                 <p class="text-size-24 mb-3">Contact Us</p>
                 <div class="d-grid rg-8px">
-                  <a
-                    href="tel:+61292726888"
-                    class="d-flex align-items-center cg-12px"
-                  >
-                    <img src="./static/images/phone.svg" alt="Phone number" />
-                    <p class="opacity-50">+61 292726888</p>
-                  </a>
-                  <a
-                    href="mailto:hello@instantfix.com"
-                    target="_blank"
-                    class="d-flex align-items-center cg-12px"
-                  >
-                    <img src="./static/images/email.svg" alt="email" />
-                    <p class="opacity-50">hello@instantfix.com</p>
-                  </a>
+            
                   <a
                     href="https://instantfix.com.au/"
                     target="_blank"
