@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>InstantFix</title>
-
+    <title>
+      InstantFix Sydney | Mobile Car Repairs & Dent Removal At Your Location
+    </title>
+    <meta
+      name="description"
+      content="Expert mobile car repairs across Sydney. Specializing in bumper, dent &amp; scratch repairs, wheel fixes &amp; ceramic coating. We come to you - Eastern Suburbs to Northern Beaches."
+    />
     <!-- CSS -->
     <link rel="stylesheet" href="./static/css/main.css" />
 
@@ -48,9 +53,11 @@
             </div>
             <form
               name="contactQuote"
-              netlify
               class="form-modal d-grid rg-24px rg-md-32px"
               enctype="multipart/form-data"
+              action="/thank-you"
+              method="POST"
+              data-netlify="true"
             >
               <div class="input__layout_modal name">
                 <label class="medium" for="pop-name"
@@ -197,10 +204,7 @@
                 <!-- File List -->
                 <!-- Image previews will appear here -->
                 <p class="text-size-14 medium">
-                  Upload File or Damaged Photo (max 5 files)<sup
-                    class="text-error"
-                    >*</sup
-                  >
+                  Upload File or Damaged Photo (max 5 files)
                 </p>
                 <div class="d-flex cg-8pcx">
                   <div
@@ -222,7 +226,6 @@
                       name="upload-image-1"
                       id="upload-image-1"
                       onchange="handleFileChange(1)"
-                      required
                       style="width: 1px; height: 1px; margin: 0; padding: 0"
                     />
                   </div>
@@ -298,11 +301,6 @@
       </nav>
       <!-- Hero -->
       <div class="">
-        <img
-          src="./static/images/hero-banner.png"
-          alt="Hero Banner"
-          class="img-behind-text__item img-cover"
-        />
         <div class="section__wrapper section__padding">
           <div class="hero__header d-grid rg-16px">
             <h1 class="text-scale-2xl bold text-white">
@@ -324,132 +322,71 @@
             </div>
           </div>
         </div>
-        <div class="desktop-only hero__bottom">
-          <div class="section__wrapper hero__text">
-            <div class="d-grid rg-24px rg-md-32px">
-              <h2 class="text-scale-xl text-white medium">
-                We Are Always Here For You
-              </h2>
-              <p class="text-scale-sm text-white medium">
-                Your Needs, Our Priority.
-              </p>
-            </div>
-            <ul class="d-grid cols-2 cols-md-4 rg-32px">
-              <li>
-                <img
-                  src="./static/images/star-big.svg"
-                  alt="customer rating"
-                  class="d-flex mx-auto mb-1"
-                />
-                <p class="text-scale-md bold text-white text-center mb-2">
-                  4.8/5
-                </p>
-                <p class="text-scale-xs medium text-white text-center">
-                  Customer Rating
-                </p>
-              </li>
-              <li>
-                <img
-                  src="./static/images/check-orange-filled.svg"
-                  alt="verified reviews"
-                  class="d-flex mx-auto mb-1"
-                />
-                <p class="text-scale-md bold text-white text-center mb-2">
-                  2.000+
-                </p>
-                <p class="text-scale-xs medium text-white text-center">
-                  Verified Reviews
-                </p>
-              </li>
-              <li>
-                <img
-                  src="./static/images/tools.svg"
-                  alt="qualified repairs"
-                  class="d-flex mx-auto mb-1"
-                />
-                <p class="text-scale-md bold text-white text-center mb-2">
-                  500+
-                </p>
-                <p class="text-scale-xs medium text-white text-center">
-                  Qualified Repairs
-                </p>
-              </li>
-              <li>
-                <img
-                  src="./static/images/clock.svg"
-                  alt="average respond time"
-                  class="d-flex mx-auto mb-1"
-                />
-                <p class="text-scale-md bold text-white text-center mb-2">
-                  6 hours
-                </p>
-                <p class="text-scale-xs medium text-white text-center">
-                  Average Respond Time
-                </p>
-              </li>
-            </ul>
+        <div class="hero__bottom hero__text section__padding">
+          <div class="d-grid rg-24px rg-md-32px">
+            <h2
+              class="text-scale-xl text-white text-center text-md-left medium"
+            >
+              We Are Always Here For You
+            </h2>
+            <p class="text-scale-sm text-white text-center text-md-left medium">
+              Your Needs, Our Priority.
+            </p>
           </div>
+          <ul class="d-grid cols-2 cols-md-4 rg-32px">
+            <li>
+              <img
+                src="./static/images/star-big.svg"
+                alt="customer rating"
+                class="d-flex mx-auto mb-1"
+              />
+              <p class="text-scale-md bold text-white text-center mb-2">
+                4.8/5
+              </p>
+              <p class="text-scale-xs medium text-white text-center">
+                Customer Rating
+              </p>
+            </li>
+            <li>
+              <img
+                src="./static/images/check-orange-filled.svg"
+                alt="verified reviews"
+                class="d-flex mx-auto mb-1"
+              />
+              <p class="text-scale-md bold text-white text-center mb-2">
+                2.000+
+              </p>
+              <p class="text-scale-xs medium text-white text-center">
+                Verified Reviews
+              </p>
+            </li>
+            <li>
+              <img
+                src="./static/images/tools.svg"
+                alt="qualified repairs"
+                class="d-flex mx-auto mb-1"
+              />
+              <p class="text-scale-md bold text-white text-center mb-2">500+</p>
+              <p class="text-scale-xs medium text-white text-center">
+                Qualified Repairs
+              </p>
+            </li>
+            <li>
+              <img
+                src="./static/images/clock.svg"
+                alt="average respond time"
+                class="d-flex mx-auto mb-1"
+              />
+              <p class="text-scale-md bold text-white text-center mb-2">
+                6 hours
+              </p>
+              <p class="text-scale-xs medium text-white text-center">
+                Average Respond Time
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
-    </section>
-    <!--  -->
-    <section class="mobile-only section__padding bg-secondary">
-      <div class="d-grid rg-24px rg-md-32px">
-        <h2 class="text-scale-xl text-white text-center text-md-left medium">
-          We Are Always Here For You
-        </h2>
-        <p
-          class="text-scale-xs text-scale-sm text-white text-center text-md-left medium"
-        >
-          Your Needs, Our Priority.
-        </p>
-      </div>
-      <ul class="d-grid cols-2 rg-32px">
-        <li>
-          <img
-            src="./static/images/star-big.svg"
-            alt="customer rating"
-            class="d-flex mx-auto mb-1"
-          />
-          <p class="text-scale-md bold text-white text-center mb-2">4.8/5</p>
-          <p class="text-scale-xs medium text-white text-center">
-            Customer Rating
-          </p>
-        </li>
-        <li>
-          <img
-            src="./static/images/check-orange-filled.svg"
-            alt="verified reviews"
-            class="d-flex mx-auto mb-1"
-          />
-          <p class="text-scale-md bold text-white text-center mb-2">2.000+</p>
-          <p class="text-scale-xs medium text-white text-center">
-            Verified Reviews
-          </p>
-        </li>
-        <li>
-          <img
-            src="./static/images/tools.svg"
-            alt="qualified repairs"
-            class="d-flex mx-auto mb-1"
-          />
-          <p class="text-scale-md bold text-white text-center mb-2">500+</p>
-          <p class="text-scale-xs medium text-white text-center">
-            Qualified Repairs
-          </p>
-        </li>
-        <li>
-          <img
-            src="./static/images/clock.svg"
-            alt="average respond time"
-            class="d-flex mx-auto mb-1"
-          />
-          <p class="text-scale-md bold text-white text-center mb-2">6 hours</p>
-          <p class="text-scale-xs medium text-white text-center">
-            Average Respond Time
-          </p>
-        </li>
-      </ul>
     </section>
     <!-- Services -->
     <section
@@ -492,7 +429,7 @@
             class="img-behind-text__item img-cover"
           />
           <div class="card-services__body">
-            <p class="text-size-24 bold text-white">Bumper Repair</p>
+            <h2 class="text-size-24 bold text-white">Bumper Repair</h2>
             <p class="text-white">
               We can repair minor and major bumper damage, restoring your car's
               appearance and protecting it from further damage.
@@ -509,7 +446,7 @@
             class="img-behind-text__item img-cover"
           />
           <div class="card-services__body">
-            <p class="text-size-24 bold text-white">Alloy Wheel Repair</p>
+            <h2 class="text-size-24 bold text-white">Alloy Wheel Repair</h2>
             <p class="text-white">
               Our alloy wheel repair service can restore your wheels to their
               original condition, removing scratches and scuffs.
@@ -526,7 +463,9 @@
             class="img-behind-text__item img-cover"
           />
           <div class="card-services__body">
-            <p class="text-size-24 bold text-white">Wheel Arc Scratch Repair</p>
+            <h2 class="text-size-24 bold text-white">
+              Wheel Arc Scratch Repair
+            </h2>
             <p class="text-white">
               Our expert technicians can repair wheel arch scratches, restoring
               your car's appearance and protecting it from further damage.
@@ -543,7 +482,7 @@
             class="img-behind-text__item img-cover"
           />
           <div class="card-services__body">
-            <p class="text-size-24 bold text-white">Paint Correction</p>
+            <h2 class="text-size-24 bold text-white">Paint Correction</h2>
             <p class="text-white">
               Our paint correction service removes imperfections and restores
               your car's original shine, leaving it looking like new.
@@ -560,7 +499,9 @@
             class="img-behind-text__item img-cover"
           />
           <div class="card-services__body">
-            <p class="text-size-24 bold text-white">Car Door Scratch Repair</p>
+            <h2 class="text-size-24 bold text-white">
+              Car Door Scratch Repair
+            </h2>
             <p class="text-white">
               Repair scratches on your car doors, restoring their original
               appearance and protecting them from further damage.
@@ -577,7 +518,7 @@
             class="img-behind-text__item img-cover"
           />
           <div class="card-services__body">
-            <p class="text-size-24 bold text-white">Small Car Dent Repair</p>
+            <h2 class="text-size-24 bold text-white">Small Car Dent Repair</h2>
             <p class="text-white">
               We use the latest technology and techniques to repair small dents
               and dings without the need for costly bodywork.
@@ -594,7 +535,9 @@
             class="img-behind-text__item img-cover"
           />
           <div class="card-services__body">
-            <p class="text-size-24 bold text-white">Minor Car Scratch Repair</p>
+            <h2 class="text-size-24 bold text-white">
+              Minor Car Scratch Repair
+            </h2>
             <p class="text-white">
               Our skilled technicians can restore your car's paint to its
               original luster by expertly removing minor scratches and scuffs.
@@ -611,9 +554,9 @@
             class="img-behind-text__item img-cover"
           />
           <div class="card-services__body">
-            <p class="text-size-24 bold text-white">
+            <h2 class="text-size-24 bold text-white">
               Presale Exterior Car Cleanup
-            </p>
+            </h2>
             <p class="text-white">
               Our comprehensive presale exterior car cleanup service will ensure
               your vehicle looks its best before being sold.
@@ -630,7 +573,7 @@
             class="img-behind-text__item img-cover"
           />
           <div class="card-services__body">
-            <p class="text-size-24 bold text-white">Ceramic Coating</p>
+            <h2 class="text-size-24 bold text-white">Ceramic Coating</h2>
             <p class="text-white">
               Protect your car's paint from the elements with our durable and
               long-lasting ceramic coating.
@@ -933,7 +876,7 @@
                       service was greatly appreciated.
                     </p>
                     <div>
-                      <p>Eleanor Pena</p>
+                      <p class="text-scale-sm">Eleanor Pena</p>
                       <img src="./static/images/star-full.svg" alt="" />
                     </div>
                   </div>
@@ -1031,7 +974,9 @@
       </div>
       <form
         name="contact"
-        netlify
+        action="/thank-you"
+        method="POST"
+        data-netlify="true"
         class="form-page d-grid rg-24px rg-md-32px cols-md-2"
       >
         <div class="input__layout name">
@@ -1090,9 +1035,7 @@
           <!-- File List -->
           <!-- Image previews will appear here -->
           <p class="text-size-14 medium">
-            Upload File or Damaged Photo (max 5 files)<sup class="text-error"
-              >*</sup
-            >
+            Upload File or Damaged Photo (max 5 files)
           </p>
           <div class="d-flex cg-8pcx">
             <div
@@ -1114,7 +1057,6 @@
                 name="upload-image-1"
                 id="upload-image-p1"
                 onchange="handleFileChangeP(1)"
-                required
                 style="width: 1px; height: 1px; margin: 0; padding: 0"
               />
             </div>
@@ -1213,21 +1155,6 @@
               <div class="">
                 <p class="text-size-24 mb-3">Contact Us</p>
                 <div class="d-grid rg-8px">
-                  <a
-                    href="tel:+61292726888"
-                    class="d-flex align-items-center cg-12px"
-                  >
-                    <img src="./static/images/phone.svg" alt="Phone number" />
-                    <p class="opacity-50">+61 292726888</p>
-                  </a>
-                  <a
-                    href="mailto:hello@instantfix.com"
-                    target="_blank"
-                    class="d-flex align-items-center cg-12px"
-                  >
-                    <img src="./static/images/email.svg" alt="email" />
-                    <p class="opacity-50">hello@instantfix.com</p>
-                  </a>
                   <a
                     href="https://instantfix.com.au/"
                     target="_blank"

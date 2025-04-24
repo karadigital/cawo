@@ -19,14 +19,22 @@
 
 .hero {
   &__section {
-    background: linear-gradient(
+    background: url(../images/hero-banner.png) no-repeat;
+    background-size: auto 42rem;
+    background-position: top;
+    border-image-source: linear-gradient(
       270deg,
       rgba(11, 35, 83, 0) 33.62%,
       #0b2353 137.84%
     );
-
+    border-image-slice: fill 1;
     @include desktop-up {
-      background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #0b2353 100%);
+      background-size: cover;
+      border-image-source: linear-gradient(
+        270deg,
+        rgba(0, 0, 0, 0) 0%,
+        #0b2353 100%
+      );
     }
   }
 
@@ -38,6 +46,7 @@
   }
 
   &__bottom {
+    background-color: $secondary;
     @include desktop-up {
       background: #0b235399;
     }
@@ -45,9 +54,11 @@
 
   &__text {
     display: grid;
-    grid-template-columns: 0.75fr 1fr;
 
-    padding: 2.625rem 5%;
+    @include desktop-up {
+      grid-template-columns: 0.75fr 1fr;
+      padding: 2.625rem 5%;
+    }
   }
 
   &__buttons {

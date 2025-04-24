@@ -21,6 +21,13 @@
           display: none;
         }
       }
+      .img-behind-text__item {
+        transition: transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1);
+      }
+      &:hover .img-behind-text__item {
+        transform: scale(1.04);
+        transition: transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1);
+      }
 
       @include desktop-up {
         height: 330px;
