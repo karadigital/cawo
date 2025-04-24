@@ -1945,6 +1945,13 @@ button {
     display: none;
   }
 }
+.our-services__section .card-services .img-behind-text__item {
+  transition: transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.our-services__section .card-services:hover .img-behind-text__item {
+  transform: scale(1.04);
+  transition: transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
 @media (min-width: 1024px) {
   .our-services__section .card-services {
     height: 330px;
@@ -2141,11 +2148,16 @@ button {
 }
 
 .hero__section {
-  background: linear-gradient(270deg, rgba(11, 35, 83, 0) 33.62%, #0b2353 137.84%);
+  background: url(../images/hero-banner.png) no-repeat;
+  background-size: auto 42rem;
+  background-position: top;
+  border-image-source: linear-gradient(270deg, rgba(11, 35, 83, 0) 33.62%, #0b2353 137.84%);
+  border-image-slice: fill 1;
 }
 @media (min-width: 1024px) {
   .hero__section {
-    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #0b2353 100%);
+    background-size: cover;
+    border-image-source: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #0b2353 100%);
   }
 }
 @media (min-width: 1024px) {
@@ -2154,6 +2166,9 @@ button {
     margin: 0;
   }
 }
+.hero__bottom {
+  background-color: #0b2353;
+}
 @media (min-width: 1024px) {
   .hero__bottom {
     background: rgba(11, 35, 83, 0.6);
@@ -2161,8 +2176,12 @@ button {
 }
 .hero__text {
   display: grid;
-  grid-template-columns: 0.75fr 1fr;
-  padding: 2.625rem 5%;
+}
+@media (min-width: 1024px) {
+  .hero__text {
+    grid-template-columns: 0.75fr 1fr;
+    padding: 2.625rem 5%;
+  }
 }
 .hero__buttons {
   display: grid;
