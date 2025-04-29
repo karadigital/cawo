@@ -1839,7 +1839,7 @@ button {
 
 .form-page {
   display: grid;
-  grid-template-areas: "name" "mobile-number" "email" "message" "picture" "submit";
+  grid-template-areas: "name" "postcode" "mobile-number" "email" "message" "picture" "submit";
   column-gap: 1rem;
   padding: 1.5rem;
   background-color: #fff;
@@ -1848,11 +1848,14 @@ button {
 }
 @media (min-width: 1024px) {
   .form-page {
-    grid-template-areas: "name name" "mobile-number email" "message message" "picture picture" "submit .";
+    grid-template-areas: "name postcode" "mobile-number email" "message message" "picture picture" "submit .";
   }
 }
 .form-page .name {
   grid-area: name;
+}
+.form-page .postcode {
+  grid-area: postcode;
 }
 .form-page .car-registration-number {
   grid-area: crn;
@@ -1872,7 +1875,7 @@ button {
 
 .form-modal {
   display: grid;
-  grid-template-areas: "name" "mobile-number" "email" "caryear" "carcolor" "damage" "service" "bookdate" "booktime" "message" "picture";
+  grid-template-areas: "name" "postcode" "mobile-number" "email" "caryear" "carcolor" "damage" "service" "bookdate" "booktime" "message" "picture";
   column-gap: 2rem;
   background-color: #fff;
   padding: 1.5rem 1rem;
@@ -1885,11 +1888,14 @@ button {
 }
 @media (min-width: 1024px) {
   .form-modal {
-    grid-template-areas: "name name" "mobile-number email" "caryear carcolor" "damage service" "bookdate booktime" "message message" "picture picture";
+    grid-template-areas: "name postcode" "mobile-number email" "caryear carcolor" "damage service" "bookdate booktime" "message message" "picture picture";
   }
 }
 .form-modal .name {
   grid-area: name;
+}
+.form-modal .postcode {
+  grid-area: postcode;
 }
 .form-modal .car-registration-number {
   grid-area: crn;

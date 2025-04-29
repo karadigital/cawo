@@ -2,6 +2,7 @@
   display: grid;
   grid-template-areas:
     "name"
+    "postcode"
     "mobile-number"
     "email"
     "message"
@@ -15,7 +16,7 @@
   border-radius: 16px;
   @include desktop-up {
     grid-template-areas:
-      "name name"
+      "name postcode"
       "mobile-number email"
       "message message"
       "picture picture"
@@ -23,6 +24,9 @@
   }
   .name {
     grid-area: name;
+  }
+  .postcode {
+    grid-area: postcode;
   }
   .car-registration-number {
     grid-area: crn;
@@ -46,6 +50,7 @@
   display: grid;
   grid-template-areas:
     "name"
+    "postcode"
     "mobile-number"
     "email"
     "caryear"
@@ -66,7 +71,7 @@
   border-radius: 16px;
   @include desktop-up {
     grid-template-areas:
-      "name name"
+      "name postcode"
       "mobile-number email"
       "caryear carcolor"
       "damage service"
@@ -76,6 +81,9 @@
   }
   .name {
     grid-area: name;
+  }
+  .postcode {
+    grid-area: postcode;
   }
   .car-registration-number {
     grid-area: crn;
