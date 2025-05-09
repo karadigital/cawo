@@ -393,6 +393,12 @@ $(document).ready(function () {
     } else {
       // Hide warning if it exists
       $("#file-warning").hide();
+            const $submitButton = $(this).find('button[type="submit"]');
+            const originalText = $submitButton.text().trim();
+            $submitButton.prop('disabled', true).text('Submit...');
+            setTimeout(function() {
+              $submitButton.prop('disabled', false).text(originalText);
+            }, 5000);
     }
   });
 });
