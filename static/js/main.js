@@ -361,6 +361,17 @@ $(document).ready(function () {
 
   // Add form submission handler to check for required files
   $('form[name="contactQuote"]').on("submit", function (e) {
+		const $submitButton = $(this).find('button[type="submit"]');
+	
+		$submitButton.prop('disabled', true);
+		$submitButton.addClass('button--disabled');
+		$submitButton.text('Submitting...');
+		
+		setTimeout(function() {
+			$submitButton.prop('disabled', false);
+			$submitButton.removeClass('button--disabled');
+			$submitButton.text('Submit');
+		}, 10000); 
     // Check if any file inputs are required but empty
     const $requiredFileInputs = $("#hidden-file-block input[required]");
     let hasEmptyRequiredFiles = false;
@@ -395,4 +406,18 @@ $(document).ready(function () {
       $("#file-warning").hide();
     }
   });
+});
+
+$('form[name="contact"], form[name="contactQuote"]').on("submit", function (e) {
+	const $submitButton = $(this).find('button[type="submit"]');
+	
+	$submitButton.prop('disabled', true);
+	$submitButton.addClass('button--disabled');
+	$submitButton.text('Submitting...');
+	
+	setTimeout(function() {
+		$submitButton.prop('disabled', false);
+		$submitButton.removeClass('button--disabled');
+		$submitButton.text('Submit');
+	}, 10000); 
 });
