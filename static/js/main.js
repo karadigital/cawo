@@ -396,3 +396,17 @@ $(document).ready(function () {
     }
   });
 });
+
+$('form[name="contact"], form[name="contactQuote"]').on("submit", function (e) {
+	const $submitButton = $(this).find('button[type="submit"]');
+	
+	$submitButton.prop('disabled', true);
+	$submitButton.addClass('button--disabled');
+	$submitButton.text('Submitting...');
+	
+	setTimeout(function() {
+		$submitButton.prop('disabled', false);
+		$submitButton.removeClass('button--disabled');
+		$submitButton.text('Submit');
+	}, 10000); 
+});
