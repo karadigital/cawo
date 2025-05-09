@@ -275,6 +275,7 @@
                   />
                 </div>
                 <button
+                id="submit-button"
                   type="submit"
                   class="submit button button--tertiary cursor-pointer mt-4 button-dynamic"
                 >
@@ -1118,6 +1119,7 @@
             />
           </div>
           <button
+          id="submit-button"
             type="submit"
             class="submit button button--tertiary cursor-pointer mt-4"
           >
@@ -1668,6 +1670,35 @@
       document
         .getElementById("add-file-button-p")
         .addEventListener("click", triggerFileInputP);
+
+function handleFormSubmit(formName) {
+  const form = document.querySelector(`form[name="${formName}"]`);
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const button = form.querySelector("#submit-button");
+    if (!button) return;
+
+    const originalText = button.innerText;
+    const originalColor = button.style.backgroundColor;
+
+    button.disabled = true;
+    button.innerText = "Submitted...";
+    button.style.backgroundColor = "#d3d3d3";
+
+    setTimeout(() => {
+      button.disabled = false;
+      button.innerText = originalText;
+      button.style.backgroundColor = originalColor;
+      form.submit(); 
+    }, 5000);
+  });
+}
+
+handleFormSubmit("contactQuote");
+handleFormSubmit("contact");
     </script>
   </body>
 </html>
