@@ -275,6 +275,7 @@
                   />
                 </div>
                 <button
+                  id="submit-button"
                   type="submit"
                   class="submit button button--tertiary cursor-pointer mt-4 button-dynamic"
                 >
@@ -1117,7 +1118,7 @@
               onchange="handleFileChangeP(5)"
             />
           </div>
-          <button
+            id="submit-button"
             type="submit"
             class="submit button button--tertiary cursor-pointer mt-4"
           >
@@ -1668,6 +1669,21 @@
       document
         .getElementById("add-file-button-p")
         .addEventListener("click", triggerFileInputP);
+        document
+  .getElementById("submit-button")
+  .addEventListener("click", (event) => {
+    const button = event.target;
+    const originalText = button.innerText;
+    const originalColor = button.style.backgroundColor;
+    button.disabled = true;
+    button.innerText = "Submitted...";
+    button.style.backgroundColor = "#d3d3d3"; 
+    setTimeout(() => {
+      button.disabled = false;
+      button.innerText = originalText;
+      button.style.backgroundColor = originalColor;
+    }, 5000);
+  });
     </script>
   </body>
 </html>
